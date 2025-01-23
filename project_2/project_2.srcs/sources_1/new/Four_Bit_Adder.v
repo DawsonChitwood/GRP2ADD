@@ -20,17 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Four_Bit_Adder(a,b,ci,x,co);
-input [3:0] a;
-input [3:0] b;
+module Four_Bit_Adder(A,B,ci,S,co);
+input [3:0] A;
+input [3:0] B;
 input ci;
-output reg [3:0] x;
+output reg [3:0] S;
 output reg co;
 
-assign C1 = a[0]*ci+b[0]*ci+a[0]*b[0];
-assign C2 = a[1]*C1+b[1]*C1+a[1]*b[1];
-assign C3 = a[2]*C2+b[2]*C2+a[2]*b[2];
-assign C4 = a[3]*C3+b[3]*C3+a[3]*b[3];
+assign C1 = A[0]*ci+B[0]*ci+A[0]*B[0];
+assign C2 = A[1]*C1+B[1]*C1+A[1]*B[1];
+assign C3 = A[2]*C2+B[2]*C2+A[2]*B[2];
+assign C4 = A[3]*C3+B[3]*C3+A[3]*B[3];
 
 always @(*) 
     if(C4)
@@ -39,27 +39,27 @@ always @(*)
         co = 0;
         
 always @(*) 
-    if(!a[0]*!b[0]*ci+!a[0]*b[0]*!ci+a[0]*!b[0]*!ci+a[0]*b[0]*ci)
-        x[0] = 1;
+    if(!A[0]*!B[0]*ci+!A[0]*B[0]*!ci+A[0]*!B[0]*!ci+A[0]*B[0]*ci)
+        S[0] = 1;
     else 
-        x[0] = 0;
+        S[0] = 0;
 
 always @(*)
-    if(!a[1]*!b[1]*C1+!a[1]*b[1]*!C1+a[1]*!b[1]*!C1+a[1]*b[1]*C1)
-        x[1] = 1;
+    if(!A[1]*!B[1]*C1+!A[1]*B[1]*!C1+A[1]*!B[1]*!C1+A[1]*B[1]*C1)
+        S[1] = 1;
     else 
-        x[1] = 0;
+        S[1] = 0;
 
 always @(*)
-    if(!a[2]*!b[2]*C2+!a[2]*b[2]*!C2+a[2]*!b[2]*!C2+a[2]*b[2]*C2)
-        x[2] = 1;
+    if(!A[2]*!B[2]*C2+!A[2]*B[2]*!C2+A[2]*!B[2]*!C2+A[2]*B[2]*C2)
+        S[2] = 1;
     else 
-        x[2] = 0;
+        S[2] = 0;
         
 always @(*)
-    if(!a[3]*!b[3]*C3+!a[3]*b[3]*!C3+a[3]*!b[3]*!C3+a[3]*b[3]*C3)
-        x[3] = 1;
+    if(!A[3]*!B[3]*C3+!A[3]*B[3]*!C3+A[3]*!B[3]*!C3+A[3]*B[3]*C3)
+        S[3] = 1;
     else 
-        x[3] = 0;
+        S[3] = 0;
         
 endmodule
