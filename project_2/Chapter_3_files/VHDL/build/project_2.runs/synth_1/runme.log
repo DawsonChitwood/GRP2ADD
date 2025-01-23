@@ -1,0 +1,264 @@
+
+*** Running vivado
+    with args -log leading_ones.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source leading_ones.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Jan 23 11:45:33 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source leading_ones.tcl -notrace
+Command: synth_design -top leading_ones -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8987
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1868.742 ; gain = 428.832 ; free physical = 1420 ; free virtual = 5877
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'leading_ones' [/home/student/Desktop/CSEE4280/CH3/VHDL/hdl/leading_ones.vhd:24]
+	Parameter SELECTOR bound to: UNIQUE_CASE - type: string 
+WARNING: [Synth 8-3819] Generic 'UNIQUE_CASE' not present in instantiated entity will be ignored
+WARNING: [Synth 8-3819] Generic 'TEST_CASE' not present in instantiated entity will be ignored
+INFO: [Synth 8-256] done synthesizing module 'leading_ones' (0#1) [/home/student/Desktop/CSEE4280/CH3/VHDL/hdl/leading_ones.vhd:24]
+WARNING: [Synth 8-3301] Unused top level parameter/generic UNIQUE_CASE
+WARNING: [Synth 8-3301] Unused top level parameter/generic TEST_CASE
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1942.711 ; gain = 502.801 ; free physical = 1326 ; free virtual = 5783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1960.523 ; gain = 520.613 ; free physical = 1324 ; free virtual = 5781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1960.523 ; gain = 520.613 ; free physical = 1324 ; free virtual = 5781
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1960.523 ; gain = 0.000 ; free physical = 1323 ; free virtual = 5780
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNC'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/student/Desktop/CSEE4280/CH3/xdc/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/leading_ones_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/leading_ones_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2097.273 ; gain = 0.000 ; free physical = 1304 ; free virtual = 5762
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2097.273 ; gain = 0.000 ; free physical = 1304 ; free virtual = 5761
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2097.273 ; gain = 657.363 ; free physical = 1302 ; free virtual = 5760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2105.277 ; gain = 665.367 ; free physical = 1302 ; free virtual = 5760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2105.277 ; gain = 665.367 ; free physical = 1302 ; free virtual = 5760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2105.277 ; gain = 665.367 ; free physical = 1300 ; free virtual = 5759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2105.277 ; gain = 665.367 ; free physical = 1286 ; free virtual = 5748
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2134.277 ; gain = 694.367 ; free physical = 1201 ; free virtual = 5664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2134.277 ; gain = 694.367 ; free physical = 1201 ; free virtual = 5664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2144.293 ; gain = 704.383 ; free physical = 1192 ; free virtual = 5655
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     1|
+|2     |LUT3 |     1|
+|3     |LUT4 |     3|
+|4     |LUT5 |     1|
+|5     |LUT6 |     8|
+|6     |IBUF |    16|
+|7     |OBUF |     5|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.105 ; gain = 866.195 ; free physical = 1051 ; free virtual = 5514
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2306.105 ; gain = 729.445 ; free physical = 1050 ; free virtual = 5513
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2306.113 ; gain = 866.195 ; free physical = 1050 ; free virtual = 5513
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2306.113 ; gain = 0.000 ; free physical = 1050 ; free virtual = 5513
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2330.117 ; gain = 0.000 ; free physical = 1214 ; free virtual = 5677
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 363e8581
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 21 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:42 . Memory (MB): peak = 2330.117 ; gain = 966.770 ; free physical = 1214 ; free virtual = 5677
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1621.230; main = 1523.996; forked = 276.604
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3074.078; main = 2330.121; forked = 914.781
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2354.129 ; gain = 0.000 ; free physical = 1214 ; free virtual = 5677
+INFO: [Common 17-1381] The checkpoint '/home/student/Desktop/CSEE4280/CH3/VHDL/build/project_2.runs/synth_1/leading_ones.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file leading_ones_utilization_synth.rpt -pb leading_ones_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 23 11:46:21 2025...

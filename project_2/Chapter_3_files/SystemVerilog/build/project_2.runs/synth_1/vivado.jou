@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jan 23 13:24:53 2025
+# Process ID         : 32323
+# Current directory  : /home/student/Desktop/CSEE4280/CH3/SystemVerilog/build/project_2.runs/synth_1
+# Command line       : vivado -log project_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_2.tcl
+# Log file           : /home/student/Desktop/CSEE4280/CH3/SystemVerilog/build/project_2.runs/synth_1/project_2.vds
+# Journal file       : /home/student/Desktop/CSEE4280/CH3/SystemVerilog/build/project_2.runs/synth_1/vivado.jou
+# Running On         : CSEE4280
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 20.04.6 LTS
+# Processor Detail   : AMD Ryzen 7 6800H with Radeon Graphics
+# CPU Frequency      : 3194.004 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 8323 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 10470 MB
+# Available Virtual  : 6549 MB
+#-----------------------------------------------------------
+source project_2.tcl -notrace

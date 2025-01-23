@@ -1,0 +1,2 @@
+Verilog Instance of mult: {/\tb(SELECTOR="MULT",UNIQUE_CASE="TRUE") /u_mt}
+

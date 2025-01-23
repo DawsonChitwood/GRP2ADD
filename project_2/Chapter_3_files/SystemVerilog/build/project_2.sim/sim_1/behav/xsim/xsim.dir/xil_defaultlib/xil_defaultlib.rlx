@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:55
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/build/project_2.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/add_sub.sv,1737649708,systemVerilog,,/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/leading_ones.sv,,add_sub,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/leading_ones.sv,1737649708,systemVerilog,,/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/num_ones.sv,,leading_ones,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/mult.sv,1737649708,systemVerilog,,/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/add_sub.sv,,mult,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/num_ones.sv,1737649708,systemVerilog,,/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/project_2.sv,,num_ones,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/hdl/project_2.sv,1737649708,systemVerilog,,/home/student/Desktop/CSEE4280/CH3/SystemVerilog/tb/tb.sv,,project_2,,uvm,,,,,,
+/home/student/Desktop/CSEE4280/CH3/SystemVerilog/tb/tb.sv,1737649708,systemVerilog,,,,tb,,uvm,,,,,,

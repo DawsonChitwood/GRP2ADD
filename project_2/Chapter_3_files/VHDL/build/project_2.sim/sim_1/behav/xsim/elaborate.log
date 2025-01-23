@@ -1,0 +1,10 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_behav xil_defaultlib.tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3348] formal generic 'selector' has no actual or default value [/home/student/Desktop/CSEE4280/CH3/VHDL/tb/tb.vhd:15]
+ERROR: [VRFC 10-3348] formal generic 'unique_case' has no actual or default value [/home/student/Desktop/CSEE4280/CH3/VHDL/tb/tb.vhd:16]
+ERROR: [VRFC 10-3348] formal generic 'test_case' has no actual or default value [/home/student/Desktop/CSEE4280/CH3/VHDL/tb/tb.vhd:17]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb in library work failed.
