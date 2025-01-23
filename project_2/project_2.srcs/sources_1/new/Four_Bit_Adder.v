@@ -58,8 +58,8 @@ always @(*)
         
 always @(*)
     if(!a[3]*!b[3]*C3+!a[3]*b[3]*!C3+a[3]*!b[3]*!C3+a[3]*b[3]*C3)
-        x[0] = 1;
+        x[3] = 1;
     else 
-        x[0] = 0;
+        x[3] = 0;
         
 endmodule
