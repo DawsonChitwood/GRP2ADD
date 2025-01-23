@@ -36,11 +36,13 @@ reg testCO;
 integer error = 0;
 integer i,j,k,l;
 
+
 Four_Bit_Adder FBA(A,B,ci,S,co);
+
 
 initial begin
     error = 0;
-    assign testS = testA + testB;
+    assign testS = testA + testB +testCI;
     assign testCO = testS[4];
     for(k = 0; k < 2; k = k + 1)begin
        assign ci = k;
@@ -50,7 +52,8 @@ initial begin
             assign testA = i;
                  for(j = 0; j < 16; j = j + 1)begin
                     assign B = j;
-                     #10 assign testB = j;
+                    #1 assign testB = j;
+                    check;
                   
                  end
         end
@@ -59,19 +62,19 @@ initial begin
                 
 end
 
-always @(co) begin
-    for(l = 0; l < 4; l = l + 1) 
+task check; begin
+    for(l = 0; l < 4; l = l + 1)  begin
         if (S[l] !== testS[l]) begin
             $display("Error in test %d + %d (ci = %d) at bit %d",A,B,ci,l);
             error = error + 1;
         end
-
+    end
    
     if(co !== testCO) begin
         $display("Error in test %d + %d (ci = %d) co value",A,B,ci);
         error = error + 1;
     end
-            
-
 end
+endtask
+
 endmodule
