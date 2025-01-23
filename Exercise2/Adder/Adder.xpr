@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="68" Path="C:/CSEE4280/GRP2ADD/project_2/project_2.xpr">
+<Project Product="Vivado" Version="7" Minor="68" Path="C:/CSEE4280/GRP2ADD/Exercise2/Adder/Adder.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ad2799da03ec495894d5320987b8652b"/>
+    <Option Name="Id" Val="8044091e5be34c349bf5aae515780811"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -111,7 +111,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../../../../../../../../../CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH2/xdc/Nexys-A7-100T-Master.xdc">
+      <File Path="$PPRDIR/../../../../../../../../../../CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH2/xdc/Nexys-A7-100T-Master.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
