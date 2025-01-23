@@ -36,8 +36,11 @@ reg testCO;
 integer error = 0;
 integer i,j,k,l;
 
+parameter TWOTOSIXTEEN = 65535;
 parameter aStart = 16'hCBA9;
+parameter aFinish = TWOTOSIXTEEN ;
 parameter bStart = 0;
+parameter bFinish = TWOTOSIXTEEN;
 
 
 Sixteen_Bit_Adder FBA(A,B,S,co,cI);
@@ -49,10 +52,10 @@ initial begin
     for(k = 0; k < 2; k = k + 1)begin
        assign cI = k;
        assign testCI = k;
-        for(i = aStart; i < 65535; i = i + 1) begin
+        for(i = aStart; i < aFinish; i = i + 1) begin
             assign A = i;
             assign testA = i;
-                 for(j = bStart; j < 65535; j = j + 1)begin
+                 for(j = bStart; j < bFinish; j = j + 1)begin
                     assign B = j;
                     #1 assign testB = j;
                     check;
