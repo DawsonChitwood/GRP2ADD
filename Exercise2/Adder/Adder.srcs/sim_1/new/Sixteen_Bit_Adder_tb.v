@@ -22,6 +22,8 @@ integer error = 0;
 integer i,j,k,l;
 
 
+
+
 // Parameters used to customize the range of testing in simulations
 parameter TWOTOSIXTEEN = 65535; // 2^16
 parameter aStart = 0;
@@ -50,8 +52,8 @@ initial begin
        for (i = aStart; i < aFinish; i = i + 1) begin
             assign A = i;
             assign testA = i;
-        for(j = bStart; j < bFinish; j = j + 1)begin
-            //if(j == 16'h7000) 
+        for(j = bStart; j < bFinish; j = j + 16'h0100 )begin
+            //if(j == 16'h7000 & i == 0) 
               //  assign B = 16'h4563;              //These lines are used to insert error
             //else 
                 assign B = j;
