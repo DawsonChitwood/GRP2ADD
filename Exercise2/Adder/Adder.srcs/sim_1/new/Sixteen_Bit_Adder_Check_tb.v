@@ -24,7 +24,7 @@ integer i,j,k,l;
 
 // Parameters used to customize the range of testing in simulations
 parameter TWOTOSIXTEEN = 65535; // 2^16
-parameter aStart = 0;
+parameter aValue = 16'hCBA9;
 parameter aFinish = TWOTOSIXTEEN ;
 parameter bStart = 0;
 parameter bFinish = TWOTOSIXTEEN;
@@ -43,13 +43,11 @@ initial begin
     error = 0;
     assign testS = testA + testB + testCI;
     assign testCO = testS[16];
-
+    assign A = aValue;
+    assign testA = aValue;
     for(k = 0; k < ciFinish; k = k + 1)begin
        assign cI = k;
        assign testCI = k;
-       for (i = aStart; i < aFinish; i = i + 1) begin
-            assign A = i;
-            assign testA = i;
         for(j = bStart; j < bFinish; j = j + 1)begin
             //if(j == 16'h7000) 
               //  assign B = 16'h4563;              //These lines are used to insert error
@@ -58,7 +56,6 @@ initial begin
             #1 assign testB = j;
             check;
         end
-       end
      end
     $display("Test Complete: %d errors",error); // Prints out errors when the testing is done
                 
