@@ -34,6 +34,8 @@ module PrimeFinder_tb();
         Reset_tb = 0;
         NumMax_tb = 15;
        end
+       
+       
     
     always begin
         SysClk_tb <=0;
