@@ -52,10 +52,10 @@ initial begin
        for (i = aStart; i < aFinish; i = i + 1) begin
             assign A = i;
             assign testA = i;
-        for(j = bStart; j < bFinish; j = j + 16'h0100 )begin
-            //if(j == 16'h7000 & i == 0) 
-              //  assign B = 16'h4563;              //These lines are used to insert error
-            //else 
+        for(j = bStart; j < bFinish; j = j + 16'h1000 )begin
+            if(j == 16'h7000 & i == 0) 
+                assign B = 16'h4563;              //These lines are used to insert error
+            else 
                 assign B = j;
             #1 assign testB = j;
             check;

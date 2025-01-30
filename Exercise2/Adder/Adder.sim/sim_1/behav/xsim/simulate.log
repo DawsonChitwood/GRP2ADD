@@ -1,2 +1,10 @@
 Time resolution is 1 ps
-Test Complete:           0 errors
+Error in test     0 + 17763 (ci = 0) at bit           0
+Error in test     0 + 17763 (ci = 0) at bit           1
+Error in test     0 + 17763 (ci = 0) at bit           5
+Error in test     0 + 17763 (ci = 0) at bit           6
+Error in test     0 + 17763 (ci = 0) at bit           8
+Error in test     0 + 17763 (ci = 0) at bit          10
+Error in test     0 + 17763 (ci = 0) at bit          12
+Error in test     0 + 17763 (ci = 0) at bit          13
+Test Complete:           8 errors
