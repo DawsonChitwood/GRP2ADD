@@ -148,3 +148,29 @@ Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // [Engine Memory]: 974 MB (+192827kb) [00:00:25]
 // WARNING: HEventQueue.dispatchEvent() is taking  3274 ms.
 // Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.754 ; gain = 225.742 
+// Project name: Exercise3; location: C:/CSEE4280/GRP2ADD/Exercise3/Exercise3; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bh (Open Project Progress)
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 145 MB (+6598kb) [00:04:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  71745 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 71476 ms. Increasing delay to 214428 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 0 ms. Decreasing delay to 2000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 14m:22s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 14m:24s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 15m:32s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 15m:35s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:53s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:55s
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:03s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:05s
+// WARNING: HEventQueue.dispatchEvent() is taking  611512 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,021 MB. GUI used memory: 69 MB. Current time: 1/30/25, 3:12:52 PM EST

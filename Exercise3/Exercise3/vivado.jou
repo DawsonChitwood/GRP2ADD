@@ -23,3 +23,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.xpr
+update_compile_order -fileset sources_1
