@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PrimeFinder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sim_1/new/PrimeFinder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PrimeFinder_tb
