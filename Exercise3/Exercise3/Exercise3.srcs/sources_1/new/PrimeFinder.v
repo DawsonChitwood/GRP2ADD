@@ -21,18 +21,18 @@
 
 
 module PrimeFinder(NumMax,Reset,SysClk,Prime,NumberChecked,NumberofPrimesFound);
-input [9:0] NumMax;
+input [9:0] NumMax = 0;
 input Reset,SysClk;
-reg [1:0] Sreg = 0,Snext = 0;
 parameter [1:0] IDLE = 0,
     CHECKING =  1,
     DONE = 2;
-reg [9:0] NumberNext=0;
+reg [1:0] Sreg = IDLE,Snext = IDLE;
+reg [9:0] NumberNext = 0;
 output reg Prime;
-output reg [9:0] NumberChecked=0;
-output reg [7:0] NumberofPrimesFound=0;
+output reg [9:0] NumberChecked = 0;
+output reg [7:0] NumberofPrimesFound = 0;
 
-   always @(NumberChecked, Sreg, Reset) begin    
+   always @( posedge SysClk) begin    
     case(Sreg)
     IDLE: begin
         Snext <= CHECKING;
@@ -213,11 +213,12 @@ output reg [7:0] NumberofPrimesFound=0;
             NumberofPrimesFound <= NumberofPrimesFound + 1;
         else
             NumberofPrimesFound <= NumberofPrimesFound;   
-        
+        if (NumberChecked + 1 <= NumMax) begin
         if(NumberChecked === 0|| NumberChecked === 1|| NumberChecked === 2)
               NumberNext <= NumberChecked + 1;
            else
-                NumberNext <= NumberChecked + 2;              
+                NumberNext <= NumberChecked + 2; 
+        end             
         if(NumMax === NumberNext)
             Snext <= DONE;
         else
@@ -229,7 +230,7 @@ output reg [7:0] NumberofPrimesFound=0;
         Snext <= IDLE;
     endcase
     
-    
+  
         
    end
    
@@ -237,8 +238,8 @@ output reg [7:0] NumberofPrimesFound=0;
         if(Reset)
             Sreg <= 0;
         else begin
-           NumberChecked = NumberNext;
-           Sreg = Snext; 
+           NumberChecked <= NumberNext;
+           Sreg <= Snext; 
            end 
    end
 endmodule

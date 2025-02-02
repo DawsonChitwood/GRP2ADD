@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Jan 31 15:02:31 2025
+# Process ID         : 9964
+# Current directory  : C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent29276 C:\CSEE4280\GRP2ADD\Exercise3\FINAL CODE\CH4\project_1\project_1.xpr
+# Log file           : C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/vivado.log
+# Journal file       : C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 9522 MB
+# Total Virtual      : 17739 MB
+# Available Virtual  : 4298 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/CSEE4280/GRP2ADD/Exercise3/FINAL CODE/CH4/project_1/project_1.runs/impl_1/counting_buttons.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]

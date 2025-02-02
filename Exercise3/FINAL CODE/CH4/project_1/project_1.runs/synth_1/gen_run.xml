@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1738264341">
-  <File Type="PA-TCL" Name="counting_buttons.tcl"/>
   <File Type="REPORTS-TCL" Name="counting_buttons_reports.tcl"/>
-  <File Type="RDS-RDS" Name="counting_buttons.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="counting_buttons_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="counting_buttons_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="counting_buttons_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="counting_buttons.tcl"/>
+  <File Type="RDS-RDS" Name="counting_buttons.vds"/>
   <File Type="RDS-DCP" Name="counting_buttons.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="counting_buttons_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="counting_buttons_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv">
+    <File Path="$PPRDIR/../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv">
+    <File Path="$PPRDIR/../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/counting_buttons.sv">
+    <File Path="$PPRDIR/../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/counting_buttons.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -40,14 +37,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../The-FPGA-Programming-Handbook-Second-Edition/CH4/xdc/Nexys-A7-100T-Master.xdc">
+    <File Path="$PPRDIR/../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/xdc/Nexys-A7-100T-Master.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PPRDIR/../The-FPGA-Programming-Handbook-Second-Edition/CH4/xdc/Nexys-A7-100T-Master.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/xdc/Nexys-A7-100T-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv" \
+"../../../../../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv" \
+"../../../../../../../../../The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/counting_buttons.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

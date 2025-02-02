@@ -21,6 +21,7 @@
     </Object>
     <Object name="u_ila_0" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="10"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
   </ObjectList>
