@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Running: xsim.dir/PrimeFinder_tb_behav/xsimk.exe -simmode gui -wdb PrimeFinder_tb_behav.wdb -simrunnum 0 -socket 60533
 Design successfully loaded
 Design Loading Memory Usage: 27196 KB (Peak: 27196 KB)
@@ -5,3 +6,9 @@ Design Loading CPU Usage: 218 ms
 Simulation completed
 Simulation Memory Usage: 28148 KB (Peak: 28148 KB)
 Simulation CPU Usage: 265 ms
+=======
+Running: xsim.dir/PrimeFinder_tb_behav/xsimk -simmode gui -wdb PrimeFinder_tb_behav.wdb -simrunnum 0 -socket 49107
+Design successfully loaded
+Design Loading Memory Usage: 180868 KB (Peak: 180988 KB)
+Design Loading CPU Usage: 1090 ms
+>>>>>>> ffcb335b72e88886d7fbc09b8d3ce2927b471322

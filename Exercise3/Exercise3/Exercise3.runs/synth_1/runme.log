@@ -1,0 +1,252 @@
+
+*** Running vivado
+    with args -log PrimeFinder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PrimeFinder.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Jan 31 03:17:17 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source PrimeFinder.tcl -notrace
+Command: synth_design -top PrimeFinder -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16678
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1704.145 ; gain = 339.859 ; free physical = 2285 ; free virtual = 7041
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'PrimeFinder' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:23]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:45]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:45]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:45]
+WARNING: [Synth 8-567] referenced signal 'NumMax' should be on the sensitivity list [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:35]
+WARNING: [Synth 8-567] referenced signal 'NumberNext' should be on the sensitivity list [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:35]
+WARNING: [Synth 8-567] referenced signal 'NumberofPrimesFound' should be on the sensitivity list [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:35]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:916]
+INFO: [Synth 8-6155] done synthesizing module 'PrimeFinder' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1778.082 ; gain = 413.797 ; free physical = 2217 ; free virtual = 6975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1792.926 ; gain = 428.641 ; free physical = 2217 ; free virtual = 6975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1800.930 ; gain = 436.645 ; free physical = 2216 ; free virtual = 6974
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'Sreg_reg' in module 'PrimeFinder'
+WARNING: [Synth 8-327] inferring latch for variable 'Prime_reg' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:42]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                CHECKING |                              010 |                               01
+                    DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Sreg_reg' using encoding 'one-hot' in module 'PrimeFinder'
+WARNING: [Synth 8-327] inferring latch for variable 'NumberChecked_reg' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+WARNING: [Synth 8-327] inferring latch for variable 'NumberofPrimesFound_reg' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:39]
+WARNING: [Synth 8-327] inferring latch for variable 'NumberNext_reg' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:41]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1819.914 ; gain = 455.629 ; free physical = 2198 ; free virtual = 6958
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---Muxes : 
+	   3 Input   10 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1935.953 ; gain = 571.668 ; free physical = 2022 ; free virtual = 6811
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1935.953 ; gain = 571.668 ; free physical = 2019 ; free virtual = 6808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1935.953 ; gain = 571.668 ; free physical = 2019 ; free virtual = 6808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[9] with 1st driver pin 'NumberChecked_reg[9]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[9] with 2nd driver pin 'NumberChecked_reg[9]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[8] with 1st driver pin 'NumberChecked_reg[8]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[8] with 2nd driver pin 'NumberChecked_reg[8]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[7] with 1st driver pin 'NumberChecked_reg[7]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[7] with 2nd driver pin 'NumberChecked_reg[7]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[6] with 1st driver pin 'NumberChecked_reg[6]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[6] with 2nd driver pin 'NumberChecked_reg[6]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[5] with 1st driver pin 'NumberChecked_reg[5]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[5] with 2nd driver pin 'NumberChecked_reg[5]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[4] with 1st driver pin 'NumberChecked_reg[4]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[4] with 2nd driver pin 'NumberChecked_reg[4]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[3] with 1st driver pin 'NumberChecked_reg[3]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[3] with 2nd driver pin 'NumberChecked_reg[3]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[2] with 1st driver pin 'NumberChecked_reg[2]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[2] with 2nd driver pin 'NumberChecked_reg[2]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[1] with 1st driver pin 'NumberChecked_reg[1]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[1] with 2nd driver pin 'NumberChecked_reg[1]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[0] with 1st driver pin 'NumberChecked_reg[0]__0/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:40]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin NumberChecked_OBUF[0] with 2nd driver pin 'NumberChecked_reg[0]/Q' [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.srcs/sources_1/new/PrimeFinder.v:917]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       10|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT2   |    13|
+|4     |LUT3   |     3|
+|5     |LUT4   |    14|
+|6     |LUT5   |     4|
+|7     |LUT6   |    18|
+|8     |MUXF7  |     4|
+|9     |MUXF8  |     2|
+|10    |FDRE   |    13|
+|11    |LD     |    29|
+|12    |IBUF   |    12|
+|13    |OBUF   |    19|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   137|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 20 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.766 ; gain = 718.480 ; free physical = 1883 ; free virtual = 6672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2082.773 ; gain = 718.480 ; free physical = 1882 ; free virtual = 6671
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.641 ; gain = 0.000 ; free physical = 2026 ; free virtual = 6818
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2213.215 ; gain = 0.000 ; free physical = 1919 ; free virtual = 6724
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 29 instances were transformed.
+  LD => LDCE: 29 instances
+
+Synth Design complete | Checksum: 8d7c4a1e
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 12 Warnings, 20 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2213.215 ; gain = 848.934 ; free physical = 1919 ; free virtual = 6724
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1474.011; main = 1474.011; forked = 278.479
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2737.172; main = 2213.219; forked = 917.254
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2237.227 ; gain = 0.000 ; free physical = 1918 ; free virtual = 6723
+INFO: [Common 17-1381] The checkpoint '/home/student/Desktop/CSEE4280/GRP2ADD/Exercise3/Exercise3/Exercise3.runs/synth_1/PrimeFinder.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file PrimeFinder_utilization_synth.rpt -pb PrimeFinder_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 31 03:17:44 2025...
