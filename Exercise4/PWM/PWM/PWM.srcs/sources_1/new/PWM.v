@@ -25,18 +25,18 @@ module PWM (input [15:0] Period, input [7:0] Duty,input BurstMode,input BurstTyp
             output pwm
     );
     
-    reg [15:0] counter = 0;
-    reg [15:0] subcounter = 0;
-    reg [15:0] substop = 0;
-    reg [15:0] subperiod = 0;
-    reg [15:0] stop = 0;
-    reg out = 0;
+    reg [15:0] counter = 0; //counter variable for the main PWM signal (not the burst mode divisions)
+    reg [15:0] subcounter = 0; //subcounter variable for the burst mode divisions
+    reg [15:0] substop = 0;    //substop variable to indicate when to change states within the burst mode divisions
+    reg [15:0] subperiod = 0;  //subperiod for defining the period of the burst mode pulses
+    reg [15:0] stop = 0;       //stop variable to indicate when to change state for the overall signal (not the burst mode divisions)
+    reg out = 0;               //variable used to indirectly assign values to the PWM signal
     
-    assign pwm = out; 
+    assign pwm = out;          //indirect assignment of PWM signal
     
    
     initial begin
-         stop = Period*Duty/100;
+         stop = (Period*Duty/100)/1;      //calculate the stop value by multiplying the period by the duty cycle
     end
     
     initial begin
@@ -67,7 +67,7 @@ module PWM (input [15:0] Period, input [7:0] Duty,input BurstMode,input BurstTyp
             counter <= counter + 1;
             out <= 0;
         end else 
-            counter <= 1;
+            counter <= 0;
     end else 
          if (counter < Period) begin
                 if (counter < stop) begin

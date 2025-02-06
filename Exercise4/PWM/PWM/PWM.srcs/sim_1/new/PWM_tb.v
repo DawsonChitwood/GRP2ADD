@@ -21,7 +21,8 @@
 
 
 module PWM_tb();
-reg [15:0] period_tb = 6000;
+parameter ONEMHZ = 500, TWOMHZ = 1000, FIFTYMHZ = 5; 
+reg [15:0] period_tb = ONEMHZ;
 reg [7:0] duty_tb = 50;
 reg burstmode_tb = 1;
 reg bursttype_tb = 1;
