@@ -34,6 +34,8 @@ wire pwm_tb;
 PWM p(period_tb,duty_tb,burstmode_tb,bursttype_tb,sysclk_tb,reset_tb,pwm_tb);
 
 always begin
+       if(TESTRST) reset_tb <= 1;
+       else reset_tb <= 0;
        #0.5 sysclk_tb <= 1;
        #0.5 sysclk_tb <= 0;
     
