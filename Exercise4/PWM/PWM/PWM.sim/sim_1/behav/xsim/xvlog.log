@@ -1,4 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM/PWM.srcs/sources_1/new/PWM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module PWM
+WARNING: [VRFC 10-3380] identifier 'START' is used before its declaration [C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM/PWM.srcs/sources_1/new/PWM.v:33]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM/PWM.srcs/sim_1/new/PWM_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module PWM_tb
