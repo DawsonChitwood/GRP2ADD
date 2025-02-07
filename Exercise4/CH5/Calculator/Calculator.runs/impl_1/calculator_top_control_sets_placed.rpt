@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Feb  5 22:11:07 2025
+| Host         : LAPTOP-RH96MGM6 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file calculator_top_control_sets_placed.rpt
+| Design       : calculator_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    31 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             116 |           28 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              24 |            8 |
+| Yes          | No                    | No                     |             104 |           37 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              77 |           37 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |                   Enable Signal                  |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/div/FSM_sequential_state[3]_i_1_n_0 | g_USE_PLL.reset_sync[1]                  |                2 |              4 |         2.00 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 |                                                  | button_capt[4]_i_1_n_0                   |                2 |              5 |         2.50 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/last_op[4]_i_1_n_0                  |                                          |                2 |              5 |         2.50 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 |                                                  | g_USE_PLL.reset_sync[1]                  |                2 |              6 |         3.00 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/div/num_bits                        |                                          |                4 |              6 |         1.50 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | counter_en                                       | counter[7]_i_1_n_0                       |                3 |              8 |         2.67 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 |                                                  | u_seven_segment/refresh_count[0]_i_1_n_0 |                4 |             13 |         3.25 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | counter                                          |                                          |                5 |             16 |         3.20 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/accumulator[31]_i_1_n_0             | g_USE_PLL.reset_sync[1]                  |               23 |             32 |         1.39 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/div/int_remainder                   | g_MOORE.u_sm/div/int_remainder0          |                9 |             33 |         3.67 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 | g_MOORE.u_sm/div/quotient[31]_i_1_n_0            |                                          |               26 |             77 |         2.96 |
+|  g_USE_PLL.u_sys_pll/inst/clk_out1 |                                                  |                                          |               28 |            116 |         4.14 |
++------------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+

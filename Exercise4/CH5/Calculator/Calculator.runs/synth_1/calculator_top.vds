@@ -1,0 +1,725 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Feb  5 22:07:11 2025
+# Process ID         : 8220
+# Current directory  : C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1
+# Command line       : vivado.exe -log calculator_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top.tcl
+# Log file           : C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/calculator_top.vds
+# Journal file       : C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 9505 MB
+# Total Virtual      : 17722 MB
+# Available Virtual  : 5043 MB
+#-----------------------------------------------------------
+source calculator_top.tcl -notrace
+Command: synth_design -top calculator_top -part xc7a100tcsg324-1 -global_retiming on -incremental_mode off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16992
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1105.316 ; gain = 466.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calculator_top' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_top.sv:10]
+	Parameter SM_TYPE bound to: MOORE - type: string 
+	Parameter USE_PLL bound to: TRUE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'sys_pll' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/.Xil/Vivado-8220-LAPTOP-RH96MGM6/realtime/sys_pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sys_pll' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/.Xil/Vivado-8220-LAPTOP-RH96MGM6/realtime/sys_pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'calculator_moore' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_moore.sv:8]
+	Parameter BITS bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'divider_nr' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/divider_nr.sv:8]
+	Parameter BITS bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/divider_nr.sv:48]
+INFO: [Synth 8-6157] synthesizing module 'leading_ones' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH3/SystemVerilog/hdl/leading_ones.sv:8]
+	Parameter SELECTOR bound to: DOWN_FOR - type: string 
+	Parameter BITS bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'leading_ones' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH3/SystemVerilog/hdl/leading_ones.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'divider_nr' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/divider_nr.sv:8]
+WARNING: [Synth 8-689] width (16) of port connection 'divisor' does not match port width (32) of module 'divider_nr' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_moore.sv:52]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_moore.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'calculator_moore' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_moore.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv:9]
+	Parameter NUM_SEGMENTS bound to: 8 - type: integer 
+	Parameter CLK_PER bound to: 20 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cathode_top' [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'cathode_top' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/cathode_top.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH4/SystemVerilog/counting_buttons/hdl/seven_segment.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'calculator_top' (0#1) [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_top.sv:10]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'g_MOORE.u_sm'. This will prevent further optimization [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_top.sv:114]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'div'. This will prevent further optimization [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_moore.sv:52]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_seven_segment'. This will prevent further optimization [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/hdl/calculator_top.sv:73]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1235.988 ; gain = 597.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1235.988 ; gain = 597.547
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1235.988 ; gain = 597.547
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1235.988 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/IP/sys_pll/sys_pll/sys_pll_in_context.xdc] for cell 'g_USE_PLL.u_sys_pll'
+Finished Parsing XDC File [c:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/IP/sys_pll/sys_pll/sys_pll_in_context.xdc] for cell 'g_USE_PLL.u_sys_pll'
+Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/xdc/calculator_a7100t.xdc]
+Finished Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/xdc/calculator_a7100t.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/xdc/calculator_a7100t.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1315.066 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1315.066 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1315.066 ; gain = 676.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1315.066 ; gain = 676.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/IP/sys_pll/sys_pll/sys_pll_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/IP/sys_pll/sys_pll/sys_pll_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for \g_USE_PLL.u_sys_pll . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1315.066 ; gain = 676.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divider_nr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                             0000
+                    INIT |                             0001 |                             0001
+              LEFT_SHIFT |                             0010 |                             0010
+          ADJ_REMAINDER0 |                             0011 |                             0101
+          ADJ_REMAINDER1 |                             0100 |                             0110
+         UPDATE_QUOTIENT |                             0101 |                             1000
+                  TEST_N |                             0110 |                             1001
+         TEST_REMAINDER1 |                             0111 |                             0100
+          ADJ_REMAINDER2 |                             1000 |                             0111
+                DIV_DONE |                             1001 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'divider_nr'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1315.066 ; gain = 676.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 162   
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 12    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	              16x32  Multipliers := 1     
++---Muxes : 
+	  10 Input   33 Bit        Muxes := 1     
+	  10 Input   32 Bit        Muxes := 2     
+	  10 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 151   
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 8     
+	   8 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP accumulator0, operation Mode is: A*B.
+DSP Report: operator accumulator0 is absorbed into DSP accumulator0.
+DSP Report: operator accumulator0 is absorbed into DSP accumulator0.
+DSP Report: Generating DSP accumulator0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator accumulator0 is absorbed into DSP accumulator0.
+DSP Report: operator accumulator0 is absorbed into DSP accumulator0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:35 . Memory (MB): peak = 1548.363 ; gain = 909.922
+---------------------------------------------------------------------------------
+ Sort Area is  accumulator0_0 : 0 0 : 3017 5738 : Used 1 time 0
+ Sort Area is  accumulator0_0 : 0 1 : 2721 5738 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|calculator_moore | A*B            | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_moore | (PCIN>>17)+A*B | 17     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:42 . Memory (MB): peak = 1548.363 ; gain = 909.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:02:57 . Memory (MB): peak = 1825.191 ; gain = 1186.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `divider_nr`
+	Numbers of forward move = 0, and backward move = 58
+
+	Retimed registers names:
+		g_MOORE.u_sm/div/quotient_reg[0]_bret
+		g_MOORE.u_sm/div/quotient_reg[0]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[0]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[0]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[0]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[0]_bret__4
+		g_MOORE.u_sm/div/quotient_reg[10]_bret
+		g_MOORE.u_sm/div/quotient_reg[10]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[10]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[10]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[10]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[10]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[10]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[11]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[11]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[11]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[11]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[11]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[11]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[11]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[12]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[12]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[12]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[12]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[12]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[12]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[12]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[13]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[13]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[13]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[13]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[13]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[13]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[13]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[13]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[13]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[14]_bret
+		g_MOORE.u_sm/div/quotient_reg[14]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[14]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[14]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[14]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[14]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[14]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[14]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[14]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[15]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[15]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[15]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[15]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[15]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[16]_bret
+		g_MOORE.u_sm/div/quotient_reg[16]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[16]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[16]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[16]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[17]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[17]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[17]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[17]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[17]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[18]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[18]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[18]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[18]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[18]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[19]_bret
+		g_MOORE.u_sm/div/quotient_reg[19]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[19]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[19]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[19]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[1]_bret
+		g_MOORE.u_sm/div/quotient_reg[1]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[1]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[1]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[1]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[1]_bret__4
+		g_MOORE.u_sm/div/quotient_reg[20]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[20]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[20]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[20]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[20]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[21]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[21]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[21]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[21]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[21]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[22]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[22]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[22]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[22]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[22]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[23]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[23]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[23]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[23]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[23]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[24]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[24]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[24]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[24]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[24]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[25]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[25]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[25]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[25]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[25]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[26]_bret
+		g_MOORE.u_sm/div/quotient_reg[26]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[26]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[26]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[26]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[27]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[27]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[27]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[27]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[27]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[28]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[28]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[28]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[28]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[28]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[29]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[29]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[29]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[29]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[29]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[2]_bret
+		g_MOORE.u_sm/div/quotient_reg[2]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[2]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[2]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[2]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[2]_bret__4
+		g_MOORE.u_sm/div/quotient_reg[30]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[30]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[30]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[30]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__10
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__5
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__6
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__7
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__8
+		g_MOORE.u_sm/div/quotient_reg[30]_bret_bret__9
+		g_MOORE.u_sm/div/quotient_reg[3]_bret
+		g_MOORE.u_sm/div/quotient_reg[3]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[3]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[3]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[3]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[3]_bret__4
+		g_MOORE.u_sm/div/quotient_reg[4]_bret
+		g_MOORE.u_sm/div/quotient_reg[4]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[4]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[4]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[4]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[5]_bret
+		g_MOORE.u_sm/div/quotient_reg[5]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[5]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[5]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[5]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[6]_bret
+		g_MOORE.u_sm/div/quotient_reg[6]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[6]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[6]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret__2
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret__3
+		g_MOORE.u_sm/div/quotient_reg[6]_bret_bret__4
+		g_MOORE.u_sm/div/quotient_reg[7]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[7]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[7]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[7]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[7]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[7]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[7]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[8]_bret
+		g_MOORE.u_sm/div/quotient_reg[8]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[8]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[8]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[8]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[8]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[8]_bret_bret__1
+		g_MOORE.u_sm/div/quotient_reg[9]_bret__0
+		g_MOORE.u_sm/div/quotient_reg[9]_bret__1
+		g_MOORE.u_sm/div/quotient_reg[9]_bret__2
+		g_MOORE.u_sm/div/quotient_reg[9]_bret__3
+		g_MOORE.u_sm/div/quotient_reg[9]_bret_bret
+		g_MOORE.u_sm/div/quotient_reg[9]_bret_bret__0
+		g_MOORE.u_sm/div/quotient_reg[9]_bret_bret__1
+ 
+
+INFO: [Synth 8-5816] Retiming module `divider_nr' done
+
+
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[30]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[30]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[29]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[29]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[28]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[28]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[27]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[27]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[26]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[26]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[25]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[25]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[24]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[24]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[23]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[23]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[22]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[22]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[21]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[21]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[20]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[20]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[19]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[19]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[18]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[18]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[17]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[17]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[16]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[16]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[15]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[15]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[14]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[14]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[13]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[13]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[12]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[12]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[11]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[11]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[10]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[10]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[9]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[9]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[8]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[8]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[7]_bret) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[7]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[6]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[6]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[5]_bret__1) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[5]_bret__4) is unused and will be removed from module divider_nr.
+WARNING: [Synth 8-3332] Sequential element (quotient_reg[4]_bret__4) is unused and will be removed from module divider_nr.
+INFO: [Synth 8-5816] Retiming module `calculator_moore`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `calculator_moore' done
+
+
+INFO: [Synth 8-5816] Retiming module `seven_segment`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `seven_segment' done
+
+
+INFO: [Synth 8-5816] Retiming module `calculator_top`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `calculator_top' done
+
+
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:02:58 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin op_store_inferred:in0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin op_store_inferred:in0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin op_store_inferred:in0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin op_store_inferred:in0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin op_store_inferred:in0[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:03:01 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:03:01 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:03:01 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:03:01 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:22 ; elapsed = 00:03:02 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:22 ; elapsed = 00:03:02 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Retiming Report:
++--------------------+-----+
+|Retiming summary:   |     | 
++--------------------+-----+
+|Forward Retiming    | -1  | 
+|Backward Retiming   | 57  | 
+|New registers added | 274 | 
+|Registers deleted   | 30  | 
++--------------------+-----+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|calculator_moore | A*B          | 17     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_moore | PCIN>>17+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |sys_pll       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |sys_pll |     1|
+|2     |CARRY4  |    38|
+|3     |DSP48E1 |     2|
+|4     |LUT1    |    26|
+|5     |LUT2    |   113|
+|6     |LUT3    |    34|
+|7     |LUT4    |   115|
+|8     |LUT5    |   203|
+|9     |LUT6    |   358|
+|10    |MUXF7   |    39|
+|11    |FDRE    |   321|
+|12    |IBUF    |    22|
+|13    |OBUF    |    16|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:22 ; elapsed = 00:03:02 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:18 ; elapsed = 00:02:59 . Memory (MB): peak = 1825.875 ; gain = 1108.355
+Synthesis Optimization Complete : Time (s): cpu = 00:01:22 ; elapsed = 00:03:02 . Memory (MB): peak = 1825.875 ; gain = 1187.434
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1825.875 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1825.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b72d95a2
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:03:08 . Memory (MB): peak = 1825.875 ; gain = 1390.199
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1825.875 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH5/SystemVerilog/build/calculator.runs/synth_1/calculator_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file calculator_top_utilization_synth.rpt -pb calculator_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 22:10:26 2025...
