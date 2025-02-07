@@ -19,6 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
 module PWM (input [15:0] Period, input [7:0] Duty,input BurstMode,input BurstType, input SysClk,
             input Reset, 
             output pwm);
@@ -28,22 +29,17 @@ module PWM (input [15:0] Period, input [7:0] Duty,input BurstMode,input BurstTyp
  reg [15:0] BurstCounter;     //Variable to keep track of when the burst division period needs to end
  reg [15:0] BurstPeriod;      //The period of an individual burst within the signal's high cycle
  reg [15:0] BurstTransitionTime;  //Variable to keep track of when the signal needs to transition from high to low within a burst division
- reg [15:0] Per;                  //Variable for Period processing.
  reg Out;                          //Variable used to indirectly assign values to the pwm output
- reg [2:0] CurrentState, NextState;   //State variables
+ reg [2:0] CurrentState = START, NextState = START;   //State variables
  
  parameter START = 0, ON = 1, OFF = 2, BURSTON = 3, BURSTOFF = 4, BURSTSWITCH = 5, SWITCH = 6;  //State parameters
- 
  
  assign pwm = Out;  //Indirect assignment of output value
  
  
  //Variable Initialization ~ mainly for calculating the appropriate burst-relevant values based on BurstType
  initial begin
-    Per = 2*Period;      // Period ends up halfing when left on its own for some reason, so it's doubled here
-    CurrentState = START;
-    NextState = START;
-    TransitionTime = (Per * Duty)/100;
+    TransitionTime = (Period * Duty)/100;
     if(BurstType) begin
         BurstPeriod = TransitionTime >> 4;
         BurstTransitionTime = TransitionTime >> 5;
@@ -68,25 +64,25 @@ module PWM (input [15:0] Period, input [7:0] Duty,input BurstMode,input BurstTyp
                 if(BurstMode) NextState = BURSTON;
                 else NextState = ON;
         ON:                                           //The PWM-High state for non-burstmode operation
-                if(Counter >= Per - 1) NextState = SWITCH;
+                if(Counter >= Period - 1) NextState = SWITCH;
                 else if(Counter >= TransitionTime - 1) NextState = OFF;
                 else NextState = ON;
         OFF:                                          //The common off state of the FSM
-                if(Counter >= Per - 1) NextState = SWITCH;
+                if(Counter >= Period - 1) NextState = SWITCH;
                 else NextState = OFF;
         BURSTON:                                     //The on state for when burst mode is activated
-                if(Counter >= Per - 1) NextState = SWITCH;
+                if(Counter >= Period - 1) NextState = SWITCH;
                 else if(Counter >= TransitionTime - 1) NextState = OFF;
                 else if (BurstCounter >= BurstTransitionTime - 1) NextState = BURSTOFF;
                 else NextState = BURSTON;
         BURSTOFF:                                   //The off state for when burst mode is activated
-                if(Counter >= Per - 1 ) NextState = SWITCH;
+                if(Counter >= Period - 1 ) NextState = SWITCH;
                 else if(Counter >= TransitionTime - 1) NextState = OFF;
                 else if(BurstCounter >= BurstPeriod - 1) NextState = BURSTSWITCH;
                 else NextState = BURSTOFF;
         BURSTSWITCH:                                //The state used to transition back to BURSTON from BURSTOFF while the overall 
                                                     //transition threshold has not yet been reached
-                if(Counter >= Per - 1 ) NextState = SWITCH;
+                if(Counter >= Period - 1 ) NextState = SWITCH;
                 else if(Counter >= TransitionTime - 1) NextState = OFF;
                 else NextState = BURSTON;
         SWITCH:                                     //The state used to transition from OFF to the next mode (based on BurstMode)
