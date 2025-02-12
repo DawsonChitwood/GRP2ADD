@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module rgb_controller(
+module rgb_controller(input clk_in, input rst_in, input [7:0] r_in, 
+input [7:0] g_in, input [7:0] b_in, output r_out, output g_out, output b_out);
 
-    );
 endmodule
