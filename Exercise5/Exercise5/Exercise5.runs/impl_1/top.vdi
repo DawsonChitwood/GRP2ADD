@@ -1,0 +1,108 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Feb 13 17:20:43 2025
+# Process ID         : 33004
+# Current directory  : C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1
+# Command line       : vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file           : C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/top.vdi
+# Journal file       : C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 11292 MB
+# Total Virtual      : 19508 MB
+# Available Virtual  : 6430 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: link_design -top top -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 635.434 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH3/xdc/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [C:/CSEE4280/The-FPGA-Programming-Handbook-Second-Edition/CH3/xdc/Nexys-A7-100T-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 759.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[0] has multiple drivers: rgbc/pwmb/Counter_reg[0]/Q, and rgbc/pwmb/Counter_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[10] has multiple drivers: rgbc/pwmb/Counter_reg[10]/Q, and rgbc/pwmb/Counter_reg[10]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[11] has multiple drivers: rgbc/pwmb/Counter_reg[11]/Q, and rgbc/pwmb/Counter_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[12] has multiple drivers: rgbc/pwmb/Counter_reg[12]__0/Q, and rgbc/pwmb/Counter_reg[12]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[13] has multiple drivers: rgbc/pwmb/Counter_reg[13]/Q, and rgbc/pwmb/Counter_reg[13]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[14] has multiple drivers: rgbc/pwmb/Counter_reg[14]/Q, and rgbc/pwmb/Counter_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[15] has multiple drivers: rgbc/pwmb/Counter_reg[15]__0/Q, and rgbc/pwmb/Counter_reg[15]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[1] has multiple drivers: rgbc/pwmb/Counter_reg[1]/Q, and rgbc/pwmb/Counter_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[2] has multiple drivers: rgbc/pwmb/Counter_reg[2]/Q, and rgbc/pwmb/Counter_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[3] has multiple drivers: rgbc/pwmb/Counter_reg[3]/Q, and rgbc/pwmb/Counter_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[4] has multiple drivers: rgbc/pwmb/Counter_reg[4]__0/Q, and rgbc/pwmb/Counter_reg[4]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[5] has multiple drivers: rgbc/pwmb/Counter_reg[5]__0/Q, and rgbc/pwmb/Counter_reg[5]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[6] has multiple drivers: rgbc/pwmb/Counter_reg[6]/Q, and rgbc/pwmb/Counter_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[7] has multiple drivers: rgbc/pwmb/Counter_reg[7]/Q, and rgbc/pwmb/Counter_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[8] has multiple drivers: rgbc/pwmb/Counter_reg[8]/Q, and rgbc/pwmb/Counter_reg[8]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[9] has multiple drivers: rgbc/pwmb/Counter_reg[9]/Q, and rgbc/pwmb/Counter_reg[9]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[0] has multiple drivers: rgbc/pwmg/Counter_reg[0]/Q, and rgbc/pwmg/Counter_reg[0]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[10] has multiple drivers: rgbc/pwmg/Counter_reg[10]__0/Q, and rgbc/pwmg/Counter_reg[10]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[11] has multiple drivers: rgbc/pwmg/Counter_reg[11]/Q, and rgbc/pwmg/Counter_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[12] has multiple drivers: rgbc/pwmg/Counter_reg[12]/Q, and rgbc/pwmg/Counter_reg[12]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[13] has multiple drivers: rgbc/pwmg/Counter_reg[13]__0/Q, and rgbc/pwmg/Counter_reg[13]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[14] has multiple drivers: rgbc/pwmg/Counter_reg[14]/Q, and rgbc/pwmg/Counter_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[15] has multiple drivers: rgbc/pwmg/Counter_reg[15]/Q, and rgbc/pwmg/Counter_reg[15]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[1] has multiple drivers: rgbc/pwmg/Counter_reg[1]/Q, and rgbc/pwmg/Counter_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[2] has multiple drivers: rgbc/pwmg/Counter_reg[2]/Q, and rgbc/pwmg/Counter_reg[2]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[3] has multiple drivers: rgbc/pwmg/Counter_reg[3]__0/Q, and rgbc/pwmg/Counter_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[4] has multiple drivers: rgbc/pwmg/Counter_reg[4]/Q, and rgbc/pwmg/Counter_reg[4]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[5] has multiple drivers: rgbc/pwmg/Counter_reg[5]/Q, and rgbc/pwmg/Counter_reg[5]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[6] has multiple drivers: rgbc/pwmg/Counter_reg[6]__0/Q, and rgbc/pwmg/Counter_reg[6]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[7] has multiple drivers: rgbc/pwmg/Counter_reg[7]/Q, and rgbc/pwmg/Counter_reg[7]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[8] has multiple drivers: rgbc/pwmg/Counter_reg[8]__0/Q, and rgbc/pwmg/Counter_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmg/Counter[9] has multiple drivers: rgbc/pwmg/Counter_reg[9]__0/Q, and rgbc/pwmg/Counter_reg[9]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[0] has multiple drivers: rgbc/pwmr/Counter_reg[0]__0/Q, and rgbc/pwmr/Counter_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[10] has multiple drivers: rgbc/pwmr/Counter_reg[10]__0/Q, and rgbc/pwmr/Counter_reg[10]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[11] has multiple drivers: rgbc/pwmr/Counter_reg[11]/Q, and rgbc/pwmr/Counter_reg[11]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[12] has multiple drivers: rgbc/pwmr/Counter_reg[12]__0/Q, and rgbc/pwmr/Counter_reg[12]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[13] has multiple drivers: rgbc/pwmr/Counter_reg[13]__0/Q, and rgbc/pwmr/Counter_reg[13]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[14] has multiple drivers: rgbc/pwmr/Counter_reg[14]/Q, and rgbc/pwmr/Counter_reg[14]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[15] has multiple drivers: rgbc/pwmr/Counter_reg[15]__0/Q, and rgbc/pwmr/Counter_reg[15]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[1] has multiple drivers: rgbc/pwmr/Counter_reg[1]__0/Q, and rgbc/pwmr/Counter_reg[1]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[2] has multiple drivers: rgbc/pwmr/Counter_reg[2]__0/Q, and rgbc/pwmr/Counter_reg[2]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[3] has multiple drivers: rgbc/pwmr/Counter_reg[3]/Q, and rgbc/pwmr/Counter_reg[3]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[4] has multiple drivers: rgbc/pwmr/Counter_reg[4]__0/Q, and rgbc/pwmr/Counter_reg[4]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[5] has multiple drivers: rgbc/pwmr/Counter_reg[5]/Q, and rgbc/pwmr/Counter_reg[5]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[6] has multiple drivers: rgbc/pwmr/Counter_reg[6]/Q, and rgbc/pwmr/Counter_reg[6]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[7] has multiple drivers: rgbc/pwmr/Counter_reg[7]__0/Q, and rgbc/pwmr/Counter_reg[7]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[8] has multiple drivers: rgbc/pwmr/Counter_reg[8]__0/Q, and rgbc/pwmr/Counter_reg[8]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmr/Counter[9] has multiple drivers: rgbc/pwmr/Counter_reg[9]__0/Q, and rgbc/pwmr/Counter_reg[9]/Q.
+INFO: [Project 1-461] DRC finished with 48 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.869 . Memory (MB): peak = 797.957 ; gain = 33.980
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 49 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 13 17:20:53 2025...

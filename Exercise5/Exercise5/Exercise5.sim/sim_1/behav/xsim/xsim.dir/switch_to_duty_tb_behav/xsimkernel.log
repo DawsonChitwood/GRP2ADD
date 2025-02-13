@@ -1,7 +1,0 @@
-Running: xsim.dir/switch_to_duty_tb_behav/xsimk.exe -simmode gui -wdb switch_to_duty_tb_behav.wdb -simrunnum 0 -socket 60465
-Design successfully loaded
-Design Loading Memory Usage: 27192 KB (Peak: 27192 KB)
-Design Loading CPU Usage: 62 ms
-Simulation completed
-Simulation Memory Usage: 28408 KB (Peak: 28408 KB)
-Simulation CPU Usage: 62 ms

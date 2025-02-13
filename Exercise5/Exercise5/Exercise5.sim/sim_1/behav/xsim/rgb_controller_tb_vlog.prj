@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Exercise5.srcs/sources_1/new/PWM.v" \
+"../../../../Exercise5.srcs/sources_1/new/rgb_controller.v" \
+"../../../../Exercise5.srcs/sources_1/new/switch_to_duty.v" \
+"../../../../Exercise5.srcs/sim_1/new/rgb_controller_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
