@@ -27,10 +27,13 @@ wire [7:0] rdut ;
 wire [7:0] gdut ;
 wire [7:0] bdut ;
 wire pwmclk;
+reg [2:0] red_bits = 5;
+reg [2:0] green_bits = 6;
+reg [2:0] blue_bits = 5;
 
-switch_to_duty stdr(clk_in,r_in,rdut);
-switch_to_duty stdg(clk_in,g_in,gdut);
-switch_to_duty stdb(clk_in,b_in,bdut);
+switch_to_duty stdr(clk_in,r_in,rdut,red_bits);
+switch_to_duty stdg(clk_in,g_in,gdut,green_bits);
+switch_to_duty stdb(clk_in,b_in,bdut,blue_bits);
 //clk_bf clkb(clk_in,pwmclk);
 
 

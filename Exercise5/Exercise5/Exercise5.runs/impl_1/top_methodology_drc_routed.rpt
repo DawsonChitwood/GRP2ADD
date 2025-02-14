@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Feb 13 22:44:46 2025
+| Date         : Thu Feb 13 23:55:21 2025
 | Host         : LAPTOP-RH96MGM6 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 59
-+-----------+------------------+--------------------------------------------+--------+
-| Rule      | Severity         | Description                                | Checks |
-+-----------+------------------+--------------------------------------------+--------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                | 57     |
-| SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal | 2      |
-+-----------+------------------+--------------------------------------------+--------+
+             Checks found: 73
++-----------+------------------+-----------------------------+--------+
+| Rule      | Severity         | Description                 | Checks |
++-----------+------------------+-----------------------------+--------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell | 73     |
++-----------+------------------+-----------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -305,27 +304,97 @@ Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgbc/stdb/duty_reg/CLKARDCLK is not reached by a timing clock
+The clock pin rgbc/stdb/duty_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgbc/stdr/duty_reg/CLKARDCLK is not reached by a timing clock
+The clock pin rgbc/stdb/duty_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin rgbc/stdr/duty_reg/CLKBWRCLK is not reached by a timing clock
+The clock pin rgbc/stdb/duty_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
-SYNTH-6#1 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance rgbc/stdb/duty_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdb/duty_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-SYNTH-6#2 Warning
-Timing of a RAM block might be sub-optimal  
-The timing for the instance rgbc/stdr/duty_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdb/duty_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdb/duty_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdg/duty_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin rgbc/stdr/duty_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 

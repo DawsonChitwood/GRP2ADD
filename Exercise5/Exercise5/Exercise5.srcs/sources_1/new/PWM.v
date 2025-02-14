@@ -44,7 +44,7 @@ module PWM (input [7:0] Duty, input SysClk,input Reset,output pwm);
     if(Reset) CurrentState <= START;
     else CurrentState <= NextState;
     
-    if(CurrentState == (START | SWITCHON | SWITCHOFF)) Counter <= 0;
+    if(CurrentState == START | CurrentState == SWITCHON | CurrentState == SWITCHOFF) Counter <= 0;
     else Counter <= Counter + 2;
  end
  
