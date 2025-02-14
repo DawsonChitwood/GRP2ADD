@@ -7,10 +7,14 @@
 # Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/tools/Xilinx/Vitis/2024.2/bin:/tools/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2024.2/bin
+  PATH=C:/Xilinx/Vitis/2024.2/bin;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.2/bin
 else
-  PATH=/tools/Xilinx/Vitis/2024.2/bin:/tools/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2024.2/bin:$PATH
+  PATH=C:/Xilinx/Vitis/2024.2/bin;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1'
+HD_PWD='C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -23,31 +23,29 @@
 module SSD_tb();
 reg clk;
 reg rst;
-reg encoded;
+reg [7:0] R;
+reg [7:0] G;
+reg [7:0] B;
 reg error;
-wire anode;
-wire cathode;
+wire [7:0] anode;
+wire [7:0] cathode;
 reg [8:0] checker;
 
-integer i;
-
-task checking(input [8:0] anode, input [5:0] R,input [5:0] G, input [5:0] , output [7:0] check);
-    case(anode) 
-    
+task(input [7:0] an,input [7:0] R, inpu
 
 
 
+ssd_controller ssdc(clk,rst,R,G,B,anode,cathode);
 
 initial begin
     clk = 0;
-    rst = 1;
+    rst = 0;
     error = 0;
     checker = 7'b0000000;
+    R = 32;
+    G = 0;
+    B = 15;
 end
-
-for(i = 0; i < 64; i = i + 1) begin
-    
-    end
 
 
 always begin

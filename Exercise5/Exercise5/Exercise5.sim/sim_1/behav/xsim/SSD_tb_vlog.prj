@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Exercise5.srcs/sources_1/new/cathodeControl.v" \
+
+sv xil_defaultlib  \
+"../../../../Exercise5.srcs/sources_1/new/cathode_top.sv" \
+"../../../../Exercise5.srcs/sources_1/new/ssd_controller.sv" \
+
+verilog xil_defaultlib  \
+"../../../../Exercise5.srcs/sim_1/new/SSD_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

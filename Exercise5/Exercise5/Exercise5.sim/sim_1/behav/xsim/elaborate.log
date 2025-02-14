@@ -1,15 +1,20 @@
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PWM_tb_behav xil_defaultlib.PWM_tb xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot SSD_tb_behav xil_defaultlib.SSD_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'anode' [C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sim_1/new/SSD_tb.v:38]
+WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'selector' [C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:42]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'digit_point' [C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:44]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.PWM
-Compiling module xil_defaultlib.PWM_tb
+Compiling module xil_defaultlib.cathodeControl
+Compiling module xil_defaultlib.cathode_top
+Compiling module xil_defaultlib.ssd_controller
+Compiling module xil_defaultlib.SSD_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot PWM_tb_behav
+Built simulation snapshot SSD_tb_behav

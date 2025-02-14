@@ -29,7 +29,7 @@ module cathodeControl(input [3:0] digit1,input [3:0] digit2,input [3:0] digit3, 
                 3:  out = digit4;
                 4:  out = digit5;
                 5:  out = digit6;
-                default: out=0;
+                default: out = 0;
             endcase
        end
 endmodule

@@ -2,6 +2,9 @@
 2020.2
 Nov  8 2024
 22:36:57
-C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/PWM_tb_func_impl.v,1739506683,verilog,,C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v,,PWM_0;PWM_1;glbl;rgb_controller;switch_to_duty;switch_to_duty_2;top,,,,,,,,
+C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/SSD_tb_func_impl.v,1739546854,verilog,,C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v,,PWM;PWM_0;PWM_1;glbl;rgb_controller;switch_to_duty;switch_to_duty_2;switch_to_duty_3;top,,uvm,,,,,,
 C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sim_1/new/PWM_tb.v,1739504526,verilog,,,,PWM_tb,,,,,,,,
-C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v,1739506477,verilog,,C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sim_1/new/PWM_tb.v,,PWM,,,,,,,,
+C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sim_1/new/SSD_tb.v,1739545076,verilog,,,,SSD_tb,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v,1739544048,verilog,,,,cathodeControl,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv,1739544048,systemVerilog,,C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv,,cathode_top,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv,1739545508,systemVerilog,,,,ssd_controller,,uvm,,,,,,
