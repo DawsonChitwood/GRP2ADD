@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 02/13/2025 12:18:53 PM
+// Create Date: 02/13/2025 10:02:53 AM
 // Design Name: 
-// Module Name: clk_bf
+// Module Name: PWM_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,18 +19,29 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-// a module we were going to use for clock buffering but didn't end up using
-module clk_bf(input clk, output reg clkout);
-reg first = 1;
 
+module PWM_tb();
+reg [7:0] duty;
+reg SysClk;
+reg Reset;
+wire pwm;
+parameter FIFTY = 128;
+parameter TWENTYFIVE = 64;
+parameter  SEVENTYFIVE = 192;
 
-// flip flop that inverses the clock every time a posedge is encountered
-always @(posedge clk) begin
-    if(first) begin
-        clkout = 1;
-        first = 0;
-    end 
-    else clkout = !clk;
+PWM pwmtb(duty,SysClk,Reset,pwm);
+
+initial begin
+    SysClk = 0;
+    Reset = 0;
+    duty = TWENTYFIVE;
 end
+
+always begin
+    #1 SysClk = 1;
+    #1 SysClk = 0;
+end
+
+
 
 endmodule
