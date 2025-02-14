@@ -39,9 +39,9 @@ rgb_controller rgb(clk,rst,rin,gin,bin,rout,gout,bout);
 initial begin
     clk = 0;
     rst = 0;
-    rin = 32;
-    gin = 0;
-    bin = 0;
+    rin = 8'h1F;
+    gin = 8'h3F;
+    bin = 8'h1F;
 end
 
 
