@@ -10,7 +10,7 @@ module cathode_top
    input wire         clk,
    input wire [3:0]   encoded,
    input wire         digit_point,
-   output logic [7:0] cathode
+   output reg [7:0] cathode
    );
 
   always_ff @(posedge clk) begin

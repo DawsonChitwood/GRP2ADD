@@ -1,0 +1,616 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Feb 14 07:33:21 2025
+# Process ID         : 19930
+# Current directory  : /home/student/Desktop/CSEE4280/GRP2ADD
+# Command line       : vivado
+# Log file           : /home/student/Desktop/CSEE4280/GRP2ADD/vivado.log
+# Journal file       : /home/student/Desktop/CSEE4280/GRP2ADD/vivado.jou
+# Running On         : CSEE4280
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 20.04.6 LTS
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 3593.258 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 8323 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 10470 MB
+# Available Virtual  : 9154 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-50:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/arty-s7-50/B.0/board.xml as part xc7s50csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-10:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/arty-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-z7-20:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/arty-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cmod-s7-25:part0:1.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/cmod-s7-25/B.0/board.xml as part xc7s25csga225-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-07s:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/cora-z7-07s/B.0/board.xml as part xc7z007sclg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:cora-z7-10:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/cora-z7-10/B.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/eclypse-z7/A.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:eclypse-z7:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/eclypse-z7/B.0/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/genesys-zu-3eg/B.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_3eg:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/genesys-zu-3eg/D.0/board.xml as part xczu3eg-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:gzu_5ev:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/genesys-zu-5ev/C.0/board.xml as part xczu5ev-sfvc784-1-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:sword:part0:1.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/sword/C.0/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zedboard:part0:1.1 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/zedboard/1.3/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-10:part0:1.2 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/zybo-z7-10/A.0/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo-z7-20:part0:1.2 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/zybo-z7-20/A.0/board.xml as part xc7z020clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:1.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/zybo/B.3/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:zybo:part0:2.0 available at /tools/Xilinx/Vivado/2024.2/data/boards/board_files/zybo/B.4/board.xml as part xc7z010clg400-1 specified in board_part file is either invalid or not available
+open_project /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+add_files -norecurse /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Feb 14 07:51:16 2025] Launched synth_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/synth_1/runme.log
+[Fri Feb 14 07:51:16 2025] Launched impl_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/runme.log
+close [ open /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v w ]
+add_files /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+reset_run impl_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Feb 14 08:12:46 2025] Launched impl_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/utils_1/imports/synth_1/top.dcp with file /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/synth_1/top.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+[Fri Feb 14 08:15:19 2025] Launched synth_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/synth_1/runme.log
+[Fri Feb 14 08:15:19 2025] Launched impl_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-14:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292BCFCD9A
+set_property PROGRAM.FILE {/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292BCFCD9A
+close_hw_manager
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/utils_1/imports/synth_1/top.dcp with file /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Feb 14 08:21:02 2025] Launched synth_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/synth_1/runme.log
+[Fri Feb 14 08:21:02 2025] Launched impl_1...
+Run output will be captured here: /home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/rgb_controller.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/ssd_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/top.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathode_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/PWM.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/seven_segment.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.srcs/sources_1/new/cathodeControl.v:]
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2024.2
+  **** Build date : Oct 29 2024 at 10:16:47
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2024.2.0
+  ****** Build date   : Oct 30 2024-14:19:07
+    **** Build number : 2024.2.1730312347
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292BCFCD9A
+set_property PROGRAM.FILE {/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {/home/student/Desktop/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292BCFCD9A
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 14 08:23:27 2025...

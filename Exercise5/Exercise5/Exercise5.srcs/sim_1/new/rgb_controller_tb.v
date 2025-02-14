@@ -31,6 +31,7 @@ wire  gout ;
 wire  bout ;
 
 
+
 rgb_controller rgb(clk,rst,rin,gin,bin,rout,gout,bout);
 
 initial begin
