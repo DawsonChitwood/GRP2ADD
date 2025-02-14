@@ -33,10 +33,10 @@ module ssd_controller(
    parameter NUM_SEGMENTS = 8;
    parameter CLK_PER      = 10;  // Clock period in ns
    parameter REFR_RATE    = 1000; // Refresh rate in Hz
-   parameter INTERVAL = 10000;  //10000
+   parameter INTERVAL = 1;  //10000
 
     reg [13:0]        refresh_count;
-    reg [3:0]    anode_count;
+    reg [2:0]    anode_count;
     reg [3:0] cathode_passthrough;
     
     cathodeControl cathctrl(red [7:4],red [3:0],green [7:4],green [3:0],blue [7:4],blue [3:0], anode_count,cathode_passthrough);
