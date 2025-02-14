@@ -97,11 +97,18 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {USF-XSim-62}  -string {{ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[14] has multiple drivers: rgbc/pwmb/Counter_reg[14]/Q, and rgbc/pwmb/Counter_reg[14]__0/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[15] has multiple drivers: rgbc/pwmb/Counter_reg[15]__0/Q, and rgbc/pwmb/Counter_reg[15]/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[1] has multiple drivers: rgbc/pwmb/Counter_reg[1]/Q, and rgbc/pwmb/Counter_reg[1]__0/Q.}}  -suppress 
 set_msg_config  -id {USF-XSim-62}  -string {{ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.}}  -suppress 
 set_msg_config  -id {Common 17-180}  -string {{ERROR: [Common 17-180] Spawn failed: No error}}  -suppress 
 set_msg_config  -id {Common 17-69}  -string {{ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[0] has multiple drivers: rgbc/pwmb/Counter_reg[0]/Q, and rgbc/pwmb/Counter_reg[0]__0/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[10] has multiple drivers: rgbc/pwmb/Counter_reg[10]/Q, and rgbc/pwmb/Counter_reg[10]__0/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[11] has multiple drivers: rgbc/pwmb/Counter_reg[11]/Q, and rgbc/pwmb/Counter_reg[11]__0/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[12] has multiple drivers: rgbc/pwmb/Counter_reg[12]__0/Q, and rgbc/pwmb/Counter_reg[12]/Q.}}  -suppress 
+set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[13] has multiple drivers: rgbc/pwmb/Counter_reg[13]/Q, and rgbc/pwmb/Counter_reg[13]__0/Q.}}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }

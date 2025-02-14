@@ -20,76 +20,73 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module PWM (input [7:0] Duty, input SysClk,input Reset,output pwm);
-            
- reg [15:0] Counter=0;          //Variable to keep track of when the period has ended for the signal
- reg [7:0] TransitionTime;   //Variable to keep track of when the signal needs to transition from high to low
- reg [15:0] Per;                  //Variable for Period processing.
+ 
+ 
+ parameter START = 0, ON = 1, OFF = 2, SWITCHON = 3, SWITCHOFF = 4;  //State parameters, Boot is to help get things moving           
+ reg [15:0] Counter = 0;          //Variable to keep track of when the period has ended for the signal
+ reg [15:0] Per = 255;                  //Variable that determines how many clocks are in a period
  reg Out = 0;                          //Variable used to indirectly assign values to the pwm output
- reg [2:0] CurrentState;
- reg [2:0] NextState;   //State variables
- 
- 
- parameter START = 0, ONA = 1,ONB = 2, OFFA = 3,OFFB = 4, SWITCH = 5, BOOT = 6;  //State parameters
+ reg [2:0] CurrentState = START;        // The variable that the current state is stored in
+ reg [2:0] NextState = START;   // The variable that the next state is stored in
+ reg reached = 0;
 
  
+ 
+ 
  assign pwm = Out;  //Indirect assignment of output value
- 
- 
- //Variable Initialization ~ mainly for calculating the appropriate burst-relevant values based on BurstType
- initial begin
-    Counter = 0;
-    Per = 255;    // Period is 255 so that 255 clock cycles will correspond to a full cycle of the PWM signal
-    CurrentState = BOOT;
-    NextState = START;
-    TransitionTime = Duty;
- end
-    
-    
- 
+     
+     
+     
+     
+     
  // State Memory
  always @ (posedge SysClk) begin
-    if(Reset) CurrentState <= BOOT;
+    if(Reset) CurrentState <= START;
     else CurrentState <= NextState;
-    TransitionTime <= Duty;
+    
+    if(CurrentState == (START | SWITCHON | SWITCHOFF)) Counter <= 0;
+    else Counter <= Counter + 2;
  end
+ 
+ 
+ 
+ 
  
  
  //Next State Logic
- always @(Counter, Out,CurrentState) begin
+ always @(Counter) begin
     case (CurrentState) 
         START: begin
-            if(Duty === 0) NextState = OFFB;                                         //FSM starts off at this stage and moves on based on BurstMode
-            else NextState = ONA;
+            if(Duty == 0) NextState = OFF;                                         //FSM starts off at this stage and moves on based on BurstMode
+            else NextState = ON;
         end
-        ONA:  begin                                         //The PWM-High state for non-burstmode operation
-                if(Counter >= Per - 1) NextState = SWITCH;
-                else if(Counter >= TransitionTime - 1) NextState = OFFA;
-                else NextState = ONB;
+        ON:  begin                                         //The PWM-High state for non-burstmode operation
+                if(Counter >= Per & Duty != 0) NextState = SWITCHON;
+                else if (Counter >= Per & Duty == 0) NextState = SWITCHOFF;
+                else if(Counter >= Duty ) NextState = OFF;
+                else NextState = ON;
              end
-        OFFA:   begin                                       //The common off state of the FSM
-                if(Counter >= Per - 1) NextState = SWITCH;
-                else NextState = OFFB;
+        OFF:   begin                                       //The common off state of the FSM
+                if(Counter >= Per & Duty != 0) NextState = SWITCHON;
+                else if(Counter >= Per & Duty == 0) NextState = SWITCHOFF;
+                else NextState = OFF;
                 end
-        ONB:    begin                                       //The PWM-High state for non-burstmode operation
-                if(Counter >= Per - 1) NextState = SWITCH;
-                else if(Counter >= TransitionTime - 1) NextState = OFFA;
-                else NextState = ONA;
+        SWITCHON: begin                               //The state used to transition from OFF to the next mode (based on BurstMode)
+                if(Duty == 0) NextState = OFF;
+                else NextState = ON;
                 end
-        OFFB:    begin                                      //The common off state of the FSM
-                if(Counter >= Per - 1) NextState = SWITCH;
-                else NextState = OFFA;
+        SWITCHOFF: begin                               //The state used to transition from OFF to the next mode (based on BurstMode)
+                if(Duty == 0) NextState = OFF;
+                else NextState = ON;
                 end
-        SWITCH: begin                               //The state used to transition from OFF to the next mode (based on BurstMode)
-             
-                if(Duty === 0) NextState = OFFA;
-                else NextState = ONA;
-                end
-        BOOT:
-            NextState = START;
         default:
-                NextState = BOOT;
+                NextState = START;
      endcase
      end        
+   
+   
+   
+   
    
    
    
@@ -98,31 +95,21 @@ module PWM (input [7:0] Duty, input SysClk,input Reset,output pwm);
   always @(CurrentState) begin
     case(CurrentState) 
     START: begin
-            Counter = 0;
             Out = 0;
      end
-     ONA:  begin
-             Counter = Counter + 2;
+     ON:  begin
             Out = 1;
      end
-     OFFA: begin
-            Counter = Counter + 2;
+     OFF: begin
             Out = 0;
      end
-     ONB:  begin
-         Counter = Counter + 2;
+     SWITCHON: begin
             Out = 1;
      end
-     OFFB: begin
-         Counter = Counter + 2;
-            Out = 0;
-     end
-     SWITCH: begin
-            Counter = 0;
+     SWITCHOFF: begin
             Out = 0;
      end
      default: begin
-      Counter = 0;
             Out = 0;
      end
      

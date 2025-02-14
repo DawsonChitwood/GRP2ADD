@@ -34,7 +34,7 @@ PWM pwmtb(duty,SysClk,Reset,pwm);
 initial begin
     SysClk = 0;
     Reset = 0;
-    duty = FIFTY;
+    duty = TWENTYFIVE;
 end
 
 always begin

@@ -1,0 +1,665 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Feb 13 22:44:46 2025
+| Host         : LAPTOP-RH96MGM6 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                                 Violations  
+---------  ----------------  ------------------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell                 57          
+SYNTH-6    Warning           Timing of a RAM block might be sub-optimal  2           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (57)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (79)
+5. checking no_input_delay (17)
+6. checking no_output_delay (3)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (57)
+-------------------------
+ There are 57 register/latch pins with no clock driven by root clock pin: CLK100MHZ (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (79)
+-------------------------------------------------
+ There are 79 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (17)
+-------------------------------
+ There are 17 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (3)
+-------------------------------
+ There are 3 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   82          inf        0.000                      0                   82           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            82 Endpoints
+Min Delay            82 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED16_R
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.505ns  (logic 4.395ns (58.569%)  route 3.109ns (41.431%))
+  Logic Levels:           3  (FDRE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y72          FDRE                         0.000     0.000 r  rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/C
+    SLICE_X8Y72          FDRE (Prop_fdre_C_Q)         0.518     0.518 r  rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/Q
+                         net (fo=4, routed)           0.958     1.476    rgbc/pwmr/CurrentState[0]
+    SLICE_X8Y72          LUT2 (Prop_lut2_I0_O)        0.153     1.629 r  rgbc/pwmr/LED16_R_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.152     3.780    LED16_R_OBUF
+    N15                  OBUF (Prop_obuf_I_O)         3.724     7.505 r  LED16_R_OBUF_inst/O
+                         net (fo=0)                   0.000     7.505    LED16_R
+    N15                                                               r  LED16_R (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED16_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.118ns  (logic 4.471ns (62.813%)  route 2.647ns (37.187%))
+  Logic Levels:           3  (FDRE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y72          FDRE                         0.000     0.000 r  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X9Y72          FDRE (Prop_fdre_C_Q)         0.419     0.419 f  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.462     0.881    rgbc/pwmg/CurrentState[2]
+    SLICE_X9Y72          LUT2 (Prop_lut2_I1_O)        0.328     1.209 r  rgbc/pwmg/LED16_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.185     3.394    LED16_G_OBUF
+    M16                  OBUF (Prop_obuf_I_O)         3.724     7.118 r  LED16_G_OBUF_inst/O
+                         net (fo=0)                   0.000     7.118    LED16_G
+    M16                                                               r  LED16_G (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/FSM_sequential_CurrentState_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            LED16_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.704ns  (logic 4.147ns (61.861%)  route 2.557ns (38.139%))
+  Logic Levels:           3  (FDRE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y86          FDRE                         0.000     0.000 r  rgbc/pwmb/FSM_sequential_CurrentState_reg[0]/C
+    SLICE_X7Y86          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  rgbc/pwmb/FSM_sequential_CurrentState_reg[0]/Q
+                         net (fo=4, routed)           0.701     1.157    rgbc/pwmb/CurrentState[0]
+    SLICE_X7Y86          LUT2 (Prop_lut2_I0_O)        0.124     1.281 r  rgbc/pwmb/LED16_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.856     3.137    LED16_B_OBUF
+    R12                  OBUF (Prop_obuf_I_O)         3.567     6.704 r  LED16_B_OBUF_inst/O
+                         net (fo=0)                   0.000     6.704    LED16_B
+    R12                                                               r  LED16_B (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdb/duty_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.123ns  (logic 2.856ns (46.646%)  route 3.267ns (53.354%))
+  Logic Levels:           4  (LUT2=1 LUT5=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y34         RAMB18E1                     0.000     0.000 r  rgbc/stdb/duty_reg/CLKARDCLK
+    RAMB18_X0Y34         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[5])
+                                                      2.454     2.454 f  rgbc/stdb/duty_reg/DOADO[5]
+                         net (fo=3, routed)           1.168     3.622    rgbc/stdb/DOADO[5]
+    SLICE_X10Y85         LUT2 (Prop_lut2_I0_O)        0.124     3.746 f  rgbc/stdb/FSM_sequential_CurrentState[2]_i_4__1/O
+                         net (fo=1, routed)           0.452     4.198    rgbc/stdb/FSM_sequential_CurrentState[2]_i_4__1_n_0
+    SLICE_X10Y85         LUT6 (Prop_lut6_I5_O)        0.124     4.322 f  rgbc/stdb/FSM_sequential_CurrentState[2]_i_2__1/O
+                         net (fo=3, routed)           1.082     5.404    rgbc/pwmb/FSM_sequential_CurrentState_reg[0]_0
+    SLICE_X7Y86          LUT5 (Prop_lut5_I0_O)        0.154     5.558 r  rgbc/pwmb/FSM_sequential_CurrentState[2]_i_1__1/O
+                         net (fo=1, routed)           0.565     6.123    rgbc/pwmb/NextState[2]
+    SLICE_X7Y86          FDRE                                         r  rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdr/duty_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.964ns  (logic 3.058ns (51.273%)  route 2.906ns (48.727%))
+  Logic Levels:           4  (LUT2=1 LUT5=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y26         RAMB18E1                     0.000     0.000 r  rgbc/stdr/duty_reg/CLKBWRCLK
+    RAMB18_X0Y26         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[6])
+                                                      2.454     2.454 f  rgbc/stdr/duty_reg/DOBDO[6]
+                         net (fo=3, routed)           1.295     3.749    rgbc/stdr/DOBDO[6]
+    SLICE_X9Y71          LUT2 (Prop_lut2_I1_O)        0.153     3.902 f  rgbc/stdr/FSM_sequential_CurrentState[2]_i_4__0/O
+                         net (fo=1, routed)           0.268     4.171    rgbc/stdr/FSM_sequential_CurrentState[2]_i_4__0_n_0
+    SLICE_X9Y71          LUT6 (Prop_lut6_I5_O)        0.327     4.498 f  rgbc/stdr/FSM_sequential_CurrentState[2]_i_2__0/O
+                         net (fo=3, routed)           1.002     5.500    rgbc/pwmg/FSM_sequential_CurrentState_reg[0]_0
+    SLICE_X9Y72          LUT5 (Prop_lut5_I0_O)        0.124     5.624 r  rgbc/pwmg/FSM_sequential_CurrentState[2]_i_1__0/O
+                         net (fo=1, routed)           0.340     5.964    rgbc/pwmg/NextState[2]
+    SLICE_X9Y72          FDRE                                         r  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 SW[12]
+                            (input port)
+  Destination:            rgbc/stdr/duty_reg/ADDRARDADDR[5]
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.919ns  (logic 1.467ns (24.780%)  route 4.452ns (75.220%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    H6                                                0.000     0.000 r  SW[12] (IN)
+                         net (fo=0)                   0.000     0.000    SW[12]
+    H6                   IBUF (Prop_ibuf_I_O)         1.467     1.467 r  SW_IBUF[12]_inst/O
+                         net (fo=1, routed)           4.452     5.919    rgbc/stdr/SW_IBUF[7]
+    RAMB18_X0Y26         RAMB18E1                                     r  rgbc/stdr/duty_reg/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdr/duty_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.842ns  (logic 3.366ns (57.621%)  route 2.476ns (42.379%))
+  Logic Levels:           5  (CARRY4=2 LUT4=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y26         RAMB18E1                     0.000     0.000 r  rgbc/stdr/duty_reg/CLKARDCLK
+    RAMB18_X0Y26         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      2.454     2.454 r  rgbc/stdr/duty_reg/DOADO[1]
+                         net (fo=3, routed)           1.003     3.457    rgbc/pwmr/DOADO[1]
+    SLICE_X9Y67          LUT4 (Prop_lut4_I3_O)        0.124     3.581 r  rgbc/pwmr/i__carry_i_7/O
+                         net (fo=1, routed)           0.000     3.581    rgbc/pwmr/i__carry_i_7_n_0
+    SLICE_X9Y67          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.131 r  rgbc/pwmr/NextState1_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     4.131    rgbc/pwmr/NextState1_inferred__1/i__carry_n_0
+    SLICE_X9Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.245 f  rgbc/pwmr/NextState1_inferred__1/i__carry__0/CO[3]
+                         net (fo=2, routed)           1.472     5.718    rgbc/pwmr/in5
+    SLICE_X8Y72          LUT6 (Prop_lut6_I5_O)        0.124     5.842 r  rgbc/pwmr/FSM_sequential_CurrentState[0]_i_1/O
+                         net (fo=1, routed)           0.000     5.842    rgbc/pwmr/NextState[0]
+    SLICE_X8Y72          FDRE                                         r  rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdr/duty_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmr/FSM_sequential_CurrentState_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.832ns  (logic 3.366ns (57.720%)  route 2.466ns (42.280%))
+  Logic Levels:           5  (CARRY4=2 LUT4=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y26         RAMB18E1                     0.000     0.000 r  rgbc/stdr/duty_reg/CLKARDCLK
+    RAMB18_X0Y26         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[1])
+                                                      2.454     2.454 r  rgbc/stdr/duty_reg/DOADO[1]
+                         net (fo=3, routed)           1.003     3.457    rgbc/pwmr/DOADO[1]
+    SLICE_X9Y67          LUT4 (Prop_lut4_I3_O)        0.124     3.581 r  rgbc/pwmr/i__carry_i_7/O
+                         net (fo=1, routed)           0.000     3.581    rgbc/pwmr/i__carry_i_7_n_0
+    SLICE_X9Y67          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.131 r  rgbc/pwmr/NextState1_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     4.131    rgbc/pwmr/NextState1_inferred__1/i__carry_n_0
+    SLICE_X9Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.245 r  rgbc/pwmr/NextState1_inferred__1/i__carry__0/CO[3]
+                         net (fo=2, routed)           1.462     5.708    rgbc/pwmr/in5
+    SLICE_X8Y72          LUT6 (Prop_lut6_I4_O)        0.124     5.832 r  rgbc/pwmr/FSM_sequential_CurrentState[1]_i_1/O
+                         net (fo=1, routed)           0.000     5.832    rgbc/pwmr/NextState[1]
+    SLICE_X8Y72          FDRE                                         r  rgbc/pwmr/FSM_sequential_CurrentState_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdr/duty_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.749ns  (logic 3.062ns (53.258%)  route 2.687ns (46.742%))
+  Logic Levels:           4  (LUT2=1 LUT5=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y26         RAMB18E1                     0.000     0.000 r  rgbc/stdr/duty_reg/CLKARDCLK
+    RAMB18_X0Y26         RAMB18E1 (Prop_ramb18e1_CLKARDCLK_DOADO[6])
+                                                      2.454     2.454 f  rgbc/stdr/duty_reg/DOADO[6]
+                         net (fo=3, routed)           1.025     3.479    rgbc/stdr/DOADO[6]
+    SLICE_X8Y67          LUT2 (Prop_lut2_I1_O)        0.153     3.632 f  rgbc/stdr/FSM_sequential_CurrentState[2]_i_4/O
+                         net (fo=1, routed)           0.289     3.921    rgbc/stdr/FSM_sequential_CurrentState[2]_i_4_n_0
+    SLICE_X8Y67          LUT6 (Prop_lut6_I5_O)        0.331     4.252 f  rgbc/stdr/FSM_sequential_CurrentState[2]_i_2/O
+                         net (fo=3, routed)           0.805     5.057    rgbc/pwmr/FSM_sequential_CurrentState_reg[0]_0
+    SLICE_X8Y72          LUT5 (Prop_lut5_I0_O)        0.124     5.181 r  rgbc/pwmr/FSM_sequential_CurrentState[2]_i_1/O
+                         net (fo=1, routed)           0.568     5.749    rgbc/pwmr/NextState[2]
+    SLICE_X8Y72          FDRE                                         r  rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/stdr/duty_reg/CLKBWRCLK
+                            (rising edge-triggered cell RAMB18E1)
+  Destination:            rgbc/pwmg/FSM_sequential_CurrentState_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.634ns  (logic 3.366ns (59.744%)  route 2.268ns (40.256%))
+  Logic Levels:           5  (CARRY4=2 LUT4=1 LUT6=1 RAMB18E1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    RAMB18_X0Y26         RAMB18E1                     0.000     0.000 r  rgbc/stdr/duty_reg/CLKBWRCLK
+    RAMB18_X0Y26         RAMB18E1 (Prop_ramb18e1_CLKBWRCLK_DOBDO[1])
+                                                      2.454     2.454 r  rgbc/stdr/duty_reg/DOBDO[1]
+                         net (fo=3, routed)           1.375     3.829    rgbc/pwmg/DOBDO[1]
+    SLICE_X9Y69          LUT4 (Prop_lut4_I3_O)        0.124     3.953 r  rgbc/pwmg/i__carry_i_7__0/O
+                         net (fo=1, routed)           0.000     3.953    rgbc/pwmg/i__carry_i_7__0_n_0
+    SLICE_X9Y69          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.503 r  rgbc/pwmg/NextState1_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     4.503    rgbc/pwmg/NextState1_inferred__1/i__carry_n_0
+    SLICE_X9Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     4.617 f  rgbc/pwmg/NextState1_inferred__1/i__carry__0/CO[3]
+                         net (fo=2, routed)           0.893     5.510    rgbc/pwmg/NextState1_inferred__1/i__carry__0_n_0
+    SLICE_X9Y72          LUT6 (Prop_lut6_I5_O)        0.124     5.634 r  rgbc/pwmg/FSM_sequential_CurrentState[0]_i_1__0/O
+                         net (fo=1, routed)           0.000     5.634    rgbc/pwmg/NextState[0]
+    SLICE_X9Y72          FDRE                                         r  rgbc/pwmg/FSM_sequential_CurrentState_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/FSM_sequential_CurrentState_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.309ns  (logic 0.227ns (73.409%)  route 0.082ns (26.591%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y86          FDRE                         0.000     0.000 r  rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X7Y86          FDRE (Prop_fdre_C_Q)         0.128     0.128 f  rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.082     0.210    rgbc/pwmb/CurrentState[2]
+    SLICE_X7Y86          LUT6 (Prop_lut6_I0_O)        0.099     0.309 r  rgbc/pwmb/FSM_sequential_CurrentState[0]_i_1__1/O
+                         net (fo=1, routed)           0.000     0.309    rgbc/pwmb/NextState[0]
+    SLICE_X7Y86          FDRE                                         r  rgbc/pwmb/FSM_sequential_CurrentState_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmg/FSM_sequential_CurrentState_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.309ns  (logic 0.227ns (73.409%)  route 0.082ns (26.591%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y72          FDRE                         0.000     0.000 r  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X9Y72          FDRE (Prop_fdre_C_Q)         0.128     0.128 f  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.082     0.210    rgbc/pwmg/CurrentState[2]
+    SLICE_X9Y72          LUT6 (Prop_lut6_I2_O)        0.099     0.309 r  rgbc/pwmg/FSM_sequential_CurrentState[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     0.309    rgbc/pwmg/NextState[1]
+    SLICE_X9Y72          FDRE                                         r  rgbc/pwmg/FSM_sequential_CurrentState_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/FSM_sequential_CurrentState_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.310ns  (logic 0.227ns (73.172%)  route 0.083ns (26.828%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y86          FDRE                         0.000     0.000 r  rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X7Y86          FDRE (Prop_fdre_C_Q)         0.128     0.128 f  rgbc/pwmb/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.083     0.211    rgbc/pwmb/CurrentState[2]
+    SLICE_X7Y86          LUT6 (Prop_lut6_I2_O)        0.099     0.310 r  rgbc/pwmb/FSM_sequential_CurrentState[1]_i_1__1/O
+                         net (fo=1, routed)           0.000     0.310    rgbc/pwmb/NextState[1]
+    SLICE_X7Y86          FDRE                                         r  rgbc/pwmb/FSM_sequential_CurrentState_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmg/FSM_sequential_CurrentState_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.310ns  (logic 0.227ns (73.172%)  route 0.083ns (26.828%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y72          FDRE                         0.000     0.000 r  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X9Y72          FDRE (Prop_fdre_C_Q)         0.128     0.128 f  rgbc/pwmg/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.083     0.211    rgbc/pwmg/CurrentState[2]
+    SLICE_X9Y72          LUT6 (Prop_lut6_I0_O)        0.099     0.310 r  rgbc/pwmg/FSM_sequential_CurrentState[0]_i_1__0/O
+                         net (fo=1, routed)           0.000     0.310    rgbc/pwmg/NextState[0]
+    SLICE_X9Y72          FDRE                                         r  rgbc/pwmg/FSM_sequential_CurrentState_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmr/FSM_sequential_CurrentState_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.332ns  (logic 0.246ns (74.207%)  route 0.086ns (25.793%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y72          FDRE                         0.000     0.000 r  rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X8Y72          FDRE (Prop_fdre_C_Q)         0.148     0.148 f  rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.086     0.234    rgbc/pwmr/CurrentState[2]
+    SLICE_X8Y72          LUT6 (Prop_lut6_I2_O)        0.098     0.332 r  rgbc/pwmr/FSM_sequential_CurrentState[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.332    rgbc/pwmr/NextState[1]
+    SLICE_X8Y72          FDRE                                         r  rgbc/pwmr/FSM_sequential_CurrentState_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.334ns  (logic 0.246ns (73.762%)  route 0.088ns (26.238%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y72          FDRE                         0.000     0.000 r  rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/C
+    SLICE_X8Y72          FDRE (Prop_fdre_C_Q)         0.148     0.148 f  rgbc/pwmr/FSM_sequential_CurrentState_reg[2]/Q
+                         net (fo=4, routed)           0.088     0.236    rgbc/pwmr/CurrentState[2]
+    SLICE_X8Y72          LUT6 (Prop_lut6_I0_O)        0.098     0.334 r  rgbc/pwmr/FSM_sequential_CurrentState[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.334    rgbc/pwmr/NextState[0]
+    SLICE_X8Y72          FDRE                                         r  rgbc/pwmr/FSM_sequential_CurrentState_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/Counter_reg[4]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/Counter_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y84          FDRE                         0.000     0.000 r  rgbc/pwmb/Counter_reg[4]/C
+    SLICE_X9Y84          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rgbc/pwmb/Counter_reg[4]/Q
+                         net (fo=3, routed)           0.120     0.261    rgbc/pwmb/Counter_reg[4]
+    SLICE_X9Y84          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  rgbc/pwmb/Counter_reg[1]_i_1__1/O[3]
+                         net (fo=1, routed)           0.000     0.369    rgbc/pwmb/Counter_reg[1]_i_1__1_n_4
+    SLICE_X9Y84          FDRE                                         r  rgbc/pwmb/Counter_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/Counter_reg[8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/Counter_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y85          FDRE                         0.000     0.000 r  rgbc/pwmb/Counter_reg[8]/C
+    SLICE_X9Y85          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rgbc/pwmb/Counter_reg[8]/Q
+                         net (fo=4, routed)           0.120     0.261    rgbc/pwmb/Counter_reg[8]
+    SLICE_X9Y85          CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  rgbc/pwmb/Counter_reg[5]_i_1__1/O[3]
+                         net (fo=1, routed)           0.000     0.369    rgbc/pwmb/Counter_reg[5]_i_1__1_n_4
+    SLICE_X9Y85          FDRE                                         r  rgbc/pwmb/Counter_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/Counter_reg[5]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/Counter_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.372ns  (logic 0.256ns (68.766%)  route 0.116ns (31.234%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y85          FDRE                         0.000     0.000 r  rgbc/pwmb/Counter_reg[5]/C
+    SLICE_X9Y85          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rgbc/pwmb/Counter_reg[5]/Q
+                         net (fo=3, routed)           0.116     0.257    rgbc/pwmb/Counter_reg[5]
+    SLICE_X9Y85          CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     0.372 r  rgbc/pwmb/Counter_reg[5]_i_1__1/O[0]
+                         net (fo=1, routed)           0.000     0.372    rgbc/pwmb/Counter_reg[5]_i_1__1_n_7
+    SLICE_X9Y85          FDRE                                         r  rgbc/pwmb/Counter_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rgbc/pwmb/Counter_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            rgbc/pwmb/Counter_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.372ns  (logic 0.252ns (67.654%)  route 0.120ns (32.346%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y85          FDRE                         0.000     0.000 r  rgbc/pwmb/Counter_reg[7]/C
+    SLICE_X9Y85          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  rgbc/pwmb/Counter_reg[7]/Q
+                         net (fo=3, routed)           0.120     0.261    rgbc/pwmb/Counter_reg[7]
+    SLICE_X9Y85          CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     0.372 r  rgbc/pwmb/Counter_reg[5]_i_1__1/O[2]
+                         net (fo=1, routed)           0.000     0.372    rgbc/pwmb/Counter_reg[5]_i_1__1_n_5
+    SLICE_X9Y85          FDRE                                         r  rgbc/pwmb/Counter_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
