@@ -32,12 +32,15 @@ parameter TWENTYFIVE = 64;
 parameter  SEVENTYFIVE = 192;
 
 
+
+
 //module instantiation
 PWM pwmtb(duty,SysClk,Reset,pwm);
 
 
 //initialization of variables
 initial begin
+    $dumpvars(0,test);
     SysClk = 0;
     Reset = 0;
     duty = 0;
