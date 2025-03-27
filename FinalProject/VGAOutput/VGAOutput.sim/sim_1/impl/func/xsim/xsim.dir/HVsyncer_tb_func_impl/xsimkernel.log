@@ -1,0 +1,7 @@
+Running: xsim.dir/HVsyncer_tb_func_impl/xsimk.exe -simmode gui -wdb HVsyncer_tb_func_impl.wdb -simrunnum 0 -socket 56575
+Design successfully loaded
+Design Loading Memory Usage: 29300 KB (Peak: 29300 KB)
+Design Loading CPU Usage: 514 ms
+Simulation completed
+Simulation Memory Usage: 37896 KB (Peak: 37896 KB)
+Simulation CPU Usage: 734 ms

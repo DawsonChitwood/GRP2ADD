@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"HVsyncer_tb_func_impl.v" \
+
+sv xil_defaultlib  \
+"../../../../../VGAOutput.srcs/sources_1/new/HVsyncer.sv" \
+
+verilog xil_defaultlib  \
+"../../../../../VGAOutput.srcs/sim_1/new/HVsyncer_tb.v" \
+
+# Do not sort compile order
+nosort

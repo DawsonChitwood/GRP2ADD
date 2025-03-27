@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Mar 17 15:35:14 2025
+# Process ID         : 16660
+# Current directory  : C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent15568 C:\CSEE4280\GRP2ADD\Exercise4\PWM\PWM\PWM.xpr
+# Log file           : C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM/vivado.log
+# Journal file       : C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 20027 MB
+# Available Virtual  : 8441 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/CSEE4280/GRP2ADD/Exercise4/PWM/PWM/PWM.xpr
+update_compile_order -fileset sources_1
