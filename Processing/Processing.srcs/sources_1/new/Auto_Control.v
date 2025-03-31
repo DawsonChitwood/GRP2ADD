@@ -24,10 +24,18 @@ module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, in
 //State Machine Variables
 reg [3:0] CurrentState = 0;
 reg [3:0] NextState = 0;
-reg [2:0] ClockCounter = 0;
-reg [2:0] CornerCounter = 0;
-reg [2:0] CornerBlock = 0;
-reg [1:0][1:0] CornerCache = 0;
+reg [2:0] ClockCounter = 0;    //Used to make sure transitions to states relying on storage feedback give enough time for 
+// storage to respond
+reg [2:0] CornerCounter = 0;   //Used to keep track of which corner is being read from storage
+reg [2:0] CornerBlock = 0;     //Used to keep track of which pixel is being read from storage while reading a particular corner
+reg [1:0][1:0] CornerCache = 0; //Used to keep track of the values of all pixels used for processing for a particular corner
+reg [1:0] SideCounter = 0;      // Used to keep track of which side is currently being traversed
+reg [6:0] SidePixelCounter = 0; // Used to keep track of which particular pixel on a line is being processed
+reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line
+reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line
+
+
+
 
 parameter FRAMEDONE = 0;
 parameter CORNERREQUEST = 1;
@@ -90,7 +98,7 @@ always @(posedge Clk) begin
         end
         //CORNERREAD will go to CORNERPROCESS if it has read all of the blocks for a specific corner, it goes back to CORNERWRITE otherwise
         CORNERREAD: begin
-            if(CornerBlock != 4) NextState <= CORNERWRITE;
+            if(!(CornerBlock >= 3) ) NextState <= CORNERWRITE;
             else NextState <= CORNERPROCESS;
         end
         //CORNERPROCESS immediately goes to CornerWrite because it is not waiting for storage before it makes this state transition
@@ -100,6 +108,19 @@ always @(posedge Clk) begin
         CORNERWRITE: begin
             if(CornerCounter != 4) NextState <= CORNERREQUEST;
             else NextState <= SIDEREQUEST;
+        end
+        SIDEREQUEST: begin
+            if(ClockCounter == 3) NextState <= SIDEREAD;
+            else NextState <= SIDEREQUEST;
+        end
+        SIDEREAD: begin
+            if(!(LineBlock >= 6)) NextState <= SIDEREQUEST;
+            else NextState <= LINEPROCESS;
+        end
+        SIDEPROCESS: NextState <= SIDEWRITE;
+        SIDEWRITE: begin
+            if(LineCounter != 4) NextState <= SIDEREQUEST;
+            else NextState <= MIDDLEREQUEST;
         end
         default: NextState <= FRAMEDONE;
         endcase
@@ -120,6 +141,8 @@ always @(posedge Clk) begin
         // the clock counter used to time the state transistion to CORNERREAD
         CORNERREQUEST: begin
           ClockCounter <= ClockCounter + 1;
+          
+          //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
           if(RW && ClockCounter == 1) begin
             enable1 <= 0;
             enable2 <= 1;
@@ -135,16 +158,16 @@ always @(posedge Clk) begin
                         Col <= 0;
                     end
                     1: begin
-                        Row <= 1;
-                        Col <= 0;
+                        Row <= 0;
+                        Col <= 1;
                     end
                     2: begin
                         Row <= 1;
                         Col <= 1;
                     end
                     3: begin
-                        Row <= 0;
-                        Col <= 1;
+                        Row <= 1;
+                        Col <= 0;
                     end
                     default:;
                 endcase
@@ -152,20 +175,20 @@ always @(posedge Clk) begin
            else if(CornerCounter == 1) begin
                 case(CornerBlock) 
                     0: begin
-                        Row <= 79;
-                        Col <= 0;
+                        Row <= 0;
+                        Col <= 79;
                     end
                     1: begin
-                        Row <= 78;
-                        Col <= 0;
+                        Row <= 0;
+                        Col <= 78;
                     end
                     2: begin
-                        Row <= 78;
-                        Col <= 1;
+                        Row <= 1;
+                        Col <= 78;
                     end
                     3: begin
-                        Row <= 79;
-                        Col <= 1;
+                        Row <= 1;
+                        Col <= 79;
                     end
                     default:;
                 endcase
@@ -173,20 +196,20 @@ always @(posedge Clk) begin
            else if(CornerCounter == 2) begin
                 case(CornerBlock) 
                     0: begin
-                        Row <= 0;
-                        Col <= 59;
+                        Row <= 59;
+                        Col <= 0;
                     end
                     1: begin
-                        Row <= 0;
-                        Col <= 58;
+                        Row <= 58;
+                        Col <= 0;
                     end
                     2: begin
-                        Row <= 1;
-                        Col <= 58;
+                        Row <= 58;
+                        Col <= 1;
                     end
                     3: begin
-                        Row <= 1;
-                        Col <= 59;
+                        Row <= 59;
+                        Col <= 1;
                     end
                     default:;
                 endcase
@@ -194,20 +217,20 @@ always @(posedge Clk) begin
            else if(CornerCounter == 3) begin
                 case(CornerBlock) 
                     0: begin
-                        Row <= 79;
-                        Col <= 59;
+                        Row <= 59;
+                        Col <= 79;
                     end
                     1: begin
-                        Row <= 79;
-                        Col <= 58;
+                        Row <= 58;
+                        Col <= 79;
                     end
                     2: begin
-                        Row <= 78;
-                        Col <= 58;
+                        Row <= 58;
+                        Col <= 78;
                     end
                     3: begin
-                        Row <= 78;
-                        Col <= 59;
+                        Row <= 59;
+                        Col <= 78;
                     end
                     default:;
                 endcase
@@ -229,15 +252,13 @@ always @(posedge Clk) begin
         CornerBlock <= CornerBlock + 1;
      end
      //CORNERPROCESS resets CornerBlock and processes what needs to be written to the other memory block (processes using CornerCache)
+     
+     // IN PROGRESS!!!!!!!!!!!!!!!
+     
+     
      CORNERPROCESS: begin
         CornerBlock <= 0;
-     end
-     //sets the appropriate enable bit to allow writing to the appropriate memory. The CornerCounter is also incremented, and I will add
-     // a note about that here. The transistion from reading the corner pixels to reading the side pixels is governed by what CornerCounter
-     // is on. That being said, the value of CornerCounter at which this transistion takes place may need to be altered if the number of 
-     // corners written to is below the actual corner value or if the whole process runs through an extra cycle.
-     CORNERWRITE: begin
-     CornerCounter <= CornerCounter + 1;
+             //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
         if(RW) begin
             enable1 <= 1;
             enable2 <= 0;
@@ -247,6 +268,134 @@ always @(posedge Clk) begin
             enable2 <= 1;
           end
      end
+     //sets the appropriate enable bit to allow writing to the appropriate memory. The CornerCounter is also incremented, and I will add
+     // a note about that here. The transistion from reading the corner pixels to reading the side pixels is governed by what CornerCounter
+     // is on. That being said, the value of CornerCounter at which this transistion takes place may need to be altered if the number of 
+     // corners written to is below the actual corner value or if the whole process runs through an extra cycle.
+     CORNERWRITE: begin
+        CornerCounter <= CornerCounter + 1;
+     end
+     SIDEREQUEST: begin 
+        ClockCounter <= ClockCounter + 1;
+        case (SideCounter) 
+            0: begin
+                case (SideBlock)
+                    0: begin
+                        Row = SidePixelCounter + 1;
+                        Col = 0;
+                    end
+                    1: begin
+                        Row = SidePixelCounter;
+                        Col = 0;
+                    end
+                    2: begin
+                        Row = SidePixelCounter + 2;
+                        Col = 0;
+                    end
+                    3: begin
+                        Row = SidePixelCounter + 1;
+                        Col =  1;
+                    end
+                    4: begin
+                        Row = SidePixelCounter;
+                        Col =  1;
+                    end
+                    5: begin
+                        Row = SidePixelCounter + 2;
+                        Col =  1;
+                    end
+                    default: ;
+            endcase
+        end
+        1: begin
+                case (SideBlock)
+                    0: begin
+                        Row = 0;
+                        Col = SidePixelCounter + 1;
+                    end
+                    1: begin
+                        Row = 0;
+                        Col = SidePixelCounter;
+                    end
+                    2: begin
+                        Row = 0;
+                        Col = SidePixelCounter + 2;
+                    end
+                    3: begin
+                        Row = 1;
+                        Col = SidePixelCounter;
+                    end
+                    4: begin
+                        Row = 1;
+                        Col = SidePixelCounter + 1;
+                    end
+                    5: begin
+                        Row = 1;
+                        Col = SidePixelCounter + 2;
+                    end
+                    default: ;
+            endcase
+        end   
+        2: begin
+             case (SideBlock)
+                    0: begin
+                        Row = SidePixelCounter + 1;
+                        Col = 79;
+                    end
+                    1: begin
+                        Row = SidePixelCounter;
+                        Col = 79;
+                    end
+                    2: begin
+                        Row = SidePixelCounter + 2;
+                        Col = 79;
+                    end
+                    3: begin
+                        Row = SidePixelCounter + 1;
+                        Col = 78;
+                    end
+                    4: begin
+                        Row = SidePixelCounter;
+                        Col = 78;
+                    end
+                    5: begin
+                        Row = SidePixelCounter + 2;
+                        Col = 78;
+                    end
+                    default: ;
+            endcase
+        end   
+        3: begin
+                case (SideBlock)
+                    0: begin
+                        Row = 59;
+                        Col = SidePixelCounter + 1;
+                    end
+                    1: begin
+                        Row = 59;
+                        Col = SidePixelCounter;
+                    end
+                    2: begin
+                        Row = 59;
+                        Col = SidePixelCounter + 2;
+                    end
+                    3: begin
+                        Row = 58;
+                        Col = SidePixelCounter;
+                    end
+                    4: begin
+                        Row = 58;
+                        Col = SidePixelCounter + 1;
+                    end
+                    5: begin
+                        Row = 58;
+                        Col = SidePixelCounter + 2;
+                    end
+                    default: ;
+            endcase
+        end                  
+                    
+        
                         
                         
 
