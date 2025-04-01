@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module HVsyncer(input Clk, input BANANAS, output hsync, output vsync, output [6:0] HC, output [6:0]  VC);
+module HVsyncer(input Clk, input BANANAS, output  hsync, output vsync, output [6:0] HC, output [6:0]  VC,output reg pleaseWork);
 
 reg [6:0] HC_reg = 0;     //The register holding the HC Value
 reg [6:0] VC_reg = 0;     //The register holding the VC Value
@@ -42,12 +42,12 @@ reg VCnext_state = 0;
 
 
 parameter HFP = 8;    //8;
-parameter HBP = 24;    //24;
+parameter HBP = 19;    //24;
 parameter HDT = 320;    //320;
 parameter HRT = 48;   //48;
 parameter HTOT = 400;  //400;
 parameter VFP = 10;   //10;
-parameter VBP = 33;   //33;
+parameter VBP = 32;   //33;
 parameter VDT = 480;   //480;
 parameter VRT = 2;   //2;
 parameter VTOT = 525;  //525;
@@ -82,10 +82,11 @@ always @(posedge Clk) begin
     else vcCounter = vcCounter;
      
     // HCount increases so long as Hcount has not reached the HCount Max. In this case, HCount goes to zero and VCount increments
+    
     if(HCount >= HTOT) begin
         HCount = 0;
         VCount = VCount + 1;
-        if (VCount >= 2) vcCounter = vcCounter + 1;    //because we only want this to increase when vsync is high
+        if (VCount >= 2) vcCounter = vcCounter + 1;    //because we only want this to increase when vsync is high (should really only increase when in visable area i think[matt])
     end
     else HCount = HCount + 1;
  
@@ -208,17 +209,20 @@ end
 always @(posedge Clk) begin
     case(HCstate)
     CounterIncrement: begin
+        pleaseWork=1;
         hcCounter = hcCounter + 1;
         if (hcCounter >= 4) begin
-            HC_reg = HC_reg + 1;
             hcCounter = 0;
+            HC_reg = HC_reg + 1;
         end
     end
     CounterReset: begin
+        pleaseWork=0;
         HC_reg = 0;
         hcCounter = 0;
     end
     default: begin
+        pleaseWork=0;
         HC_reg = 0;
         hcCounter = 0;
     end
@@ -246,6 +250,7 @@ end
 
 assign hsync = hsync_reg;
 assign vsync = vsync_reg;
+//assign HCountOut = HCount;
 assign HC = HC_reg;
 assign VC = VC_reg;
 

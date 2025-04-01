@@ -26,11 +26,17 @@ wire [10:0] HC;
 wire [10:0] VC;
 logic [11:0] FIBISH;
 wire [11:0] FISH;
+reg [1:0] colors;
 
 Clk_Divider_25MHZ CD(CLK100MHZ,CLK);
 
-VGA_Out vga(CLK,RESET,SW, h_sync, v_sync,R,G, B, HC, VC);
-HVsyncer hvs(CLK,RESET,h_sync,v_sync,HC,VC);
-
+VGA_Out vga(CLK,RESET,colors, h_sync, v_sync,R,G, B, HC, VC);
+//HVsyncer hvs(CLK,RESET,h_sync,v_sync,HC,VC);
+always begin
+if(VC%2)
+    colors = 3;
+else
+    colors = 1;
+end
 
 endmodule

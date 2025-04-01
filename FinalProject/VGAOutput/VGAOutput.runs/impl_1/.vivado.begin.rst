@@ -1,195 +1,270 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21332" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="20099" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="20812" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="24653" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19040" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="26995" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="8732" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="29011" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="15204" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="31281" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19376" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="35005" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19820" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="36964" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="12864" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="37598" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="13520" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="40977" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21160" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="43662" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="1912" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="45637" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="18712" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="47646" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="1872" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="50153" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19468" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="53612" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="18568" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="57227" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="4424" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="60902" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="17116" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="65273" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="18652" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="68602" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="20948" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="71230" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19720" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="74014" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21272" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="76336" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="9608" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="78309" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19748" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="80436" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="16284" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="84323" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="5588" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="86472" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="14752" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="88573" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="7456" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="90547" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21920" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="92647" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="1156" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="94873" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="22216" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="98312" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21448" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="99105" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="18284" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="101651" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="19028" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="103955" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="8832" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="106514" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21228" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="110156" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="2372" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="113957" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="20304" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="116549" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="1368" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="119128" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="21048" HostCore="12" HostMemory="08216391680">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="122880" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="125911" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="128918" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="130715" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="134619" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="136667" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="140145" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="142216" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="144082" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="144737" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="147040" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="150213" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="152973" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="155067" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="157311" HostCore="8" HostMemory="8127056">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="159905" HostCore="8" HostMemory="8127056">
     </Process>
 </ProcessHandle>

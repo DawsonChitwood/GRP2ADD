@@ -50,26 +50,43 @@ always @(posedge Clk) begin
 end
 
 always @(posedge Clk) begin
-        case (ColorIn) 
-        0: nstate = BLACK;
-        1: nstate = WHITE;
-        2: nstate = RED;
-        3: nstate = BLUE;
-        default: nstate = state;
-        endcase
+        if(ColorTime==1)    begin 
+           
+           case (ColorIn) 
+            0: nstate = BLACK;
+            1: nstate = WHITE;
+            2: nstate = RED;
+            3: nstate = BLUE;
+            default: nstate = state;
+            endcase
+          
+           end
+           
+        else
+            nstate = BLACK;
     end 
 
 always begin
     case(state) 
         BLACK: begin
-            R =  4'b0111;
-            G =  4'b0111;
-            B =  4'b0111;
+            R =  4'b0000;
+            G =  4'b0000;
+            B =  4'b0000;
             end
         WHITE: begin
-            R = 4'b0111;
-            G = 4'b0111;
-            B = 4'b0111;
+            R = 4'b1111;
+            G = 4'b1111;
+            B = 4'b1111;
+            end    
+        RED: begin
+            R = 4'b1111;
+            G = 4'b0000;
+            B = 4'b0000;
+            end
+       BLUE: begin
+            R = 4'b0000;
+            G = 4'b0000;
+            B = 4'b1111;
             end
         endcase
         end
@@ -79,7 +96,7 @@ always begin
     
 
 
-HVsyncer hvs(Clk,BANANAS,hsync,vsync,HC,VC);
+HVsyncer hvs(Clk,BANANAS,hsync,vsync,HC,VC,ColorTime);
 
 
     
