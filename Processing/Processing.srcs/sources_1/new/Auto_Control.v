@@ -37,6 +37,7 @@ reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for proces
 
 
 
+
 parameter FRAMEDONE = 0;
 parameter CORNERREQUEST = 1;
 parameter CORNERREAD = 2;
@@ -114,12 +115,12 @@ always @(posedge Clk) begin
             else NextState <= SIDEREQUEST;
         end
         SIDEREAD: begin
-            if(!(LineBlock >= 6)) NextState <= SIDEREQUEST;
+            if(!(SideBlock >= 4)) NextState <= SIDEREQUEST;
             else NextState <= LINEPROCESS;
         end
         SIDEPROCESS: NextState <= SIDEWRITE;
         SIDEWRITE: begin
-            if(LineCounter != 4) NextState <= SIDEREQUEST;
+            if(LineCounter != 3) NextState <= SIDEREQUEST;
             else NextState <= MIDDLEREQUEST;
         end
         default: NextState <= FRAMEDONE;
@@ -141,7 +142,6 @@ always @(posedge Clk) begin
         // the clock counter used to time the state transistion to CORNERREAD
         CORNERREQUEST: begin
           ClockCounter <= ClockCounter + 1;
-          
           //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
           if(RW && ClockCounter == 1) begin
             enable1 <= 0;
@@ -245,7 +245,6 @@ always @(posedge Clk) begin
      // read.
      CORNERREAD: begin
         ClockCounter <= 0;
-        
         if(CornerBlock != 4) begin
             CornerCache[CornerBlock] <= DataBack;
         end
@@ -275,6 +274,8 @@ always @(posedge Clk) begin
      CORNERWRITE: begin
         CornerCounter <= CornerCounter + 1;
      end
+     //SIDEREQUEST sets the output row and column buses to the correct values for when the state transistions to SIDEREAD. 
+     //It uses SidePixelCounter 
      SIDEREQUEST: begin 
         ClockCounter <= ClockCounter + 1;
         case (SideCounter) 
@@ -393,7 +394,71 @@ always @(posedge Clk) begin
                     end
                     default: ;
             endcase
-        end                  
+            end
+            default: ;
+      endcase
+      end   
+      SIDEREAD: begin
+        ClockCounter <= 0;
+        //Might need to change the way SideBlock is incremented or how it is used to transistion into the next state from SIDEREAD
+        //It may go into an extra loop through SIDEREQUEST or may not go through enough loops if these conditions are set incorrectly
+        if(SideBlock <= 5) SideCache[SideBlock] <= DataBack;
+        CornerBlock <= CornerBlock + 1;
+        SideBlock <= SideBlock + 1;
+     end
+     
+     //Need to include the processing part of this
+     SIDEPROCESS: begin
+        SideBlock <= 0;
+             //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
+        if(RW) begin
+            enable1 <= 1;
+            enable2 <= 0;
+          end
+          else begin
+            enable1 <= 0;
+            enable2 <= 1;
+          end     
+     end
+     
+     //May need to change the way that SideCounter increments if there is an extra loop or not enough loops for the lines
+    
+     SIDEWRITE: begin
+        SidePixelCounter <= SidePixelCounter + 1;
+        case(SideCounter) 
+            0: begin
+                if(SidePixelCounter == 60) begin
+                    SidePixelCounter <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            1: begin
+                if(SidePixelCounter == 80) begin
+                    SidePixelCounter <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            2: begin
+                 if(SidePixelCounter == 60) begin
+                    SidePixelCounter <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end 
+            3: begin
+                 if(SidePixelCounter == 80) begin
+                    SidePixelCounter <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            default:SidePixelCounter <= 0 ;
+        endcase                         
+           
+     end
+     default: ;
+ endcase        
+
+        
+                       
                     
         
                         
