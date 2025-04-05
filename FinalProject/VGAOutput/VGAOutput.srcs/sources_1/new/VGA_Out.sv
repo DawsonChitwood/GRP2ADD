@@ -34,9 +34,9 @@ parameter RED = 2;
 parameter BLUE = 3;
 
 
-
+/**
 always @(posedge Clk) begin
-   /*if(BANANAS) begin
+   if(BANANAS) begin
         R = 4'b0000;
         G = 4'b0000;
         B = 0;
@@ -45,13 +45,13 @@ always @(posedge Clk) begin
         nstate = BLACK;
     end 
     else begin
-     */   state = nstate;
+  //      state = nstate;
     //end
 end
 
 always @(posedge Clk) begin
         if(ColorTime==1)    begin 
-           
+           if(VC>29) begin
            case (ColorIn) 
             0: nstate = BLACK;
             1: nstate = WHITE;
@@ -59,15 +59,25 @@ always @(posedge Clk) begin
             3: nstate = BLUE;
             default: nstate = state;
             endcase
-          
-           end
-           
+          end
+    else begin 
+    case (ColorIn) 
+                0: nstate = BLACK;
+                1: nstate = WHITE;
+                2: nstate = BLUE;
+                3: nstate = RED;
+                default: nstate = state;
+                endcase
+              
+               end
+               end           
         else
             nstate = BLACK;
     end 
-
+**/
 always begin
-    case(state) 
+if(ColorTime==1)    begin 
+    case(ColorIn) 
         BLACK: begin
             R =  4'b0000;
             G =  4'b0000;
@@ -89,8 +99,14 @@ always begin
             B = 4'b1111;
             end
         endcase
-        end
-        
+end
+else begin
+  R =  4'b0000;
+            G =  4'b0000;
+            B =  4'b0000;
+
+end
+end        
 
 
     

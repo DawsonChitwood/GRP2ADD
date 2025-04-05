@@ -47,9 +47,9 @@ parameter HDT = 320;    //320;
 parameter HRT = 48;   //48;
 parameter HTOT = 400;  //400;
 parameter VFP = 10;   //10;
-parameter VBP = 32;   //33;
-parameter VDT = 480;   //480;
-parameter VRT = 2;   //2;
+parameter VBP = 22;   //33;
+parameter VDT = 491;   //480;
+parameter VRT = 1;   //2;
 parameter VTOT = 525;  //525;
 
 parameter HStart = 0;
@@ -87,6 +87,7 @@ always @(posedge Clk) begin
         HCount = 0;
         VCount = VCount + 1;
         if (VCount >= 2) vcCounter = vcCounter + 1;    //because we only want this to increase when vsync is high (should really only increase when in visable area i think[matt])
+        else vcCounter =0;
     end
     else HCount = HCount + 1;
  

@@ -33,10 +33,14 @@ Clk_Divider_25MHZ CD(CLK100MHZ,CLK);
 VGA_Out vga(CLK,RESET,colors, h_sync, v_sync,R,G, B, HC, VC);
 //HVsyncer hvs(CLK,RESET,h_sync,v_sync,HC,VC);
 always begin
-if(VC%2)
-    colors = 3;
-else
-    colors = 1;
+if(VC%2)begin
+    if(HC%2)colors = 3;
+    else colors = 2;
+end
+else begin
+    if(HC%2)colors = 1;
+    else colors=0;
+end
 end
 
 endmodule
