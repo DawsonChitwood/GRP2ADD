@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, input [1:0] DataBack, output RW, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] Data, output enable1, output enable2);
+module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, input [1:0] DataBack, output RW, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] Data, output reg enable1, output reg  enable2);
 //State Machine Variables
 reg [3:0] CurrentState = 0;
 reg [3:0] NextState = 0;
@@ -30,13 +30,16 @@ reg [2:0] CornerCounter = 0;   //Used to keep track of which corner is being rea
 reg [2:0] CornerBlock = 0;     //Used to keep track of which pixel is being read from storage while reading a particular corner
 reg [1:0][1:0] CornerCache = 0; //Used to keep track of the values of all pixels used for processing for a particular corner
 reg [1:0] SideCounter = 0;      // Used to keep track of which side is currently being traversed
-reg [6:0] SidePixelCounter = 0; // Used to keep track of which particular pixel on a line is being processed
+reg [6:0] PixelCount = 0; // Used to keep track of which particular pixel on a line is being processed
 reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line
 reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line
+reg [5:0] RowCount = 1;        //Used to keep track of which row is being processed in the MIDDLE section. 1 is the default position
+reg [6:0] ColCount = 1;        //Used to keep track of which column is being processed in the MIDDLE section. 1 is the default position
+reg [8:0][1:0] MiddleCache = 0; //Used to hold the pixels currently being processed in the MIDDLE section
 
 
 
-
+//Names of the states
 parameter FRAMEDONE = 0;
 parameter CORNERREQUEST = 1;
 parameter CORNERREAD = 2;
@@ -72,7 +75,7 @@ reg Max_Row = 60;
 reg Max_Col = 80;
 
 always @(FrameSelector) begin
-    Frame_Done = 0;
+    Frame_Done <= 0;
     if(FrameSelector) RW_reg = 1;
     else RW_reg = 0;
 end
@@ -88,7 +91,7 @@ always @(posedge Clk) begin
     case(CurrentState) 
     //FRAMEDONE will only transition to start requesting data from memory when Frame_Done is high
         FRAMEDONE: begin
-            if(Frame_Done) NextState <= CORNERREQUEST;
+            if(!Frame_Done) NextState <= CORNERREQUEST;
             else NextState <= FRAMEDONE;
         end
         //CORNERREQUEST will only transition to CORNERREAD when the ClockCounter has reached 3, this allows the storage module to process
@@ -109,18 +112,43 @@ always @(posedge Clk) begin
             if(CornerCounter != 4) NextState <= CORNERREQUEST;
             else NextState <= SIDEREQUEST;
         end
+        //SIDEREQUEST goes to SIDEREAD if the ClockCounter has reached 3. This allows time for the Storage to process the information
         SIDEREQUEST: begin
             if(ClockCounter == 3) NextState <= SIDEREAD;
             else NextState <= SIDEREQUEST;
         end
+        //SIDEREAD continues going back to SIDEREQUEST unless all the sideblocks have been read for a particular pixel in which case it goes on to SIDEPROCESS
         SIDEREAD: begin
-            if(!(LineBlock >= 6)) NextState <= SIDEREQUEST;
-            else NextState <= LINEPROCESS;
+            if(!(SideBlock >= 4)) NextState <= SIDEREQUEST;
+            else NextState <= SIDEPROCESS;
         end
+        //SIDEPROCESS sets up the enable signals for writing to the other storage block
         SIDEPROCESS: NextState <= SIDEWRITE;
+        //SIDEWRITE increments the LineCounter if all the pixels within a line have been processed
         SIDEWRITE: begin
-            if(LineCounter != 4) NextState <= SIDEREQUEST;
+            if(SideCounter != 3) NextState <= SIDEREQUEST;
             else NextState <= MIDDLEREQUEST;
+        end
+        //MIDDLEREQUEST moves to MIDDLEREAD as long as 3 Clocks have passed. This gives The storage time to process the data request
+        MIDDLEREQUEST: begin
+            if(ClockCounter == 3) NextState <= MIDDLEREAD;
+            else NextState <= MIDDLEREQUEST;
+        end
+        //MIDDLEREAD moves back to MIDDLEREQUEST until all blocks (9 per pixel including the pixel of interest) have been read. It then moves to MIDDLEPROCESS
+        MIDDLEREAD: begin
+            if(PixelCount != 8) NextState <= MIDDLEREQUEST;
+            else NextState <= MIDDLEPROCESS;
+        end
+        //MIDDLEPROCESS sets the enables for writing to the other storage module before moving on to the MIDDLEWRITE
+        MIDDLEPROCESS: NextState <= MIDDLEWRITE;
+        
+        //MIDDLEWRITE will move back to MIDDLEREQUEST unless all middle pixels have been processed in which case it will set FrameDone and move to FRAMEDONE
+        MIDDLEWRITE: begin
+            if(!((RowCount == 58)&&(ColCount == 78))) NextState <= MIDDLEREQUEST;
+            else begin  
+                Frame_Done <= 1;
+                NextState <= FRAMEDONE;
+            end
         end
         default: NextState <= FRAMEDONE;
         endcase
@@ -141,7 +169,6 @@ always @(posedge Clk) begin
         // the clock counter used to time the state transistion to CORNERREAD
         CORNERREQUEST: begin
           ClockCounter <= ClockCounter + 1;
-          
           //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
           if(RW && ClockCounter == 1) begin
             enable1 <= 0;
@@ -245,13 +272,14 @@ always @(posedge Clk) begin
      // read.
      CORNERREAD: begin
         ClockCounter <= 0;
-        
         if(CornerBlock != 4) begin
             CornerCache[CornerBlock] <= DataBack;
         end
         CornerBlock <= CornerBlock + 1;
      end
+     
      //CORNERPROCESS resets CornerBlock and processes what needs to be written to the other memory block (processes using CornerCache)
+     //sets the appropriate enable bit to allow writing to the appropriate memory.
      
      // IN PROGRESS!!!!!!!!!!!!!!!
      
@@ -268,40 +296,44 @@ always @(posedge Clk) begin
             enable2 <= 1;
           end
      end
-     //sets the appropriate enable bit to allow writing to the appropriate memory. The CornerCounter is also incremented, and I will add
+     // The CornerCounter is incremented, and I will add
      // a note about that here. The transistion from reading the corner pixels to reading the side pixels is governed by what CornerCounter
      // is on. That being said, the value of CornerCounter at which this transistion takes place may need to be altered if the number of 
      // corners written to is below the actual corner value or if the whole process runs through an extra cycle.
      CORNERWRITE: begin
         CornerCounter <= CornerCounter + 1;
      end
+     //SIDEREQUEST sets the output row and column buses to the correct values for when the state transistions to SIDEREAD. 
+     //It uses PixelCount to set the correct index values for the rows and columns based upon which Side segment is being processed.
+     // The numbering goes like this: 0 is the left 1 is the top 2 is the right and 3 is the bottom. Each pixel has 6 pixels associated with processing:
+     // itself, and the 5 pixels surrounding it. 
      SIDEREQUEST: begin 
         ClockCounter <= ClockCounter + 1;
         case (SideCounter) 
             0: begin
                 case (SideBlock)
                     0: begin
-                        Row = SidePixelCounter + 1;
+                        Row = PixelCount + 1;
                         Col = 0;
                     end
                     1: begin
-                        Row = SidePixelCounter;
+                        Row = PixelCount;
                         Col = 0;
                     end
                     2: begin
-                        Row = SidePixelCounter + 2;
+                        Row = PixelCount + 2;
                         Col = 0;
                     end
                     3: begin
-                        Row = SidePixelCounter + 1;
+                        Row = PixelCount + 1;
                         Col =  1;
                     end
                     4: begin
-                        Row = SidePixelCounter;
+                        Row = PixelCount;
                         Col =  1;
                     end
                     5: begin
-                        Row = SidePixelCounter + 2;
+                        Row = PixelCount + 2;
                         Col =  1;
                     end
                     default: ;
@@ -311,27 +343,27 @@ always @(posedge Clk) begin
                 case (SideBlock)
                     0: begin
                         Row = 0;
-                        Col = SidePixelCounter + 1;
+                        Col = PixelCount + 1;
                     end
                     1: begin
                         Row = 0;
-                        Col = SidePixelCounter;
+                        Col = PixelCount;
                     end
                     2: begin
                         Row = 0;
-                        Col = SidePixelCounter + 2;
+                        Col = PixelCount + 2;
                     end
                     3: begin
                         Row = 1;
-                        Col = SidePixelCounter;
+                        Col = PixelCount;
                     end
                     4: begin
                         Row = 1;
-                        Col = SidePixelCounter + 1;
+                        Col = PixelCount + 1;
                     end
                     5: begin
                         Row = 1;
-                        Col = SidePixelCounter + 2;
+                        Col = PixelCount + 2;
                     end
                     default: ;
             endcase
@@ -339,27 +371,27 @@ always @(posedge Clk) begin
         2: begin
              case (SideBlock)
                     0: begin
-                        Row = SidePixelCounter + 1;
+                        Row = PixelCount + 1;
                         Col = 79;
                     end
                     1: begin
-                        Row = SidePixelCounter;
+                        Row = PixelCount;
                         Col = 79;
                     end
                     2: begin
-                        Row = SidePixelCounter + 2;
+                        Row = PixelCount + 2;
                         Col = 79;
                     end
                     3: begin
-                        Row = SidePixelCounter + 1;
+                        Row = PixelCount + 1;
                         Col = 78;
                     end
                     4: begin
-                        Row = SidePixelCounter;
+                        Row = PixelCount;
                         Col = 78;
                     end
                     5: begin
-                        Row = SidePixelCounter + 2;
+                        Row = PixelCount + 2;
                         Col = 78;
                     end
                     default: ;
@@ -369,31 +401,166 @@ always @(posedge Clk) begin
                 case (SideBlock)
                     0: begin
                         Row = 59;
-                        Col = SidePixelCounter + 1;
+                        Col = PixelCount + 1;
                     end
                     1: begin
                         Row = 59;
-                        Col = SidePixelCounter;
+                        Col = PixelCount;
                     end
                     2: begin
                         Row = 59;
-                        Col = SidePixelCounter + 2;
+                        Col = PixelCount + 2;
                     end
                     3: begin
                         Row = 58;
-                        Col = SidePixelCounter;
+                        Col = PixelCount;
                     end
                     4: begin
                         Row = 58;
-                        Col = SidePixelCounter + 1;
+                        Col = PixelCount + 1;
                     end
                     5: begin
                         Row = 58;
-                        Col = SidePixelCounter + 2;
+                        Col = PixelCount + 2;
                     end
                     default: ;
             endcase
-        end                  
+            end
+            default: ;
+      endcase
+      end   
+      
+      //Side read stores the data sent from storage into the SideCache for when the state goes to SIDEPROCESS. Side block is also incremented here so that 
+      //SIDEREQUEST can send the right row and column on the next go round
+      SIDEREAD: begin
+        ClockCounter <= 0;
+        //Might need to change the way SideBlock is incremented or how it is used to transistion into the next state from SIDEREAD
+        //It may go into an extra loop through SIDEREQUEST or may not go through enough loops if these conditions are set incorrectly
+        if(SideBlock <= 5) SideCache[SideBlock] <= DataBack;
+        SideBlock <= SideBlock + 1;
+     end
+     
+     //Need to include the processing part of this
+     SIDEPROCESS: begin
+        SideBlock <= 0;
+             //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
+        if(RW) begin
+            enable1 <= 1;
+            enable2 <= 0;
+          end
+          else begin
+            enable1 <= 0;
+            enable2 <= 1;
+          end     
+     end
+     
+     //May need to change the way that SideCounter increments if there is an extra loop or not enough loops for the lines
+    // This state essentially allows a clock to run so that the storage module can take in the write command. It also increments SideCounter if a side has been completed.
+     SIDEWRITE: begin
+        PixelCount <= PixelCount + 1;
+        case(SideCounter) 
+            0: begin
+                if(PixelCount == 60) begin
+                    PixelCount <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            1: begin
+                if(PixelCount == 80) begin
+                    PixelCount <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            2: begin
+                 if(PixelCount == 60) begin
+                    PixelCount <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end 
+            3: begin
+                 if(PixelCount == 80) begin
+                    PixelCount <= 0;
+                    SideCounter <= SideCounter + 1;
+                end
+            end
+            default:PixelCount <= 0 ;
+        endcase                                
+     end
+     MIDDLEREQUEST: begin
+        ClockCounter <= ClockCounter + 1;
+        case(PixelCount)
+            0: begin
+                Row <= RowCount;
+                Col <= ColCount;
+            end
+            1: begin
+                Row <= RowCount - 1;
+                Col <= ColCount;
+            end
+            2: begin
+                Row <= RowCount - 1;
+                Col <= ColCount - 1;
+            end
+            3: begin
+                Row <= RowCount;
+                Col <= ColCount - 1;
+            end
+            4: begin
+                Row <= RowCount + 1;
+                Col <= ColCount - 1;
+            end
+            5: begin
+                Row <= RowCount + 1;
+                Col <= ColCount;
+            end
+            6: begin
+                Row <= RowCount + 1;
+                Col <= ColCount + 1;
+            end
+            7: begin
+                Row <= RowCount;
+                Col <= ColCount + 1;
+            end
+            8: begin
+                Row <= RowCount - 1;
+                Col <= ColCount + 1;
+            end
+            default: ;
+            endcase
+     end
+     MIDDLEREAD: begin
+        ClockCounter <= 0;
+        if(PixelCount <= 8) MiddleCache[PixelCount] <= DataBack;
+        PixelCount <= PixelCount + 1;
+     end
+     MIDDLEPROCESS: begin
+         PixelCount <= 0;
+      //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
+        if(RW) begin
+            enable1 <= 1;
+            enable2 <= 0;
+          end
+          else begin
+            enable1 <= 0;
+            enable2 <= 1;
+          end     
+     end
+     //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
+     MIDDLEWRITE: begin
+        if(!(RowCount >= 58)) begin
+            if(ColCount >= 78) begin
+                ColCount <= 0;
+                RowCount <= RowCount + 1;
+            end
+            else ColCount <= ColCount + 1;
+        end 
+        end
+     default: ;
+ endcase;
+ end       
+
+        
+                       
                     
         
                         
