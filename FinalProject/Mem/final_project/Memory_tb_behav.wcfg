@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Memory_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Memory_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="16,797.137 ns"></ZoomStartTime>
+      <ZoomEndTime time="16,808.318 ns"></ZoomEndTime>
+      <Cursor1Time time="16,799.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject type="array" fp_name="/Memory_tb/currentRow_tb">
+      <obj_property name="ElementShortName">currentRow_tb[5:0]</obj_property>
+      <obj_property name="ObjectShortName">currentRow_tb[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/currentCol_tb">
+      <obj_property name="ElementShortName">currentCol_tb[6:0]</obj_property>
+      <obj_property name="ObjectShortName">currentCol_tb[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/vCount_tb">
+      <obj_property name="ElementShortName">vCount_tb[5:0]</obj_property>
+      <obj_property name="ObjectShortName">vCount_tb[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/hCount_tb">
+      <obj_property name="ElementShortName">hCount_tb[6:0]</obj_property>
+      <obj_property name="ObjectShortName">hCount_tb[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/enableVisual_tb">
+      <obj_property name="ElementShortName">enableVisual_tb</obj_property>
+      <obj_property name="ObjectShortName">enableVisual_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/enableData1_tb">
+      <obj_property name="ElementShortName">enableData1_tb</obj_property>
+      <obj_property name="ObjectShortName">enableData1_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/enableData2_tb">
+      <obj_property name="ElementShortName">enableData2_tb</obj_property>
+      <obj_property name="ObjectShortName">enableData2_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/readWrite_tb">
+      <obj_property name="ElementShortName">readWrite_tb</obj_property>
+      <obj_property name="ObjectShortName">readWrite_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/clk_tb">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Memory_tb/reset_tb">
+      <obj_property name="ElementShortName">reset_tb</obj_property>
+      <obj_property name="ObjectShortName">reset_tb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/dataIn_tb">
+      <obj_property name="ElementShortName">dataIn_tb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIn_tb[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/dataBack_tb">
+      <obj_property name="ElementShortName">dataBack_tb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dataBack_tb[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Memory_tb/colorData_tb">
+      <obj_property name="ElementShortName">colorData_tb[1:0]</obj_property>
+      <obj_property name="ObjectShortName">colorData_tb[1:0]</obj_property>
+   </wvobject>
+</wave_config>

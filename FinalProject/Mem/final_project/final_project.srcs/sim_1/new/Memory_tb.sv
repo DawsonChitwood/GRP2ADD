@@ -22,7 +22,8 @@
 
 module Memory_tb(
     );
-    
+
+reg [8:0] errors;   
 reg [5:0] currentRow_tb;
 reg [6:0] currentCol_tb;
 reg [5:0] vCount_tb;
@@ -57,69 +58,87 @@ initial begin
     enableData1_tb=1;
     enableData2_tb=0;
     readWrite_tb=0;
-    currentRow_tb=25;
-    currentCol_tb=25;
-    dataIn_tb=2;    
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=50;
-    currentCol_tb=50;
-    dataIn_tb=1;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    readWrite_tb=1;
-    vCount_tb=50;
-    hCount_tb=50;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=25;
-    currentCol_tb=25;
-    vCount_tb=25;
-    hCount_tb=25;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=50;
-    currentCol_tb=50;
-    vCount_tb=50;
-    hCount_tb=50; 
-     @(posedge clk_tb)
-    @(posedge clk_tb)
-    enableVisual_tb=0;
-    enableData1_tb=0;
-    enableData2_tb=1;
-    readWrite_tb=0;
-    currentRow_tb=25;
-    currentCol_tb=25;
-    dataIn_tb=3;    
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=50;
-    currentCol_tb=50;
     dataIn_tb=0;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
+    errors=0;
+     @(posedge clk_tb);
+     
+     
+    for(int i=0; i<60;i = i+1)begin
+       currentRow_tb=i;
+       for(int j=0; j<80; j=j+1)begin
+            currentCol_tb=j;
+            enableData1_tb=1;
+            @(posedge clk_tb);
+            enableData1_tb=0;
+            @(posedge clk_tb);
+            dataIn_tb= dataIn_tb+1;
+                     
+            @(posedge clk_tb);
+       end 
+    end
+    enableData2_tb=1;
+    for(int i=0; i<60;i = i+1)begin
+       currentRow_tb=i;
+       for(int j=0; j<80; j=j+1)begin
+            currentCol_tb=j;
+            @(posedge clk_tb);        
+            @(posedge clk_tb);
+       end 
+    end   
+            @(posedge clk_tb);
+            @(posedge clk_tb);
+            enableData2_tb=0;
+            @(posedge clk_tb);
+            @(posedge clk_tb);
     readWrite_tb=1;
-    vCount_tb=50;
-    hCount_tb=50;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=25;
-    currentCol_tb=25;
-    vCount_tb=25;
-    hCount_tb=25;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    currentRow_tb=50;
-    currentCol_tb=50;
-    vCount_tb=50;
-    hCount_tb=50;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    enableVisual_tb=1;
-    @(posedge clk_tb)
-    @(posedge clk_tb)
-    vCount_tb=25;
-    hCount_tb=25;
+            @(posedge clk_tb);
+    enableData1_tb=1;
+    @(posedge clk_tb);
+    for(int i=0; i<60;i = i+1)begin
+       currentRow_tb=i;
+       vCount_tb=i;
+       for(int j=0; j<80; j=j+1)begin
+            currentCol_tb=j;
+            hCount_tb=j;
+            @(posedge clk_tb);
+            @(posedge clk_tb);
+            if(dataBack_tb!=j%4) begin
+                $display("error at %d row %d col",i,j);
+                errors = errors+1;
+          end
+            if(colorData_tb!=j%4) begin
+                $display("error at %d row %d col",i,j);
+                errors = errors+1;       
+       end 
+       end
+    end
+    @(posedge clk_tb);
+    @(posedge clk_tb);
+enableData1_tb=0;
+enableData2_tb=1;
+enableVisual_tb=0;
+@(posedge clk_tb);
+@(posedge clk_tb);
+for(int i=0; i<60;i = i+1)begin
+       currentRow_tb=i;
+       vCount_tb=i;
+       for(int j=0; j<80; j=j+1)begin
+            currentCol_tb=j;
+            hCount_tb=j;
+            @(posedge clk_tb);
+            @(posedge clk_tb);
+            if(dataBack_tb!=0) begin
+                $display("error at %d row %d col in second mem",i,j);
+                errors = errors+1;
+          end
+            if(colorData_tb!=0) begin
+                $display("error at %d row %d col in second mem",i,j);
+                errors = errors+1;       
+       end 
+       end
+    end
+    
+                $display("errors found = %d ",errors);
     end
 
 always begin
