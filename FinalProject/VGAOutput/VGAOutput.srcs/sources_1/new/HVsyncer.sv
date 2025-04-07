@@ -46,11 +46,11 @@ parameter HBP = 19;    //24;
 parameter HDT = 320;    //320;
 parameter HRT = 48;   //48;
 parameter HTOT = 400;  //400;
-parameter VFP = 10;   //10;
-parameter VBP = 22;   //33;
-parameter VDT = 491;   //480;
+parameter VFP = 2;   //2 for testbench, 10 for actual timing
+parameter VBP = 2;   //2 for testbench, 22 for actual timing
+parameter VDT = 2;   //2 for testbench, 491 for actual timing
 parameter VRT = 1;   //2;
-parameter VTOT = 525;  //525;
+parameter VTOT = 7;  //7 for testbench, 525 for actual timing
 
 parameter HStart = 0;
 parameter VStart = 1;

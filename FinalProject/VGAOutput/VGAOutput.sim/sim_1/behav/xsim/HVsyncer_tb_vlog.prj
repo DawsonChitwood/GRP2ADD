@@ -1,7 +1,9 @@
 # compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../VGAOutput.srcs/sources_1/new/HVsyncer.sv" \
+
 verilog xil_defaultlib  \
-"../../../../VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v" \
-"../../../../VGAOutput.srcs/sim_1/new/Clk_25_MHZ_tb.v" \
+"../../../../VGAOutput.srcs/sim_1/new/HVsyncer_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
