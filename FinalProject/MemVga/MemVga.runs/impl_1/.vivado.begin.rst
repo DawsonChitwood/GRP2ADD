@@ -1,85 +1,25 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="5264" HostCore="8" HostMemory="8127064">
+    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="4732" HostCore="12" HostMemory="08216391680">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="9486" HostCore="8" HostMemory="8127064">
+    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="5632" HostCore="12" HostMemory="08216391680">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="13599" HostCore="8" HostMemory="8127064">
+    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="20148" HostCore="12" HostMemory="08216391680">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="20755" HostCore="8" HostMemory="8127064">
+    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="14916" HostCore="12" HostMemory="08216391680">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="24949" HostCore="8" HostMemory="8127064">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="29215" HostCore="8" HostMemory="8127064">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="33436" HostCore="8" HostMemory="8127064">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="37617" HostCore="8" HostMemory="8127064">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="41830" HostCore="8" HostMemory="8127064">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="4404" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="9210" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="14025" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="18355" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="22605" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="26890" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="31268" HostCore="8" HostMemory="8127048">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="student" Host="CSEE4280" Pid="35824" HostCore="8" HostMemory="8127048">
+    <Process Command="vivado.bat" Owner="dgchi" Host="LAPTOP-RH96MGM6" Pid="24680" HostCore="12" HostMemory="08216391680">
     </Process>
 </ProcessHandle>

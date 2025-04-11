@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.tcl"
+  variable script "C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,8 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 3
 set_msg_config  -id {USF-XSim-62}  -string {{ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.}}  -suppress 
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[14] has multiple drivers: rgbc/pwmb/Counter_reg[14]/Q, and rgbc/pwmb/Counter_reg[14]__0/Q.}}  -suppress 
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[15] has multiple drivers: rgbc/pwmb/Counter_reg[15]__0/Q, and rgbc/pwmb/Counter_reg[15]/Q.}}  -suppress 
@@ -99,23 +98,25 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.cache/wt [current_project]
-set_property parent.project_path /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.xpr [current_project]
+set_property webtalk.parent_dir C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.cache/wt [current_project]
+set_property parent.project_path C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
-set_property ip_output_repo /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.cache/ip [current_project]
+set_property ip_output_repo c:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv
-  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv
-  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv
-  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv
-  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv
+  C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv
+  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv
 }
-read_verilog -library xil_defaultlib /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v
+read_verilog -library xil_defaultlib C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -125,12 +126,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
+read_xdc C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp
+read_checkpoint -auto_incremental -incremental C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
