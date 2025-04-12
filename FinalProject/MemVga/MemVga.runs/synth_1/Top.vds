@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Apr 11 16:14:08 2025
-# Process ID         : 5144
+# Start of session at: Sat Apr 12 12:12:32 2025
+# Process ID         : 4880
 # Current directory  : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1
 # Command line       : vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file           : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.vds
@@ -19,7 +19,7 @@
 # Host memory        : 8216 MB
 # Swap memory        : 11365 MB
 # Total Virtual      : 19581 MB
-# Available Virtual  : 6558 MB
+# Available Virtual  : 6640 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp
@@ -34,9 +34,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7776
+INFO: [Synth 8-7075] Helper process launched with PID 13604
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1097.906 ; gain = 468.168
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1099.031 ; gain = 469.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'ColorTime', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
 INFO: [Synth 8-11241] undeclared symbol 'ColorTimeTwo', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
@@ -44,6 +44,8 @@ WARNING: [Synth 8-9926] potential always loop found [C:/CSEE4280/GRP2ADD/FinalPr
 INFO: [Synth 8-11241] undeclared symbol 'enableData2', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:35]
 INFO: [Synth 8-11241] undeclared symbol 'readWrite', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:35]
 INFO: [Synth 8-11241] undeclared symbol 'dataBack', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:35]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
+INFO: [Synth 8-11241] undeclared symbol 'enableData2', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
 INFO: [Synth 8-6157] synthesizing module 'Clk_Divider_25MHZ' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Clk_Divider_25MHZ' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
@@ -62,34 +64,39 @@ INFO: [Synth 8-226] default block is never used [C:/CSEE4280/GRP2ADD/FinalProjec
 INFO: [Synth 8-6155] done synthesizing module 'HVsyncer' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'VGA_Out' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:23]
 WARNING: [Synth 8-689] width (6) of port connection 'VC' does not match port width (7) of module 'VGA_Out' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'Control_And_Start' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Auto_Control' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Auto_Control' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
-WARNING: [Synth 8-324] index 3 out of range [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
-WARNING: [Synth 8-324] index 4 out of range [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
-WARNING: [Synth 8-689] width (1) of port connection 'DataBack' does not match port width (2) of module 'Auto_Control' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
 INFO: [Synth 8-6157] synthesizing module 'Starting_Pixels' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Starting_Pixels' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Control_And_Start' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
+WARNING: [Synth 8-324] index 3 out of range [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
+WARNING: [Synth 8-324] index 4 out of range [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
+WARNING: [Synth 8-689] width (1) of port connection 'dataB' does not match port width (2) of module 'Control_And_Start' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
 INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
 WARNING: [Synth 8-11357] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  m_data_reg with 9600 registers
 WARNING: [Synth 8-6014] Unused sequential element pleaseWorkTwo_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:161]
 WARNING: [Synth 8-6014] Unused sequential element ClockCounter_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:133]
-WARNING: [Synth 8-3848] Net readWrite in module/entity Top does not have driver. [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:35]
+WARNING: [Synth 8-3848] Net enabledata1 in module/entity Control_And_Start does not have driver. [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
+WARNING: [Synth 8-3848] Net enabledata2 in module/entity Control_And_Start does not have driver. [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
 WARNING: [Synth 8-7129] Port Start in module Auto_Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enabledata1 in module Control_And_Start is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enabledata2 in module Control_And_Start is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module DualPort is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[1] in module Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1748.324 ; gain = 1118.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1748.148 ; gain = 1118.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1748.324 ; gain = 1118.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1748.148 ; gain = 1118.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1748.324 ; gain = 1118.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1748.148 ; gain = 1118.375
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.685 . Memory (MB): peak = 1748.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.612 . Memory (MB): peak = 1748.148 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -106,28 +113,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1804.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1843.637 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1804.836 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1843.637 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'CurrentState_reg' in module 'Auto_Control'
 INFO: [Synth 8-802] inferred FSM for state register 'Write_reg' in module 'Starting_Pixels'
@@ -165,7 +172,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'CurrentState_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'Write_reg' using encoding 'sequential' in module 'Starting_Pixels'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:08 ; elapsed = 00:01:20 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:00 ; elapsed = 00:01:12 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -240,29 +247,29 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port SW[1] in module Top is either unconnected or has no load
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dataIn[1] with 1st driver pin 'i_0/nolabel_line38i_27/z' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dataIn[1] with 1st driver pin 'i_0/nolabel_line26i_27/z' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dataIn[1] with 2nd driver pin 'GND' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net dataIn[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:29 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:55 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:09 ; elapsed = 00:02:35 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:02:00 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:09 ; elapsed = 00:02:35 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Timing Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:02:00 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:12 ; elapsed = 00:02:37 . Memory (MB): peak = 1804.836 ; gain = 1175.098
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:02:00 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -280,74 +287,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:15 ; elapsed = 00:02:41 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished IO Insertion : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:15 ; elapsed = 00:02:41 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[3] with 1st driver pin 'm_data[44][79][0]_i_2__0/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[3] with 2nd driver pin 'nolabel_line37/Row_reg[3]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[0] with 1st driver pin 'm_data[57][79][0]_i_3__0/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[0] with 2nd driver pin 'nolabel_line37/Row_reg[0]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[4] with 1st driver pin 'm_data[56][79][0]_i_2__0/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[4] with 2nd driver pin 'nolabel_line37/Row_reg[4]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin enableData1 with 1st driver pin 'm_data[30][79][0]_i_3/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin enableData1 with 2nd driver pin 'nolabel_line37/enable1_reg/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:141]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[5] with 1st driver pin 'nolabel_line37/Row_reg[5]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[5] with 2nd driver pin 'nolabel_line38/currentRow_tristate_oe_reg[5]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:28]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[2] with 1st driver pin 'm_data[55][79][0]_i_3__0/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[2] with 2nd driver pin 'nolabel_line37/Row_reg[2]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[1] with 1st driver pin 'm_data[59][79][0]_i_4/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentRow[1] with 2nd driver pin 'nolabel_line37/Row_reg[1]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:159]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dataIn[0] with 1st driver pin 'm_data[59][79][0]_i_2__0/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dataIn[0] with 2nd driver pin 'nolabel_line37/Data_reg[0]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:251]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[0] with 1st driver pin 'm_data[59][78][0]_i_4/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[0] with 2nd driver pin 'nolabel_line37/Col_reg[0]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[2] with 1st driver pin 'm_data[59][78][0]_i_5/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[2] with 2nd driver pin 'nolabel_line37/Col_reg[2]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[6] with 1st driver pin 'nolabel_line37/Col_reg[6]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[6] with 2nd driver pin 'nolabel_line38/currentCol_tristate_oe_reg[6]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:29]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[3] with 1st driver pin 'm_data[59][74][0]_i_3/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[3] with 2nd driver pin 'nolabel_line37/Col_reg[3]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[1] with 1st driver pin 'm_data[59][77][0]_i_4/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[1] with 2nd driver pin 'nolabel_line37/Col_reg[1]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[4] with 1st driver pin 'm_data[59][79][0]_i_9/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[4] with 2nd driver pin 'nolabel_line37/Col_reg[4]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[5] with 1st driver pin 'm_data[59][79][0]_i_10/O' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin currentCol[5] with 2nd driver pin 'nolabel_line37/Col_reg[5]/Q' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:160]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       15|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:02:42 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:17 ; elapsed = 00:02:43 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:20 ; elapsed = 00:02:46 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:20 ; elapsed = 00:02:46 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -360,46 +330,42 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |BUFG  |     2|
-|2     |LUT1  |    29|
-|3     |LUT2  |   617|
-|4     |LUT3  |   204|
-|5     |LUT4  |   977|
-|6     |LUT5  |  3085|
-|7     |LUT6  |  9375|
-|8     |MUXF7 |   952|
-|9     |MUXF8 |    98|
-|10    |FDRE  |  9772|
-|11    |FDSE  |     3|
-|12    |IBUF  |     3|
-|13    |OBUF  |    14|
-+------+------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     7|
+|4     |LUT3 |     5|
+|5     |LUT4 |     6|
+|6     |LUT5 |    16|
+|7     |LUT6 |    12|
+|8     |FDRE |    33|
+|9     |FDSE |     1|
+|10    |IBUF |     3|
+|11    |OBUF |    14|
++------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:20 ; elapsed = 00:02:46 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:42 ; elapsed = 00:02:03 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 33 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:02:40 . Memory (MB): peak = 1827.777 ; gain = 1141.527
-Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:48 . Memory (MB): peak = 1827.777 ; gain = 1198.039
+Synthesis finished with 0 errors, 3 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:18 ; elapsed = 00:01:57 . Memory (MB): peak = 1843.637 ; gain = 1118.375
+Synthesis Optimization Complete : Time (s): cpu = 00:01:42 ; elapsed = 00:02:04 . Memory (MB): peak = 1843.637 ; gain = 1213.863
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.273 . Memory (MB): peak = 1848.254 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1050 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1843.637 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1853.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1843.637 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 4158adda
+Synth Design complete | Checksum: 84d82c45
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 18 Warnings, 35 Critical Warnings and 0 Errors encountered.
+52 Infos, 21 Warnings, 5 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:56 . Memory (MB): peak = 1853.949 ; gain = 1425.098
+synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:02:10 . Memory (MB): peak = 1843.637 ; gain = 1413.863
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1853.949 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1843.637 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr 11 16:17:12 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 12 12:14:49 2025...
