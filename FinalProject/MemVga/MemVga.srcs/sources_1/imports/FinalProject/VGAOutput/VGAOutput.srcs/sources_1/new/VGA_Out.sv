@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module VGA_Out(input Clk, input BANANAS, input [1:0] ColorIn, output hsync, output vsync, output logic [3:0] R, output logic [3:0] G, output logic [3:0] B, output [6:0] HC, output [6:0] VC);
+module VGA_Out(input Clk, input BANANAS, input [1:0] ColorIn, output hsync, output vsync, output logic [3:0] R, output logic [3:0] G, output logic [3:0] B, output [6:0] HC, output [5:0] VC);
 reg HS = 0;
 reg VS = 0;
 reg hc = 0;

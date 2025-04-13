@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, input [1:0] DataBack, output RW, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] Data, output reg enable1, output reg  enable2);
+module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, input [1:0] DataBack, output RW, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] data, output reg enable1, output reg  enable2);
 //State Machine Variables
 reg [3:0] CurrentState = 0;
 reg [3:0] NextState = 0;
@@ -58,7 +58,7 @@ parameter PROCESS = 12;
 
 
 // Register for the Read/Write output
-reg RW_reg = 0;
+reg RW_reg = 1;
 
 // This register keeps up with how many clocks have elapsed to make sure we allow adequate time for the storage module to process
 // our read commands and send out the data we need
@@ -135,12 +135,12 @@ always @(posedge Clk) begin
             RowCount <= 0;
             ColCount <= 0;
             Live_Counter <= 0;
-            Cache <= 0;
+            Cache <= 0; 
         end
         PIXELDONE: begin
             enable1 <= 0;
             enable2 <= 0;
-            RW_reg <= 0;
+            RW_reg <= 1;
         end
    //This is the state in which the row and column to be requested will be specified. The clock counter is present to give some delay 
    //allowing for the storage module to process
@@ -248,11 +248,11 @@ always @(posedge Clk) begin
          else ;
          
          if(Cache[0] == Live_Color) begin
-            if((Live_Counter > 3) || (Live_Counter < 2)) Data <= Dead_Color; 
-            else Data <= Live_Color;
+            if((Live_Counter > 3) || (Live_Counter < 2)) data <= 0; 
+            else data <= 1;
          end 
-         else if(Live_Counter == 3) Data <= Live_Color;
-         else Data <= Dead_Color;
+         else if(Live_Counter == 3) data <= 1;
+         else data <= 0;
          
          Live_Counter <= 0;
          Row = RowCount;
@@ -270,7 +270,7 @@ always @(posedge Clk) begin
      end
      //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
      WRITE: begin
-        RW_reg <= 1;
+        RW_reg <= 0;
         if(!(RowCount >= (Max_Row - 1))) begin
             if(ColCount >= (Max_Col - 1)) begin
                 ColCount <= 0;

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module HVsyncer(input Clk, input BANANAS, output  hsync, output vsync, output [6:0] HC, output [6:0]  VC,output reg pleaseWork,output reg pleaseWorkTwo);
+module HVsyncer(input Clk, input BANANAS, output  hsync, output vsync, output [6:0] HC, output [5:0]  VC,output reg pleaseWork,output reg pleaseWorkTwo);
 
 reg [6:0] HC_reg = 0;     //The register holding the HC Value
 reg [6:0] VC_reg = 0;     //The register holding the VC Value

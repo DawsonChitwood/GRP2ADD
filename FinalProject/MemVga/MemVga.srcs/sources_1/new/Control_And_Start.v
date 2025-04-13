@@ -20,9 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Control_And_Start(input Clk,input Reset, input FrameSelect, input Start, input [1:0] dataB,output RW, output [5:0] currentRow, output [6:0] currentCol, output [1:0] dataIn, output enabledata1, output enabledata2);
+module Control_And_Start(input Clk,input Reset, input FrameSelect, input Start, input [1:0] dataB,output RW, output [5:0] currentRow, output [6:0] currentCol, output [1:0] BANANA, output enableData1, output enableData2,input keepGoing);
+Auto_Control ac(Clk,Reset,FrameSelect,Start,dataB,RW_A,currentRow_A,currentCol_A,BANANA_A,enableData1_A,enableData2_A);
+Starting_Pixels sp(Clk,currentRow_B,currentCol_B,BANANA_B,enableData1_B,keepGoing);
 
-Auto_Control(Clk,Reset,FrameSelect,Start,dataB,RW,currentRow,currentCol,dataIn,enableData1,enableData2);
-Starting_Pixels(Clk,currentRow,currentCol,dataIn,enableData1);
+assign currentRow = Start ? currentRow_A:currentRow_B;
+assign currentCol = Start ? currentCol_A:currentCol_B;
+assign BANANA = Start ? BANANA_A:BANANA_B;
+assign enableData1 = Start ? enableData1_A:enableData1_B;
+assign enableData2 = Start ? enableData1_A:0;
+assign RW = Start ? RW_A:0;
 
 endmodule

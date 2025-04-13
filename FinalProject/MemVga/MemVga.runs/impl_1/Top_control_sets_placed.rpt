@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Sat Apr 12 12:15:23 2025
-| Host         : LAPTOP-RH96MGM6 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Sat Apr 12 22:08:10 2025
+| Host         : CSEE4280 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     5 |
-|    Minimum number of control sets                        |     5 |
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    27 |
+| Unused register locations in slices containing registers |    37 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     5 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
+| Total control sets |    12 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
-| >= 14 to < 16      |     0 |
-| >= 16              |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     1 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,26 +58,33 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               7 |            2 |
+| No           | No                    | No                     |              33 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              22 |            7 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              35 |           11 |
+| Yes          | No                    | No                     |              19 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              20 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+---------------+---------------------------+------------------+----------------+--------------+
-|     Clock Signal     | Enable Signal |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------------+---------------+---------------------------+------------------+----------------+--------------+
-|  CD/CLK              |               | RESET_IBUF                |                1 |              3 |         3.00 |
-|  CLK100MHZ_IBUF_BUFG |               |                           |                1 |              3 |         3.00 |
-|  CD/CLK              |               |                           |                1 |              4 |         4.00 |
-|  CD/CLK              |               | vga/hvs/HCount[8]_i_1_n_0 |                2 |              9 |         4.50 |
-|  CD/CLK              |               | vga/hvs/clear             |                4 |             10 |         2.50 |
-+----------------------+---------------+---------------------------+------------------+----------------+--------------+
++----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |            Enable Signal            |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
+|  CLK_BUFG            |                                     | vga/hvs/hcCounter[3]_i_1_n_0 |                1 |              4 |         4.00 |
+|  CLK_BUFG            |                                     | vga/hvs/vcCounter[3]_i_1_n_0 |                1 |              4 |         4.00 |
+|  CLK_BUFG            | cas/ac/PixelCount                   |                              |                2 |              4 |         2.00 |
+|  CLK_BUFG            | vga/hvs/vcCounter_reg_n_0_[3]       | vga/hvs/VC_reg[5]_i_1_n_0    |                2 |              6 |         3.00 |
+|  CLK_BUFG            | vga/hvs/HC_reg[6]_i_2_n_0           | vga/hvs/HC_reg[6]_i_1_n_0    |                2 |              7 |         3.50 |
+|  CLK_BUFG            | cas/ac/ColCount                     | cas/ac/RowCount0             |                2 |              7 |         3.50 |
+|  CLK_BUFG            |                                     | RESET_IBUF                   |                3 |              8 |         2.67 |
+|  CLK_BUFG            |                                     | vga/hvs/HCount[8]_i_1_n_0    |                2 |              9 |         4.50 |
+|  CLK_BUFG            |                                     | vga/hvs/clear                |                4 |             10 |         2.50 |
+|  CLK_BUFG            | cas/sp/FSM_onehot_Write[14]_i_1_n_0 |                              |                3 |             15 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG |                                     |                              |                6 |             15 |         2.50 |
+|  CLK_BUFG            |                                     |                              |               10 |             18 |         1.80 |
++----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
 
 

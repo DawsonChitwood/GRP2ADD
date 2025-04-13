@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1);
+module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing);
 reg [5:0] Write;
 
 always @(posedge Clk) begin
@@ -39,9 +39,10 @@ always @(posedge Clk) begin
        Write=3;
     end
      else if(Write==3) begin
-       currentRow=1;
-       currentCol=0;
-       dataIn=1;
+       currentRow=0;
+       currentCol=2;
+       dataIn=2;
+       
        Write=4;
     end
     else if(Write==4) begin       
@@ -53,9 +54,9 @@ always @(posedge Clk) begin
        Write=6;
     end
      else if(Write==6) begin
-       currentRow=59;
-       currentCol=79;
-       dataIn=2;
+       currentRow=1;
+       currentCol=0;
+       dataIn=1;
        Write=7;
     end
     else if(Write==7) begin       
@@ -80,9 +81,9 @@ always @(posedge Clk) begin
        enableData1=0;
        Write=12;
     end
-          else if(Write==12) begin
-       currentRow=49;
-       currentCol=79;
+        else if(Write==12) begin
+       currentRow=0;
+       currentCol=3;
        dataIn=1;
        Write=13;
     end
@@ -95,11 +96,13 @@ always @(posedge Clk) begin
        Write=15;
     end
     else begin
-        currentRow=5'bz;
+        /**currentRow=5'bz;
         currentCol=6'bz;
         dataIn=2'bz;
         enableData1=1'bz;
-        Write=Write;
+        **/
+        if(keepGoing) Write=0;
+        else Write=Write;
     end
 end
 endmodule
