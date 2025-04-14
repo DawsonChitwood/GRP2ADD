@@ -25,75 +25,75 @@ reg [5:0] Write;
 
 always @(posedge Clk) begin
     if(Write==0) begin
-       currentRow=0;
-       currentCol=0;
-       dataIn=3;
-       Write=1;
+       currentRow<=0;
+       currentCol<=0;
+       dataIn<=3;
+       Write<=1;
     end
     else if(Write==1) begin       
-       enableData1=1;
-       Write=2;
+       enableData1<=1;
+       Write<=2;
     end
     else if(Write==2) begin       
-       enableData1=0;
-       Write=3;
+       enableData1<=0;
+       Write<=3;
     end
      else if(Write==3) begin
-       currentRow=0;
-       currentCol=2;
-       dataIn=2;
+       currentRow<=0;
+       currentCol<=2;
+       dataIn<=2;
        
-       Write=4;
+       Write<=4;
     end
     else if(Write==4) begin       
-       enableData1=1;
-       Write=5;
+       enableData1<=1;
+       Write<=5;
     end
     else if(Write==5) begin       
-       enableData1=0;
-       Write=6;
+       enableData1<=0;
+       Write<=6;
     end
      else if(Write==6) begin
-       currentRow=1;
-       currentCol=0;
-       dataIn=1;
-       Write=7;
+       currentRow<=1;
+       currentCol<=0;
+       dataIn<=1;
+       Write<=7;
     end
     else if(Write==7) begin       
-       enableData1=1;
-       Write=8;
+       enableData1<=1;
+       Write<=8;
     end
     else if(Write==8) begin       
-       enableData1=0;
-       Write=9;
+       enableData1<=0;
+       Write<=9;
     end
        else if(Write==9) begin
-       currentRow=0;
-       currentCol=1;
-       dataIn=2;
-       Write=10;
+       currentRow<=0;
+       currentCol<=1;
+       dataIn<=2;
+       Write<=10;
     end
     else if(Write==10) begin       
-       enableData1=1;
-       Write=11;
+       enableData1<=1;
+       Write<=11;
     end
     else if(Write==11) begin       
-       enableData1=0;
-       Write=12;
+       enableData1<=0;
+       Write<=12;
     end
         else if(Write==12) begin
-       currentRow=0;
-       currentCol=3;
-       dataIn=1;
-       Write=13;
+       currentRow<=0;
+       currentCol<=3;
+       dataIn<=1;
+       Write<=13;
     end
     else if(Write==13) begin       
-       enableData1=1;
-       Write=14;
+       enableData1<=1;
+       Write<=14;
     end
     else if(Write==14) begin       
-       enableData1=0;
-       Write=15;
+       enableData1<=0;
+       Write<=15;
     end
     else begin
         /**currentRow=5'bz;

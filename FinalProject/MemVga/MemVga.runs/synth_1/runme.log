@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sat Apr 12 22:04:57 2025
+  **** Start of session at: Mon Apr 14 12:48:49 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -24,24 +24,18 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 203757
+INFO: [Synth 8-7075] Helper process launched with PID 10657
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1872.645 ; gain = 427.832 ; free physical = 4742 ; free virtual = 6638
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1872.676 ; gain = 428.832 ; free physical = 4567 ; free virtual = 6958
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'ColorTime', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
 INFO: [Synth 8-11241] undeclared symbol 'ColorTimeTwo', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
 WARNING: [Synth 8-9926] potential always loop found [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:109]
 INFO: [Synth 8-11241] undeclared symbol 'readWrite', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:37]
-INFO: [Synth 8-11241] undeclared symbol 'RW_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'currentRow_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'currentCol_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'BANANA_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'enableData1_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'enableData2_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-INFO: [Synth 8-11241] undeclared symbol 'currentRow_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
-INFO: [Synth 8-11241] undeclared symbol 'currentCol_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
-INFO: [Synth 8-11241] undeclared symbol 'BANANA_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
-INFO: [Synth 8-11241] undeclared symbol 'enableData1_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
+INFO: [Synth 8-11241] undeclared symbol 'RW_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
+INFO: [Synth 8-11241] undeclared symbol 'enableData2_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:34]
 INFO: [Synth 8-6157] synthesizing module 'Top' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
 INFO: [Synth 8-6157] synthesizing module 'Clk_Divider_25MHZ' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Clk_Divider_25MHZ' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
@@ -61,14 +55,8 @@ INFO: [Synth 8-6155] done synthesizing module 'VGA_Out' (0#1) [/home/student/Des
 INFO: [Synth 8-6157] synthesizing module 'Control_And_Start' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Auto_Control' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'Row' does not match port width (6) of module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-WARNING: [Synth 8-689] width (1) of port connection 'Col' does not match port width (7) of module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
-WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (2) of module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:24]
 INFO: [Synth 8-6157] synthesizing module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Starting_Pixels' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'currentRow' does not match port width (6) of module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
-WARNING: [Synth 8-689] width (1) of port connection 'currentCol' does not match port width (7) of module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
-WARNING: [Synth 8-689] width (1) of port connection 'dataIn' does not match port width (2) of module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'Control_And_Start' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
 WARNING: [Synth 8-11357] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  m_data_reg with 9600 registers
@@ -78,18 +66,18 @@ WARNING: [Synth 8-7129] Port Start in module Auto_Control is either unconnected 
 WARNING: [Synth 8-7129] Port reset in module DualPort is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[2] in module Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2394.746 ; gain = 949.934 ; free physical = 4196 ; free virtual = 6099
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2394.777 ; gain = 950.934 ; free physical = 4018 ; free virtual = 6419
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2394.746 ; gain = 949.934 ; free physical = 4196 ; free virtual = 6099
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2400.715 ; gain = 956.871 ; free physical = 4031 ; free virtual = 6432
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2394.746 ; gain = 949.934 ; free physical = 4196 ; free virtual = 6099
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2400.715 ; gain = 956.871 ; free physical = 4031 ; free virtual = 6432
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.84 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2394.746 ; gain = 0.000 ; free physical = 4206 ; free virtual = 6108
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2400.715 ; gain = 0.000 ; free physical = 4031 ; free virtual = 6432
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -100,7 +88,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2533.223 ; gain = 0.000 ; free physical = 4194 ; free virtual = 6096
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2535.191 ; gain = 0.000 ; free physical = 4014 ; free virtual = 6415
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -140,7 +128,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'CurrentState_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'Write_reg' using encoding 'one-hot' in module 'Starting_Pixels'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:15 . Memory (MB): peak = 2557.234 ; gain = 1112.422 ; free physical = 198 ; free virtual = 1384
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:23 ; elapsed = 00:01:23 . Memory (MB): peak = 2559.203 ; gain = 1115.359 ; free physical = 144 ; free virtual = 1765
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -169,10 +157,10 @@ Detailed RTL Component Info :
 	  16 Input   16 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
 	  10 Input    7 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 2     
 	   6 Input    7 Bit        Muxes := 1     
 	  10 Input    6 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
 	   6 Input    6 Bit        Muxes := 1     
 	  12 Input    6 Bit        Muxes := 1     
 	  14 Input    6 Bit        Muxes := 1     
@@ -182,11 +170,11 @@ Detailed RTL Component Info :
 	   4 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 5     
 	   4 Input    2 Bit        Muxes := 2     
 	   5 Input    2 Bit        Muxes := 2     
 	  13 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 17    
+	   2 Input    1 Bit        Muxes := 14    
 	   4 Input    1 Bit        Muxes := 6     
 	  10 Input    1 Bit        Muxes := 1     
 	  11 Input    1 Bit        Muxes := 1     
@@ -212,28 +200,27 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'cas/sp/currentCol_reg' and it is trimmed from '7' to '1' bits. [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:29]
 WARNING: [Synth 8-7129] Port SW[2] in module Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:59 . Memory (MB): peak = 2557.234 ; gain = 1112.422 ; free physical = 160 ; free virtual = 1404
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:27 ; elapsed = 00:02:28 . Memory (MB): peak = 2559.203 ; gain = 1115.359 ; free physical = 163 ; free virtual = 1710
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:38 ; elapsed = 00:02:18 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 849 ; free virtual = 2218
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:11 ; elapsed = 00:02:40 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 923 ; free virtual = 2581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:18 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 849 ; free virtual = 2218
+Finished Timing Optimization : Time (s): cpu = 00:03:11 ; elapsed = 00:02:40 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 923 ; free virtual = 2581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:39 ; elapsed = 00:02:19 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 839 ; free virtual = 2208
+Finished Technology Mapping : Time (s): cpu = 00:03:14 ; elapsed = 00:02:43 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 922 ; free virtual = 2581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -251,37 +238,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished IO Insertion : Time (s): cpu = 00:03:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:21 ; elapsed = 00:02:51 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:21 ; elapsed = 00:02:51 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -294,43 +281,47 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     2|
-|2     |LUT1 |     8|
-|3     |LUT2 |    14|
-|4     |LUT3 |    23|
-|5     |LUT4 |    19|
-|6     |LUT5 |    28|
-|7     |LUT6 |    48|
-|8     |FDRE |   106|
-|9     |FDSE |     1|
-|10    |IBUF |     6|
-|11    |OBUF |    14|
-+------+-----+------+
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     2|
+|2     |LUT1  |    12|
+|3     |LUT2  |    39|
+|4     |LUT3  |   125|
+|5     |LUT4  |   444|
+|6     |LUT5  |    73|
+|7     |LUT6  |  1102|
+|8     |MUXF7 |    43|
+|9     |MUXF8 |    10|
+|10    |FDRE  |   902|
+|11    |FDSE  |     1|
+|12    |IBUF  |     6|
+|13    |OBUF  |    14|
++------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:42 ; elapsed = 00:02:22 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 826 ; free virtual = 2195
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:21 ; elapsed = 00:02:51 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 921 ; free virtual = 2580
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:32 ; elapsed = 00:02:15 . Memory (MB): peak = 2561.152 ; gain = 965.941 ; free physical = 4851 ; free virtual = 6234
-Synthesis Optimization Complete : Time (s): cpu = 00:02:42 ; elapsed = 00:02:23 . Memory (MB): peak = 2561.152 ; gain = 1116.340 ; free physical = 4851 ; free virtual = 6236
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:07 ; elapsed = 00:02:39 . Memory (MB): peak = 2563.121 ; gain = 972.879 ; free physical = 4960 ; free virtual = 6619
+Synthesis Optimization Complete : Time (s): cpu = 00:03:22 ; elapsed = 00:02:52 . Memory (MB): peak = 2563.121 ; gain = 1119.277 ; free physical = 4960 ; free virtual = 6621
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2561.152 ; gain = 0.000 ; free physical = 4851 ; free virtual = 6238
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2563.121 ; gain = 0.000 ; free physical = 4960 ; free virtual = 6622
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2605.258 ; gain = 0.000 ; free physical = 4853 ; free virtual = 6245
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2607.227 ; gain = 0.000 ; free physical = 4951 ; free virtual = 6624
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 7a5a4a84
+Synth Design complete | Checksum: 67d05c01
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:02:31 . Memory (MB): peak = 2605.258 ; gain = 1238.977 ; free physical = 4852 ; free virtual = 6245
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 6623.038; main = 1703.709; forked = 5187.219
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 15286.250; main = 2605.262; forked = 12729.012
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2629.270 ; gain = 0.000 ; free physical = 4849 ; free virtual = 6249
+synth_design: Time (s): cpu = 00:03:29 ; elapsed = 00:02:59 . Memory (MB): peak = 2607.227 ; gain = 1240.914 ; free physical = 4951 ; free virtual = 6624
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 6636.393; main = 1658.369; forked = 5137.471
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 15288.824; main = 2607.230; forked = 12729.617
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2631.238 ; gain = 0.000 ; free physical = 4950 ; free virtual = 6625
 INFO: [Common 17-1381] The checkpoint '/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 12 22:07:34 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 12:51:55 2025...
