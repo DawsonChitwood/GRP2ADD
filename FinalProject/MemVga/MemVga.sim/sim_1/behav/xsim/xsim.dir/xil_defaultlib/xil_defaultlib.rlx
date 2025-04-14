@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/Muxed_Control_tb.v,1744652718,verilog,,,,Muxed_Starting_tb,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv,1744650058,systemVerilog,,C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv,,DualPort,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv,1744650058,systemVerilog,,C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v,,Memory,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v,1744653622,verilog,,,,Control_And_Start,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v,1744650848,systemVerilog,,,,Starting_Pixels,,uvm,,,,,,
+C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v,1744656410,systemVerilog,,C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv,,Auto_Control,,uvm,,,,,,

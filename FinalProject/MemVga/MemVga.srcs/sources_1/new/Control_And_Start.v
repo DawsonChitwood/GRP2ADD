@@ -37,7 +37,7 @@ assign currentRow = Start ? currentRow_A:currentRow_B;
 assign currentCol = Start ? currentCol_A:currentCol_B;
 assign BANANA = Start ? BANANA_A:BANANA_B;
 assign enableData1 = Start ? enableData1_A:enableData1_B;
-assign enableData2 = Start ? enableData1_A:0;
+assign enableData2 = Start ? enableData2_A:0;
 assign RW = Start ? RW_A:0;
 
 endmodule

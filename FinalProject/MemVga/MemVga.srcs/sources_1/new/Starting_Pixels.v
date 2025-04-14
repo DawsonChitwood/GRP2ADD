@@ -27,7 +27,7 @@ always @(posedge Clk) begin
     if(Write==0) begin
        currentRow<=0;
        currentCol<=0;
-       dataIn<=3;
+       dataIn<=1;
        Write<=1;
     end
     else if(Write==1) begin       
@@ -41,7 +41,7 @@ always @(posedge Clk) begin
      else if(Write==3) begin
        currentRow<=0;
        currentCol<=2;
-       dataIn<=2;
+       dataIn<=1;
        
        Write<=4;
     end
@@ -70,7 +70,7 @@ always @(posedge Clk) begin
        else if(Write==9) begin
        currentRow<=0;
        currentCol<=1;
-       dataIn<=2;
+       dataIn<=1;
        Write<=10;
     end
     else if(Write==10) begin       

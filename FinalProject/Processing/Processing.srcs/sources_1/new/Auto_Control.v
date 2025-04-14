@@ -66,11 +66,11 @@ reg [2:0] Clock_Counter = 0;
 reg [4:0] Clocks_To_Wait = 3;
 
 // Register to tell module that it is done writing the current frame
-reg Frame_Done = 0;
+reg Frame_Done = 1;
 
 //Registers holding the max rows and columns
-reg Max_Row = 4; //4 for simulation  60 for application
-reg Max_Col = 4; //4 for simulation  80 for application
+reg Max_Row = 60; //4 for simulation  60 for application
+reg Max_Col = 80; //4 for simulation  80 for application
 
 //Registers for color parameters
 reg [1:0] Live_Color = 1;
@@ -82,9 +82,11 @@ reg CurrentStorageModule = 0; //keeps track of which storage module is currently
 //This block will change Frame done to 0 whenever FrameSelector changes. If Frame selector is high then the RW output will be high, otherwise
 //it is low
 always @(FrameSelector) begin
-    Frame_Done <= 0;
-    if(FrameSelector) CurrentStorageModule= 1;
-    else CurrentStorageModule = 0;
+        if(Start) begin
+            Frame_Done <= 0;
+            if(FrameSelector) CurrentStorageModule= 1;
+            else CurrentStorageModule = 0;
+        end
 end
 
 //State Memory
@@ -143,7 +145,7 @@ always @(posedge Clk) begin
             RW_reg <= 1;
         end
    //This is the state in which the row and column to be requested will be specified. The clock counter is present to give some delay 
-   //allowing for the storage module to process
+   //allowing for the  module to process
      REQUEST: begin
 //        ClockCounter <= ClockCounter + 1;
     if(CurrentStorageModule) begin
@@ -160,47 +162,47 @@ always @(posedge Clk) begin
                 Col <= ColCount;
             end
             1: begin
-               if((RowCount - 1) > 0)  Row <= RowCount - 1;
+               if((RowCount != 0)) Row <= RowCount - 1;
                else Row <= (Max_Row - 1);
                 Col <= ColCount;
             end
             2: begin
-               if((RowCount - 1) > 0)  Row <= RowCount - 1;
+               if((RowCount != 0))  Row <= RowCount - 1;
                else Row <= (Max_Row - 1);
-               if((ColCount - 1) > 0) Col <= ColCount - 1;
+               if((ColCount != 0)) Col <= ColCount - 1;
                else Col <= (Max_Col - 1);
             end
             3: begin
                 Row <= RowCount;
-               if((ColCount - 1) > 0) Col <= ColCount - 1;
+               if((ColCount != 0)) Col <= ColCount - 1;
                else Col <= (Max_Col - 1);
             end
             4: begin
-               if((RowCount + 1) < Max_Row)  Row <= RowCount + 1;
+               if((RowCount != (Max_Row - 1)))  Row <= RowCount + 1;
                else Row <= 0;
-               if((ColCount - 1) > 0) Col <= ColCount - 1;
+               if((ColCount != 0)) Col <= ColCount - 1;
                else Col <= (Max_Col - 1);
             end
             5: begin
-               if((RowCount + 1) < Max_Row)  Row <= RowCount + 1;
+               if((RowCount != (Max_Row - 1)))  Row <= RowCount + 1;
                else Row <= 0;
                 Col <= ColCount;
             end
             6: begin
-               if((RowCount + 1) < Max_Row)  Row <= RowCount + 1;
+               if((RowCount != (Max_Row - 1)))  Row <= RowCount + 1;
                else Row <= 0;
-               if((ColCount + 1) < Max_Col) Col <= ColCount + 1;
+               if((ColCount != (Max_Col - 1))) Col <= ColCount + 1;
                else Col <= 0;
             end
             7: begin
                 Row <= RowCount;
-               if((ColCount + 1) < Max_Col) Col <= ColCount + 1;
+               if((ColCount != (Max_Col - 1))) Col <= ColCount + 1;
                else Col <= 0;
             end
             8: begin
-               if((RowCount - 1) > 0)  Row <= RowCount - 1;
+               if((RowCount != 0))  Row <= RowCount - 1;
                else Row <= (Max_Row - 1);
-               if((ColCount + 1) < Max_Col) Col <= ColCount + 1;
+               if((ColCount != (Max_Col - 1))) Col <= ColCount + 1;
                else Col <= 0;
             end
             default: ;
