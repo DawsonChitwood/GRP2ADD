@@ -33,10 +33,14 @@ reg [2:0] ClockCounter = 0;    //Used to make sure transitions to states relying
 reg [3:0] PixelCount = 0; // Used to keep track of which particular peripheral pixel is currently being processed
 //reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line
 //reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line
-reg [5:0] RowCount = 0;        //Used to keep track of which row is being processed in the MIDDLE section. 1 is the default position
-reg [6:0] ColCount = 0;        //Used to keep track of which column is being processed in the MIDDLE section. 1 is the default position
-reg [17:0] Cache = 0; //Used to hold the pixels currently being processed in the MIDDLE section
-reg [3:0] Live_Counter = 0; //Used to count how many of the pixels in the cache are living
+reg [5:0] RowCountStart = 29;
+reg [6:0] ColCountStart = 38;
+reg [5:0] RowCount = RowCountStart;        //Used to keep track of which row is being processed in the MIDDLE section. 1 is the default position
+reg [6:0] ColCount = ColCountStart;        //Used to keep track of which column is being processed in the MIDDLE section. 1 is the default position
+reg  CurrentPixelValue = 0; //Used to hold the pixels currently being processed in the MIDDLE section
+reg [3:0] Live_Counter; //Used to count how many of the pixels in the cache are living
+
+
 
 
 
@@ -66,11 +70,14 @@ reg [2:0] Clock_Counter = 0;
 reg [4:0] Clocks_To_Wait = 3;
 
 // Register to tell module that it is done writing the current frame
-reg Frame_Done = 1;
+reg Frame_Done = 1 ;
+
+
+reg FrameSelectorPrev = 0;
 
 //Registers holding the max rows and columns
-reg Max_Row = 60; //4 for simulation  60 for application
-reg Max_Col = 80; //4 for simulation  80 for application
+reg [5:0]Max_Row = 60; //4 for simulation  60 for application
+reg [6:0]Max_Col = 80; //4 for simulation  80 for application
 
 //Registers for color parameters
 reg [1:0] Live_Color = 1;
@@ -79,15 +86,6 @@ reg [1:0] Dead_Color = 0;
 reg CurrentStorageModule = 0; //keeps track of which storage module is currently being written to
 
 
-//This block will change Frame done to 0 whenever FrameSelector changes. If Frame selector is high then the RW output will be high, otherwise
-//it is low
-always @(FrameSelector) begin
-        if(Start) begin
-            Frame_Done <= 0;
-            if(FrameSelector) CurrentStorageModule= 1;
-            else CurrentStorageModule = 0;
-        end
-end
 
 //State Memory
 always @(posedge Clk) begin
@@ -109,7 +107,9 @@ always @(posedge Clk) begin
         //READ moves back to REQUEST until all blocks (9 per pixel including the pixel of interest) have been read. It then moves to PROCESS
         //The timing works because the NextState logic will only register PixelCount as being 8 once the data from the 8th peripheral pixel has been fetched
         READ: begin
-            if(PixelCount != 8) NextState <= REQUEST;
+        //ClockCounter has to be used for Read so that the Pixels have time to proprogate from the storage module
+            if (ClockCounter != 1) NextState <= READ; 
+            else if(PixelCount != 8) NextState <= REQUEST;
             else NextState <= PROCESS;
         end
         //PROCESS sets the enables for writing to the other storage module before moving on to the WRITE
@@ -119,13 +119,15 @@ always @(posedge Clk) begin
         WRITE: begin
             if(!((RowCount == (Max_Row - 1))&(ColCount == (Max_Col - 1)))) NextState <= PIXELDONE;
             else begin  
-                Frame_Done <= 1;
                 NextState <= FRAMEDONE;
             end
         end
         default: NextState <= FRAMEDONE;
         endcase
 end
+
+
+always @(FrameSelector) CurrentStorageModule = FrameSelector;
 
 //Output Logic
 always @(posedge Clk) begin
@@ -134,12 +136,20 @@ always @(posedge Clk) begin
         FRAMEDONE: begin
             ClockCounter <= 0;
             PixelCount <= 0;
-            RowCount <= 0;
-            ColCount <= 0;
+            RowCount <= RowCountStart;
+            ColCount <= ColCountStart;
             Live_Counter <= 0;
-            Cache <= 0; 
+            CurrentPixelValue <= 0; 
+            if(FrameSelector != FrameSelectorPrev) begin
+                Frame_Done <= 0;
+                FrameSelectorPrev <= FrameSelector;
+            end
+            else ;
         end
         PIXELDONE: begin
+            CurrentPixelValue <= 0;
+            Live_Counter <= 0;
+            ClockCounter <= 0;
             enable1 <= 0;
             enable2 <= 0;
             RW_reg <= 1;
@@ -147,7 +157,7 @@ always @(posedge Clk) begin
    //This is the state in which the row and column to be requested will be specified. The clock counter is present to give some delay 
    //allowing for the  module to process
      REQUEST: begin
-//        ClockCounter <= ClockCounter + 1;
+     ClockCounter <= 0;
     if(CurrentStorageModule) begin
         enable1 <= 1;
         enable2 <= 0;
@@ -210,28 +220,41 @@ always @(posedge Clk) begin
      end
      //Reads the data sent from storage. It will move to processing as soon as the the Pixel count reaches 8 (see NextState Logic)
      READ: begin
-        ClockCounter <= 0;
+     ClockCounter <= ClockCounter + 1;
+     
+     if(ClockCounter == 1) begin
+     /*
         case(PixelCount) 
             0: Cache[1:0] <= DataBack;
             1: Cache[3:2] <= DataBack;   
             2: Cache[5:4] <= DataBack;
             3: Cache[7:6] <= DataBack;
-            4: Cache[9:8] <= DataBack;
-            5: Cache[11:10] <= DataBack;
+            4: Cache[9:8] <= DataBack;  
+            5: Cache[11:10] <= DataBack;  
             6: Cache[13:12] <= DataBack;
             7: Cache[15:14] <= DataBack;
             8: Cache[17:16] <= DataBack;
             default: ;
         endcase
+        */
+        
+        //If the PixelCount is 0, store DataBack into CurrentPixelValue. Else (as long as Pixel count is not greater than 8)
+        // Add whatever DataBack is into Live_Counter. This keeps track of how many live pixels are around the current pixel
+        if(PixelCount == 0) CurrentPixelValue <= DataBack;
+        else if (PixelCount <= 8) Live_Counter <= Live_Counter + DataBack;
+        else ;
         PixelCount <= PixelCount + 1;
+      end
+        else ;
+        
      end
      //Middle Process merely sets up the enable lines for the write state, essentially allowing a clock pulse for this to happen. 
      //Oh yeah... and it also implements the game logic. I guess that is a pretty important part of it...
-     PROCESS: begin
-         
+     PROCESS: begin 
          PixelCount <= 0;
          //GAME LOGIC!!!
          //Counts all of the live cells in cache and then uses that information to determine what the output data will be
+         /*
          if(Cache[2] == Live_Color) Live_Counter <= Live_Counter + 1;
          else ;
          if(Cache[4] == Live_Color) Live_Counter <= Live_Counter + 1;
@@ -255,6 +278,13 @@ always @(posedge Clk) begin
          end 
          else if(Live_Counter == 3) data <= 1;
          else data <= 0;
+         */
+         if(CurrentPixelValue == Live_Color) begin
+            if((Live_Counter > 3) || (Live_Counter < 2)) data <= 0; 
+            else data <= 1;
+         end 
+         else if(Live_Counter == 3) data <= 1;
+         else data <= 0;
          
          Live_Counter <= 0;
          Row = RowCount;
@@ -271,9 +301,11 @@ always @(posedge Clk) begin
           end
      end
      //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
+     //In which it sets Frame_Done High
      WRITE: begin
         RW_reg <= 0;
-        if(!(RowCount >= (Max_Row - 1))) begin
+        Frame_Done <= 1;
+        if(!(RowCount >= (Max_Row))) begin
             if(ColCount >= (Max_Col - 1)) begin
                 ColCount <= 0;
                 RowCount <= RowCount + 1;

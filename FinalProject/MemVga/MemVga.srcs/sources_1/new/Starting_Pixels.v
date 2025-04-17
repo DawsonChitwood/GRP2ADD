@@ -21,12 +21,12 @@
 
 
 module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing);
-reg [5:0] Write;
+reg [5:0] Write = 0;
 
 always @(posedge Clk) begin
     if(Write==0) begin
-       currentRow<=0;
-       currentCol<=0;
+       currentRow<=29;
+       currentCol<=38;
        dataIn<=1;
        Write<=1;
     end
@@ -39,8 +39,8 @@ always @(posedge Clk) begin
        Write<=3;
     end
      else if(Write==3) begin
-       currentRow<=0;
-       currentCol<=2;
+       currentRow<=29;
+       currentCol<=39;
        dataIn<=1;
        
        Write<=4;
@@ -54,8 +54,8 @@ always @(posedge Clk) begin
        Write<=6;
     end
      else if(Write==6) begin
-       currentRow<=1;
-       currentCol<=0;
+       currentRow<=29;
+       currentCol<=40;
        dataIn<=1;
        Write<=7;
     end
@@ -68,8 +68,8 @@ always @(posedge Clk) begin
        Write<=9;
     end
        else if(Write==9) begin
-       currentRow<=0;
-       currentCol<=1;
+       currentRow<=28;
+       currentCol<=40;
        dataIn<=1;
        Write<=10;
     end
@@ -82,8 +82,8 @@ always @(posedge Clk) begin
        Write<=12;
     end
         else if(Write==12) begin
-       currentRow<=0;
-       currentCol<=3;
+       currentRow<=27;
+       currentCol<=39;
        dataIn<=1;
        Write<=13;
     end

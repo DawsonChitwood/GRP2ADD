@@ -32,11 +32,14 @@ wire enableData2;
 wire [1:0] dataBack;
 wire CLK;
 wire RW;
+wire enableVis;
+
 
 Clk_Divider_25MHZ CD(CLK100MHZ,CLK);
-Memory mem(currentRow,currentCol,VC,HC,SW[0],enableData1,enableData2,readWrite,CLK100MHZ,RESET,dataIn,dataBack,colors);
+Memory mem(currentRow,currentCol,VC,HC,enableVis,enableData1,enableData2,readWrite,CLK100MHZ,RESET,dataIn,dataBack,colors);
 VGA_Out vga(CLK,RESET,colors, h_sync, v_sync,R,G, B, HC, VC);
 Control_And_Start cas(CLK100MHZ,RESET,SW[3],SW[4],dataBack,readWrite,currentRow,currentCol,dataIn,enableData1,enableData2,SW[1]);
 //Starting_Pixels(CLK100MHZ,currentRow,currentCol,dataIn,enableData1,SW[1]);
 
+assign enableVis = (SW[4])?~SW[3]:1;
 endmodule

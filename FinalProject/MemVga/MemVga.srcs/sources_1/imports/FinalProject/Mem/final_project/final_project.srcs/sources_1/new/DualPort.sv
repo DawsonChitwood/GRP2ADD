@@ -17,7 +17,7 @@ output reg [1:0] colorData
 reg [59:0][79:0][1:0] m_data = 0;    
 
 always @ (posedge clk) begin
-    if(enableVisual)
+    if(enableVisual) 
         colorData = m_data[vCount][hCount];
     else 
         colorData = 2'bz;

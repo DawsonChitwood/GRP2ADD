@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Apr 14 12:52:49 2025
-| Host         : CSEE4280 running 64-bit Ubuntu 20.04.6 LTS
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Apr 17 13:05:51 2025
+| Host         : LAPTOP-RH96MGM6 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    13 |
-|    Minimum number of control sets                        |    13 |
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    49 |
+| Unused register locations in slices containing registers |    47 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    13 |
+| Total control sets |    15 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     4 |
-| >= 6 to < 8        |     2 |
-| >= 8 to < 10       |     3 |
-| >= 10 to < 12      |     2 |
-| >= 12 to < 14      |     0 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
 | >= 14 to < 16      |     1 |
-| >= 16              |     1 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             818 |          413 |
+| No           | No                    | No                     |            9641 |         4220 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              32 |           15 |
-| Yes          | No                    | No                     |              27 |            7 |
+| No           | Yes                   | No                     |              32 |           12 |
+| Yes          | No                    | No                     |              36 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              26 |            6 |
+| Yes          | Yes                   | No                     |              76 |           33 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,19 +73,21 @@ Table of Contents
 +----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
 |     Clock Signal     |            Enable Signal            |       Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
-|  CLK100MHZ_IBUF_BUFG | cas/ac/PixelCount                   |                              |                1 |              4 |         4.00 |
-|  CLK_BUFG            |                                     | vga/hvs/hcCounter[3]_i_1_n_0 |                1 |              4 |         4.00 |
 |  CLK_BUFG            |                                     | vga/hvs/vcCounter[3]_i_1_n_0 |                1 |              4 |         4.00 |
-|  CLK_BUFG            |                                     | RESET_IBUF                   |                4 |              5 |         1.25 |
-|  CLK100MHZ_IBUF_BUFG | cas/ac/ColCount[6]_i_2_n_0          | cas/ac/ColCount[6]_i_1_n_0   |                2 |              7 |         3.50 |
-|  CLK_BUFG            |                                     |                              |                4 |              7 |         1.75 |
-|  CLK100MHZ_IBUF_BUFG | cas/ac/Row[5]_i_1_n_0               |                              |                3 |              8 |         2.67 |
-|  CLK_BUFG            |                                     | vga/hvs/HCount[8]_i_1_n_0    |                4 |              9 |         2.25 |
-|  CLK_BUFG            | vga/hvs/HC_reg[6]_i_2_n_0           | vga/hvs/HC_reg[6]_i_1_n_0    |                2 |              9 |         4.50 |
-|  CLK_BUFG            |                                     | vga/hvs/clear                |                5 |             10 |         2.00 |
-|  CLK_BUFG            | vga/hvs/vcCounter_reg_n_0_[3]       | vga/hvs/VC_reg[5]_i_1_n_0    |                2 |             10 |         5.00 |
-|  CLK100MHZ_IBUF_BUFG | cas/sp/FSM_onehot_Write[14]_i_1_n_0 |                              |                3 |             15 |         5.00 |
-|  CLK100MHZ_IBUF_BUFG |                                     |                              |              409 |            811 |         1.98 |
+|  CLK_BUFG            |                                     | vga/hvs/hcCounter[3]_i_1_n_0 |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | cas/ac/Live_Counter                 |                              |                2 |              4 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | cas/ac/PixelCount                   |                              |                2 |              4 |         2.00 |
+|  CLK_BUFG            |                                     | RESET_IBUF                   |                3 |              5 |         1.67 |
+|  CLK100MHZ_IBUF_BUFG | cas/ac/RowCount                     | cas/ac/ColCount[6]_i_1_n_0   |                2 |              6 |         3.00 |
+|  CLK_BUFG            |                                     |                              |                5 |              7 |         1.40 |
+|  CLK_BUFG            | vga/hvs/HC_reg[6]_i_2_n_0           | vga/hvs/HC_reg[6]_i_1_n_0    |                2 |              7 |         3.50 |
+|  CLK100MHZ_IBUF_BUFG | cas/ac/ColCount                     | cas/ac/ColCount[6]_i_1_n_0   |                3 |              7 |         2.33 |
+|  CLK_BUFG            |                                     | vga/hvs/HCount[8]_i_1_n_0    |                3 |              9 |         3.00 |
+|  CLK_BUFG            |                                     | vga/hvs/clear                |                4 |             10 |         2.50 |
+|  CLK100MHZ_IBUF_BUFG | cas/ac/Row[5]_i_1_n_0               |                              |                7 |             13 |         1.86 |
+|  CLK100MHZ_IBUF_BUFG | cas/sp/FSM_onehot_Write[14]_i_1_n_0 |                              |                2 |             15 |         7.50 |
+|  CLK_BUFG            | vga/hvs/vcCounter_reg_n_0_[3]       | vga/hvs/VC_reg[5]_i_1_n_0    |               26 |             56 |         2.15 |
+|  CLK100MHZ_IBUF_BUFG |                                     |                              |             4215 |           9634 |         2.29 |
 +----------------------+-------------------------------------+------------------------------+------------------+----------------+--------------+
 
 
