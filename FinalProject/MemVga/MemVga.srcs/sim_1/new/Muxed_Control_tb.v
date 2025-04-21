@@ -66,18 +66,24 @@ Control_And_Start cas(Clk,Reset,FrameSelect,Start,dataB,RW,currentRow,currentCol
 Memory meme(currentRow,currentCol,vCount,hCount,enableVisual,enableData1,enableData2,RW,Clk,Reset,DataIn,dataB,colorColor);
 
 initial begin
-    for(i = 0; i < 20; i = i + 1)begin
+    @(posedge Clk) keepGoing = 1;
+    for(i = 0; i < 10000; i = i + 1)begin
         @(posedge Clk);
     end
     
-    @(posedge Clk) Start = 1;
     @(posedge Clk) keepGoing = 0;
+    @(posedge Clk) Start = 1;
+    
     
     for(i = 0; i < 20; i = i + 1) begin
         @(posedge Clk);    
     end 
        
     FrameSelect = 1;
+    
+    for(i = 0; i < 10000; i = i + 1)begin
+        @(posedge Clk);
+    end
  /*   
     for(i = 0; i < 20; i = i + 1) begin
         @(posedge Clk);    

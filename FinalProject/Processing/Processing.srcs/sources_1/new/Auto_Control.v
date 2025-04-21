@@ -33,8 +33,8 @@ reg [2:0] ClockCounter = 0;    //Used to make sure transitions to states relying
 reg [3:0] PixelCount = 0; // Used to keep track of which particular peripheral pixel is currently being processed
 //reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line
 //reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line
-reg [5:0] RowCountStart = 29;
-reg [6:0] ColCountStart = 38;
+reg [5:0] RowCountStart = 0;
+reg [6:0] ColCountStart = 0;
 reg [5:0] RowCount = RowCountStart;        //Used to keep track of which row is being processed in the MIDDLE section. 1 is the default position
 reg [6:0] ColCount = ColCountStart;        //Used to keep track of which column is being processed in the MIDDLE section. 1 is the default position
 reg  CurrentPixelValue = 0; //Used to hold the pixels currently being processed in the MIDDLE section
@@ -47,6 +47,8 @@ reg [3:0] Live_Counter; //Used to count how many of the pixels in the cache are 
 //Names of the states
 parameter FRAMEDONE = 0;
 parameter PIXELDONE = 1;
+parameter WaitState = 2;
+parameter WaitStateTwo = 3;
 //parameter CORNERREQUEST = 1;
 //parameter CORNERREAD = 2;
 //parameter CORNERWRITE = 3;
@@ -101,23 +103,26 @@ always @(posedge Clk) begin
             if(!Frame_Done) NextState <= PIXELDONE;
             else NextState <= FRAMEDONE;
         end
+        WaitState: NextState <= PIXELDONE;
         PIXELDONE: NextState <= REQUEST;
         //REQUEST moves to READ as long as 3 Clocks have passed. This gives The storage time to process the data request
         REQUEST: NextState <= READ;
         //READ moves back to REQUEST until all blocks (9 per pixel including the pixel of interest) have been read. It then moves to PROCESS
         //The timing works because the NextState logic will only register PixelCount as being 8 once the data from the 8th peripheral pixel has been fetched
+        WaitStateTwo:NextState <= READ;
         READ: begin
         //ClockCounter has to be used for Read so that the Pixels have time to proprogate from the storage module
-            if (ClockCounter != 1) NextState <= READ; 
-            else if(PixelCount != 8) NextState <= REQUEST;
+           if(ClockCounter!=1) NextState <= READ; 
+           else if(PixelCount != 8) NextState <= REQUEST;
             else NextState <= PROCESS;
         end
         //PROCESS sets the enables for writing to the other storage module before moving on to the WRITE
-        PROCESS: NextState <= WRITE;
+        PROCESS:NextState <= WRITE;
+        
         
         //WRITE will move back to REQUEST unless all middle pixels have been processed in which case it will set FrameDone and move to FRAMEDONE
         WRITE: begin
-            if(!((RowCount == (Max_Row - 1))&(ColCount == (Max_Col - 1)))) NextState <= PIXELDONE;
+            if(!((RowCount == (Max_Row - 1))&(ColCount == (Max_Col - 1)))) NextState <= WaitState;
             else begin  
                 NextState <= FRAMEDONE;
             end
@@ -146,6 +151,12 @@ always @(posedge Clk) begin
             end
             else ;
         end
+        WaitState: begin
+        ;
+        end
+        WaitStateTwo: begin
+        ;
+        end
         PIXELDONE: begin
             CurrentPixelValue <= 0;
             Live_Counter <= 0;
@@ -159,6 +170,7 @@ always @(posedge Clk) begin
      REQUEST: begin
      ClockCounter <= 0;
     if(CurrentStorageModule) begin
+ 
         enable1 <= 1;
         enable2 <= 0;
     end 
@@ -222,7 +234,7 @@ always @(posedge Clk) begin
      READ: begin
      ClockCounter <= ClockCounter + 1;
      
-     if(ClockCounter == 1) begin
+     if(ClockCounter ==1)begin
      /*
         case(PixelCount) 
             0: Cache[1:0] <= DataBack;
@@ -245,9 +257,11 @@ always @(posedge Clk) begin
         else ;
         PixelCount <= PixelCount + 1;
       end
-        else ;
-        
-     end
+      else
+      ; 
+      end
+     
+     
      //Middle Process merely sets up the enable lines for the write state, essentially allowing a clock pulse for this to happen. 
      //Oh yeah... and it also implements the game logic. I guess that is a pretty important part of it...
      PROCESS: begin 
@@ -286,11 +300,11 @@ always @(posedge Clk) begin
          else if(Live_Counter == 3) data <= 1;
          else data <= 0;
          
-         Live_Counter <= 0;
          Row = RowCount;
          Col = ColCount;
          
       //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
+      
         if(CurrentStorageModule) begin
             enable1 = 0;
             enable2 = 1;
@@ -299,10 +313,12 @@ always @(posedge Clk) begin
             enable1 = 1;
             enable2 = 0;
           end
+         
      end
      //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
      //In which it sets Frame_Done High
      WRITE: begin
+        Live_Counter <= 0;
         RW_reg <= 0;
         Frame_Done <= 1;
         if(!(RowCount >= (Max_Row))) begin
