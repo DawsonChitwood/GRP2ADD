@@ -106,7 +106,7 @@ always @(posedge Clk) begin
         WaitState: NextState <= PIXELDONE;
         PIXELDONE: NextState <= REQUEST;
         //REQUEST moves to READ as long as 3 Clocks have passed. This gives The storage time to process the data request
-        REQUEST: NextState <= READ;
+        REQUEST: NextState <= WaitStateTwo;
         //READ moves back to REQUEST until all blocks (9 per pixel including the pixel of interest) have been read. It then moves to PROCESS
         //The timing works because the NextState logic will only register PixelCount as being 8 once the data from the 8th peripheral pixel has been fetched
         WaitStateTwo:NextState <= READ;
@@ -152,8 +152,15 @@ always @(posedge Clk) begin
             else ;
         end
         WaitState: begin
-        ;
-        end
+            if(CurrentStorageModule) begin
+                enable1 = 0;
+                enable2 = 1;
+              end
+              else begin
+                enable1 = 1;
+                enable2 = 0;
+              end
+            end
         WaitStateTwo: begin
         ;
         end
@@ -169,15 +176,7 @@ always @(posedge Clk) begin
    //allowing for the  module to process
      REQUEST: begin
      ClockCounter <= 0;
-    if(CurrentStorageModule) begin
- 
-        enable1 <= 1;
-        enable2 <= 0;
-    end 
-    else begin
-        enable1 <= 0;
-        enable2 <= 1;
-    end
+    
         case(PixelCount)
             0: begin
                 Row <= RowCount;
@@ -229,6 +228,14 @@ always @(posedge Clk) begin
             end
             default: ;
             endcase
+        if(CurrentStorageModule) begin
+            enable1 <= 1;
+            enable2 <= 0;
+        end 
+        else begin
+            enable1 <= 0;
+            enable2 <= 1;
+         end
      end
      //Reads the data sent from storage. It will move to processing as soon as the the Pixel count reaches 8 (see NextState Logic)
      READ: begin
@@ -256,6 +263,8 @@ always @(posedge Clk) begin
         else if (PixelCount <= 8) Live_Counter <= Live_Counter + DataBack;
         else ;
         PixelCount <= PixelCount + 1;
+        enable1 <= 0;
+        enable2 <= 0;
       end
       else
       ; 
@@ -304,15 +313,9 @@ always @(posedge Clk) begin
          Col = ColCount;
          
       //Might need to include a part that sets the line to High-Z once we start working with the Joystick Controller
-      
-        if(CurrentStorageModule) begin
-            enable1 = 0;
-            enable2 = 1;
-          end
-          else begin
-            enable1 = 1;
-            enable2 = 0;
-          end
+      enable1 <= 0;
+      enable2 <= 0;
+        
          
      end
      //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment

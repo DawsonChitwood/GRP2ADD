@@ -21,9 +21,38 @@
 
 
 module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing);
-reg [5:0] Write = 0;
+reg [13:0] Write = 0;
+wire data;
 
+LFSR lfsr(Clk,data);
 always @(posedge Clk) begin
+    if(Write==0) begin
+        if(keepGoing ==1)  Write=1;
+        else Write <= 0;
+    end
+    else if(Write == 14401) begin
+     Write <= 0;
+     currentRow<=0;
+     currentCol<=0;
+    end
+    else if(Write % 3 == 1) begin
+        if(currentCol == 79) begin
+        currentCol <= 0;
+        currentRow <= currentRow+1;
+        end
+        else currentCol <= currentCol+1;
+        dataIn <= data;
+        Write <= Write + 1;
+    end
+    else if(Write % 3 == 2) begin
+        enableData1<=1;
+        Write <= Write + 1;
+    end
+    else if(Write % 3 == 0) begin
+        enableData1<=0;
+        Write <= Write + 1;
+    end
+    /**
     if(Write==0) begin
        currentRow<=29;
        currentCol<=38;
@@ -96,13 +125,14 @@ always @(posedge Clk) begin
        Write<=15;
     end
     else begin
-        /**currentRow=5'bz;
+        currentRow=5'bz;
         currentCol=6'bz;
         dataIn=2'bz;
         enableData1=1'bz;
-        **/
+        
         if(keepGoing) Write=0;
         else Write=Write;
     end
+    **/
 end
 endmodule

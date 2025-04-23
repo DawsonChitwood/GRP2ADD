@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
 set_msg_config  -id {USF-XSim-62}  -string {{ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/CSEE4280/GRP2ADD/Exercise5/Exercise5/Exercise5.sim/sim_1/impl/func/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.}}  -suppress 
 set_msg_config  -id {DRC MDRV-1}  -string {{ERROR: [DRC MDRV-1] Multiple Driver Nets: Net rgbc/pwmb/Counter[14] has multiple drivers: rgbc/pwmb/Counter_reg[14]/Q, and rgbc/pwmb/Counter_reg[14]__0/Q.}}  -suppress 
@@ -111,6 +112,7 @@ read_verilog -library xil_defaultlib -sv {
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv
+  /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v
   /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv
