@@ -28,6 +28,9 @@ wire [5:0] currentRow_B;
 wire [6:0] currentCol_B;
 wire [5:0] currentRow_C;
 wire [6:0] currentCol_C;
+wire [1:0] dataIn_A;
+wire [1:0] dataIn_B;
+wire [1:0] dataIn_C;
 reg start_prev;
 reg start_prev_reg;
 reg start_counter;
@@ -42,9 +45,8 @@ wire [2:0] keyprev3;
 
 
 Auto_Control ac(Clk,Reset,FrameSelect,doesnothing,dataB,RW_A,currentRow_A,currentCol_A,dataIn_A,enableData1_A,enableData2_A);
-Starting_Pixels sp(Clk,currentRow_B,currentCol_B,dataIn_B,enableData1_B,keepGoing);
-User_Interface ui(Clk,Reset,dataB,keys,start,clear,keepGoing,currentRow_C,currentCol_C,dataIn_C,RW_C,enableData1_C,mode,currentkey,keyprev1,keyprev2,keyprev3);
-
+Starting_Pixels sp(Clk,currentRow_B,currentCol_B,dataIn_B,enableData1_B,keepGoing,clear);
+User_Interface ui(Clk,Reset,dataB,keys,start,clear,keepGoing,currentRow_C,currentCol_C,dataIn_C,RW_C,enableData1_C,mode,step);
 assign currentRow = mode ? currentRow_C:(keepGoing ? currentRow_B:currentRow_A);
 assign currentCol = mode ? currentCol_C:(keepGoing ? currentCol_B:currentCol_A);
 assign dataIn = mode ? dataIn_C:(keepGoing ? dataIn_B:dataIn_A);

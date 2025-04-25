@@ -36,7 +36,7 @@ wire enableVis;
 wire start;
 wire [2:0] testing;
 wire startFrameTogle;
-reg [24:0] counter;
+reg [22:0] counter;
 reg frameSelect;
 reg test;
 

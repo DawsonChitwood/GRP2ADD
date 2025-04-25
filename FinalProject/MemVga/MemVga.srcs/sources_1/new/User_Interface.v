@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module User_Interface(input Clk, input Rst,input [1:0] databack, input [5:0] keys,output reg run,output reg clear,output reg RandMode, output reg [5:0] row, output reg [6:0] col, output reg [1:0] data,output reg RW, output reg enable1, output reg usermode, output reg [2:0] currentkey, output reg [2:0] keyprev1, output reg [2:0] keyprev2, output reg [2:0] keyprev3);
+module User_Interface(input Clk, input Rst,input [1:0] databack, input [5:0] keys,output reg run,output reg clear,output reg RandMode, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] data,output reg RW, output reg enable1, output reg mode, output reg step);
 
 reg [3:0] currentstate = 0;
 reg [3:0] nextstate = 0;
@@ -40,6 +40,9 @@ assign key[4]=!keys[4];
 assign key[5]=!keys[5];
 
 reg pressed;
+reg inter;
+reg pressyOne;
+reg superBanana;
 
 parameter MAIN = 0;
 parameter USER = 1;
@@ -56,6 +59,27 @@ parameter READADDRESS = 11;
 parameter READWAIT = 12;
 parameter READOFF = 13;
 
+reg [3:0] state;
+reg [1:0] datawrite;
+reg [1:0] dataread;
+
+reg [5:0] RowCount;
+reg [6:0] ColCount;
+reg [5:0] oldrow;
+reg [6:0] oldcol;
+reg modeprev;
+reg returning;
+
+parameter START = 0;
+parameter WRITEPREVADDRESS = 1;
+parameter WRITEPREVWAIT = 2;
+parameter WRITEPREVSTOP = 3;
+parameter READCURRADDRESS = 4;
+parameter READCURRWAIT = 5;
+parameter READCURRSTOP = 6;
+parameter WRITECURRADDRESS = 7;
+parameter WRITECURRWAIT = 8;
+parameter WRITECURRSTOP = 9;
 
 
 /**
@@ -224,28 +248,139 @@ assign RandMode = (currentkey == 3) ? 1 : 0;
 always @(posedge Clk) begin
     if(key == 0) begin
         pressed <= 0;
+        pressyOne <= 0;
         RandMode <=0;
+        clear <= 0;
+        if(returning == 1) mode <=0;
     end
     else begin
         if(pressed == 0) begin 
             if(key[0] == 1) begin
+                if(mode) begin
+                ;
+                end
+                else run <=0;
             end
             else if(key[1] == 1)begin
+                if(mode) begin
+                    if(RowCount==0) RowCount<= 59;
+                    else RowCount<=RowCount-1;
+                    pressyOne <= 1;
+                end
+                else mode <= 1;
             end
             else if(key[2] == 1)begin
+            if(mode) begin
+                ;
+                end
+                else step <= 1;
             end
             else if(key[3] == 1)begin
-                RandMode <= 1;
+                if(mode) begin
+                    if(ColCount==0) ColCount<= 79;
+                    else ColCount<=ColCount-1;
+                    pressyOne <= 1;
+                end
+                else RandMode <= 1;
             end
             else if(key[4] == 1)begin
-                run <= 1;
+                if(mode) begin
+                    if(RowCount==59) RowCount<= 0;
+                    else RowCount<=RowCount+1;
+                    pressyOne <= 1;
+                end
+                else run <= 1;
             end
             else if(key[5] == 1)begin
-                run <= 0;
+                if(mode) begin
+                    if(ColCount==79) ColCount<= 0;
+                    else ColCount<=ColCount+1;
+                    pressyOne <= 1;
+                end
+                else begin
+                clear <= 1;
+                RandMode <= 1;
+                end
             end
         end
-        else ;
+        else step <= 0;
         pressed <= 1;
+        pressyOne <= 0;
     end
 end
+
+always @ (posedge Clk) begin	
+	if(mode) begin
+	case(state) 
+		WRITEPREVADDRESS: begin
+			Row <= oldrow;
+			Col <= oldcol;
+			data[1] <= 0;
+			data[0] <= writedata;
+			enable1 <= 1;
+			RW <= 0;
+			state <= WRITEPREVWAIT;
+		end
+		WRITEPREVWAIT: state <= WRITEPREVSTOP;
+		WRITEPREVSTOP: begin
+			RW <= 1;
+			enable1 <= 0;
+			state <= READCURRADDRESS;
+		end
+		READCURRADDRESS: begin
+			Row <= RowCount;
+			Col <= ColCount;
+			enable1 <= 1;
+			state <= READCURRWAIT;
+		end
+		READCURRWAIT: state <= READCURRSTOP;
+		READCURRSTOP: begin
+			readdata <= databack;
+			enable1 <= 0;
+		end
+		WRITECURRADDRESS: begin
+			Row <= RowCount;
+			Col <= ColCount;
+			data[1] <= 1;
+			if(inter) begin
+			data[0] <= !readdata[0];
+			readdata[0] <= !readdata[0];
+			writedata = !readdata[0];
+			end
+			else data[0] <= readdata[0];
+			inter <=0;
+			enable1 <= 1;
+			RW <= 0;
+			state <= WRITECURRWAIT;
+		end
+		WRITECURRWAIT: state = WRITECURRSTOP;
+		WRITECURRSTOP: begin
+			RW <= 1;
+			oldrow <= RowCount;
+			oldcol <= ColCount;
+			enable1 <= 0;
+			if(superBanana) returning <= 1;
+			state <= START;
+		end
+		START: begin
+			superBanana <= 0;
+			if(key[0] && !pressed) begin
+				state <= WRITECURRADDRESS;
+				superBanana <= 1;
+				
+			end
+			else if(key[2] && !pressed) begin
+			 inter <=1;
+			 state <= WRITECURRADDRESS;
+			end
+			else if(pressyOne) state <= WRITEPREVADDRESS;
+			else state <= START;
+		end
+		default: state = START;
+        endcase
+     end
+	else returning <= 0;
+end
+
+
 endmodule

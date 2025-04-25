@@ -95,8 +95,8 @@ if(ColorTime==1)    begin
             end
        BLUE: begin
             R = 4'b0000;
-            G = 4'b0000;
-            B = 4'b1111;
+            G = 4'b1111;
+            B = 4'b0000;
             end
         endcase
 end

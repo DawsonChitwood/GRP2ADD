@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing);
+module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing,input clear);
 reg [13:0] Write = 0;
 wire data;
 
@@ -40,8 +40,9 @@ always @(posedge Clk) begin
         currentCol <= 0;
         currentRow <= currentRow+1;
         end
-        else currentCol <= currentCol+1;
-        dataIn <= data;
+        else currentCol <= currentCol+1;  
+        if(clear) dataIn <= 0;
+        else dataIn <= data;
         Write <= Write + 1;
     end
     else if(Write % 3 == 2) begin

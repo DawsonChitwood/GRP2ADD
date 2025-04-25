@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Apr 25 11:43:52 2025
-# Process ID         : 90474
+# Start of session at: Fri Apr 25 14:48:25 2025
+# Process ID         : 171581
 # Current directory  : /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1
 # Command line       : vivado -log Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Top.tcl -notrace
 # Log file           : /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 8322 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 10469 MB
-# Available Virtual  : 7989 MB
+# Available Virtual  : 7996 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace

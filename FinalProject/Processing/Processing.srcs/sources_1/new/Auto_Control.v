@@ -260,7 +260,7 @@ always @(posedge Clk) begin
         //If the PixelCount is 0, store DataBack into CurrentPixelValue. Else (as long as Pixel count is not greater than 8)
         // Add whatever DataBack is into Live_Counter. This keeps track of how many live pixels are around the current pixel
         if(PixelCount == 0) CurrentPixelValue <= DataBack;
-        else if (PixelCount <= 8) Live_Counter <= Live_Counter + DataBack;
+        else if (PixelCount <= 8) Live_Counter <= Live_Counter + DataBack[0];
         else ;
         PixelCount <= PixelCount + 1;
         enable1 <= 0;
