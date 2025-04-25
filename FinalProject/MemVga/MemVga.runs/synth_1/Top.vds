@@ -1,29 +1,29 @@
 #-----------------------------------------------------------
 # Vivado v2024.2 (64-bit)
-# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Apr 23 13:38:47 2025
-# Process ID         : 20080
-# Current directory  : /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1
-# Command line       : vivado -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
-# Log file           : /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.vds
-# Journal file       : /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/vivado.jou
-# Running On         : CSEE4280
-# Platform           : Ubuntu
-# Operating System   : Ubuntu 20.04.6 LTS
-# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
-# CPU Frequency      : 3593.248 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 8
-# Host memory        : 8322 MB
-# Swap memory        : 2147 MB
-# Total Virtual      : 10469 MB
-# Available Virtual  : 8224 MB
+# Start of session at: Thu Apr 24 21:11:54 2025
+# Process ID         : 6292
+# Current directory  : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1
+# Command line       : vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file           : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.vds
+# Journal file       : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 20027 MB
+# Available Virtual  : 8181 MB
 #-----------------------------------------------------------
 source Top.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Top -part xc7a100tcsg324-1
 Starting synth_design
@@ -32,104 +32,226 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20111
+INFO: [Synth 8-7075] Helper process launched with PID 16580
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1872.441 ; gain = 428.801 ; free physical = 4746 ; free virtual = 6894
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1099.465 ; gain = 470.344
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'ColorTime', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
-INFO: [Synth 8-11241] undeclared symbol 'ColorTimeTwo', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
-WARNING: [Synth 8-9926] potential always loop found [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:109]
-INFO: [Synth 8-11241] undeclared symbol 'readWrite', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:39]
-INFO: [Synth 8-11241] undeclared symbol 'RW_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
-INFO: [Synth 8-11241] undeclared symbol 'dataIn_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
-INFO: [Synth 8-11241] undeclared symbol 'enableData1_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
-INFO: [Synth 8-11241] undeclared symbol 'enableData2_A', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
-INFO: [Synth 8-11241] undeclared symbol 'dataIn_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:34]
-INFO: [Synth 8-11241] undeclared symbol 'enableData1_B', assumed default net type 'wire' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:34]
-INFO: [Synth 8-6157] synthesizing module 'Top' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
-INFO: [Synth 8-6157] synthesizing module 'Clk_Divider_25MHZ' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Clk_Divider_25MHZ' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'DualPort' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'DualPort' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'VGA_Out' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:23]
-WARNING: [Synth 8-85] always block has no event control specified [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:78]
-INFO: [Synth 8-6157] synthesizing module 'HVsyncer' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:23]
-INFO: [Synth 8-226] default block is never used [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:142]
-INFO: [Synth 8-226] default block is never used [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:157]
-INFO: [Synth 8-226] default block is never used [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:221]
-INFO: [Synth 8-226] default block is never used [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:246]
-INFO: [Synth 8-6155] done synthesizing module 'HVsyncer' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'VGA_Out' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'Control_And_Start' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Auto_Control' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (2) of module 'Auto_Control' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:33]
-INFO: [Synth 8-6157] synthesizing module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
-INFO: [Synth 8-6157] synthesizing module 'LFSR' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'LFSR' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'Starting_Pixels' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'dataIn' does not match port width (2) of module 'Starting_Pixels' [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'Control_And_Start' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
+INFO: [Synth 8-11241] undeclared symbol 'ColorTime', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
+INFO: [Synth 8-11241] undeclared symbol 'ColorTimeTwo', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:115]
+WARNING: [Synth 8-9926] potential always loop found [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:109]
+INFO: [Synth 8-11241] undeclared symbol 'readWrite', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:42]
+INFO: [Synth 8-11241] undeclared symbol 'FrameSelector', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'RW_A', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'dataIn_A', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1_A', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'enableData2_A', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-11241] undeclared symbol 'dataIn_B', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:45]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1_B', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:45]
+INFO: [Synth 8-11241] undeclared symbol 'dataIn_C', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:46]
+INFO: [Synth 8-11241] undeclared symbol 'RW_C', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:46]
+INFO: [Synth 8-11241] undeclared symbol 'enableData1_C', assumed default net type 'wire' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:46]
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Clk_Divider_25MHZ' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Clk_Divider_25MHZ' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/Clk_Divider_25MHZ.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'DualPort' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:1]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][79]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][78]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][77]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][76]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][75]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][74]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][73]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][72]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][71]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][70]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][69]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][68]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][67]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][66]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][65]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][64]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][63]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][62]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][61]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][60]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][59]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][58]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][57]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][56]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][55]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][54]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][53]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][52]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][51]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][50]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][49]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][48]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][47]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][46]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][45]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][44]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][43]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][42]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][41]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][40]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][39]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][38]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][37]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][36]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][35]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][34]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][33]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][32]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][31]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][30]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][29]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][28]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][27]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][26]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][25]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][24]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][23]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][22]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][21]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][20]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][19]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][18]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][17]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][16]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][15]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][14]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][13]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][12]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][11]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][10]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][9]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][8]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][7]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][6]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][5]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][4]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][3]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][2]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][1]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[59][0]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][79]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][78]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][77]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][76]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][75]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][74]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][73]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][72]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][71]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][70]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][69]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][68]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][67]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][66]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][65]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][64]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][63]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][62]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][61]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+WARNING: [Synth 8-7186] Applying attribute ram_style = "block" is ignored, object 'm_data[58][60]' is not inferred as ram due to incorrect usage [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:17]
+INFO: [Common 17-14] Message 'Synth 8-7186' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'DualPort' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Out' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:23]
+WARNING: [Synth 8-85] always block has no event control specified [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:78]
+INFO: [Synth 8-6157] synthesizing module 'HVsyncer' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:142]
+INFO: [Synth 8-226] default block is never used [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:157]
+INFO: [Synth 8-226] default block is never used [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:221]
+INFO: [Synth 8-226] default block is never used [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:246]
+INFO: [Synth 8-6155] done synthesizing module 'HVsyncer' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Out' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/VGA_Out.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Control_And_Start' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Auto_Control' [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Auto_Control' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (2) of module 'Auto_Control' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:44]
+INFO: [Synth 8-6157] synthesizing module 'Starting_Pixels' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
+INFO: [Synth 8-6157] synthesizing module 'LFSR' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'LFSR' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Starting_Pixels' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'dataIn' does not match port width (2) of module 'Starting_Pixels' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:45]
+INFO: [Synth 8-6157] synthesizing module 'User_Interface' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/User_Interface.v:23]
+WARNING: [Synth 8-6090] variable 'start' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/User_Interface.v:124]
+WARNING: [Synth 8-6090] variable 'start' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/User_Interface.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'User_Interface' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/User_Interface.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'data' does not match port width (2) of module 'User_Interface' [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'Control_And_Start' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Control_And_Start.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Top.sv:22]
 WARNING: [Synth 8-11357] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  m_data_reg with 9600 registers
-WARNING: [Synth 8-6014] Unused sequential element pleaseWorkTwo_reg was removed.  [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:161]
-WARNING: [Synth 8-6014] Unused sequential element newBit_reg was removed.  [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:35]
-WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:34]
+WARNING: [Synth 8-6014] Unused sequential element pleaseWorkTwo_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/imports/FinalProject/VGAOutput/VGAOutput.srcs/sources_1/new/HVsyncer.sv:161]
+WARNING: [Synth 8-6014] Unused sequential element newBit_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:35]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/LFSR.sv:34]
+WARNING: [Synth 8-6014] Unused sequential element readdata_reg was removed.  [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/User_Interface.v:196]
+WARNING: [Synth 8-7129] Port databack[1] in module User_Interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port databack[0] in module User_Interface is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Start in module Auto_Control is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module DualPort is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[5] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module Top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[2] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module Top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[0] in module Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.543 ; gain = 950.902 ; free physical = 4201 ; free virtual = 6359
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1750.863 ; gain = 1121.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2394.543 ; gain = 950.902 ; free physical = 4201 ; free virtual = 6359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1765.039 ; gain = 1135.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2394.543 ; gain = 950.902 ; free physical = 4201 ; free virtual = 6359
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1765.039 ; gain = 1135.918
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.8 ; elapsed = 00:00:00.8 . Memory (MB): peak = 2394.543 ; gain = 0.000 ; free physical = 4214 ; free virtual = 6372
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.608 . Memory (MB): peak = 1773.008 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
-Finished Parsing XDC File [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'JA[6]'. [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/constrs_1/imports/VGAOutput/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2525.387 ; gain = 0.000 ; free physical = 4202 ; free virtual = 6359
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1888.961 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 2537.309 ; gain = 0.000 ; free physical = 4189 ; free virtual = 6346
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1888.961 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2537.309 ; gain = 1093.668 ; free physical = 2526 ; free virtual = 4684
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2545.312 ; gain = 1101.672 ; free physical = 2525 ; free virtual = 4683
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2545.312 ; gain = 1101.672 ; free physical = 2523 ; free virtual = 4681
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'CurrentState_reg' in module 'Auto_Control'
+INFO: [Synth 8-802] inferred FSM for state register 'currentstate_reg' in module 'User_Interface'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -143,8 +265,25 @@ INFO: [Synth 8-802] inferred FSM for state register 'CurrentState_reg' in module
                WaitState |                              111 |                             0010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'CurrentState_reg' using encoding 'sequential' in module 'Auto_Control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    MAIN |                             0000 |                             0000
+             READADDRESS |                             0001 |                             1011
+                READWAIT |                             0010 |                             1100
+                 READOFF |                             0011 |                             1101
+                    USER |                             0100 |                             0001
+                      UP |                             0101 |                             0011
+                    DOWN |                             0110 |                             0100
+                    LEFT |                             0111 |                             0101
+                   RIGHT |                             1000 |                             0110
+                    NONE |                             1001 |                             0111
+               WRITEWAIT |                             1010 |                             1001
+                WRITEOFF |                             1011 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'currentstate_reg' using encoding 'sequential' in module 'User_Interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 2549.398 ; gain = 1105.758 ; free physical = 158 ; free virtual = 1667
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -154,11 +293,12 @@ Detailed RTL Component Info :
 	   2 Input   14 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 2     
 	   2 Input    9 Bit       Adders := 1     
-	   2 Input    7 Bit       Adders := 6     
-	   2 Input    6 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 7     
+	   2 Input    6 Bit       Adders := 5     
 	   2 Input    4 Bit       Adders := 5     
 	   2 Input    3 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
 +---XORs : 
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
@@ -166,32 +306,38 @@ Detailed RTL Component Info :
 	               14 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
-	                7 Bit    Registers := 5     
-	                6 Bit    Registers := 3     
+	                7 Bit    Registers := 7     
+	                6 Bit    Registers := 5     
 	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 5     
-	                2 Bit    Registers := 9601  
-	                1 Bit    Registers := 18    
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 9602  
+	                1 Bit    Registers := 25    
 +---Muxes : 
 	   4 Input   14 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 5     
 	   8 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 2     
+	  12 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 3     
 	   8 Input    6 Bit        Muxes := 1     
+	  12 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 3     
 	   4 Input    4 Bit        Muxes := 3     
 	   8 Input    4 Bit        Muxes := 3     
+	  12 Input    4 Bit        Muxes := 1     
+	  21 Input    4 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 5     
 	   8 Input    3 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 4     
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 27    
+	  12 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 36    
 	   4 Input    1 Bit        Muxes := 7     
 	  10 Input    1 Bit        Muxes := 1     
 	   8 Input    1 Bit        Muxes := 16    
 	   3 Input    1 Bit        Muxes := 2     
+	  12 Input    1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -208,28 +354,33 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port LED[5] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[4] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED[3] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module Top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[2] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module Top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SW[0] in module Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:25 ; elapsed = 00:02:31 . Memory (MB): peak = 2549.398 ; gain = 1105.758 ; free physical = 157 ; free virtual = 1622
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:22 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:10 ; elapsed = 00:02:46 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 1514 ; free virtual = 3075
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:27 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:11 ; elapsed = 00:02:46 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 1504 ; free virtual = 3066
+Finished Timing Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:27 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:15 ; elapsed = 00:02:51 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 899 ; free virtual = 2464
+Finished Technology Mapping : Time (s): cpu = 00:02:10 ; elapsed = 00:02:31 . Memory (MB): peak = 1888.961 ; gain = 1259.840
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -247,37 +398,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:20 ; elapsed = 00:02:55 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 898 ; free virtual = 2463
+Finished IO Insertion : Time (s): cpu = 00:02:14 ; elapsed = 00:02:35 . Memory (MB): peak = 1917.016 ; gain = 1287.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:20 ; elapsed = 00:02:56 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 897 ; free virtual = 2463
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:14 ; elapsed = 00:02:35 . Memory (MB): peak = 1917.016 ; gain = 1287.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:23 ; elapsed = 00:02:59 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 882 ; free virtual = 2448
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:17 ; elapsed = 00:02:38 . Memory (MB): peak = 1924.125 ; gain = 1295.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:28 ; elapsed = 00:03:04 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 882 ; free virtual = 2449
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:42 . Memory (MB): peak = 1924.125 ; gain = 1295.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:34 ; elapsed = 00:03:10 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 882 ; free virtual = 2449
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:25 ; elapsed = 00:02:46 . Memory (MB): peak = 1924.125 ; gain = 1295.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:34 ; elapsed = 00:03:10 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 882 ; free virtual = 2449
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:25 ; elapsed = 00:02:47 . Memory (MB): peak = 1924.125 ; gain = 1295.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -296,42 +447,42 @@ Report Cell Usage:
 |1     |BUFG   |     2|
 |2     |CARRY4 |    16|
 |3     |LUT1   |    29|
-|4     |LUT2   |   236|
-|5     |LUT3   |   428|
-|6     |LUT4   |  1025|
-|7     |LUT5   |  5812|
-|8     |LUT6   | 12643|
+|4     |LUT2   |   213|
+|5     |LUT3   |   312|
+|6     |LUT4   |  1041|
+|7     |LUT5   |  5827|
+|8     |LUT6   | 12833|
 |9     |MUXF7  |  1917|
 |10    |MUXF8  |   280|
-|11    |FDRE   |  9800|
+|11    |FDRE   |  9852|
 |12    |FDSE   |     9|
-|13    |IBUF   |     5|
-|14    |OBUF   |    14|
+|13    |IBUF   |     9|
+|14    |OBUF   |    17|
+|15    |OBUFT  |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:34 ; elapsed = 00:03:10 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 882 ; free virtual = 2449
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:25 ; elapsed = 00:02:47 . Memory (MB): peak = 1924.125 ; gain = 1295.004
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:24 ; elapsed = 00:03:05 . Memory (MB): peak = 2553.316 ; gain = 966.910 ; free physical = 4912 ; free virtual = 6489
-Synthesis Optimization Complete : Time (s): cpu = 00:03:34 ; elapsed = 00:03:14 . Memory (MB): peak = 2553.316 ; gain = 1109.676 ; free physical = 4912 ; free virtual = 6490
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:02 ; elapsed = 00:02:41 . Memory (MB): peak = 1924.184 ; gain = 1171.141
+Synthesis Optimization Complete : Time (s): cpu = 00:02:25 ; elapsed = 00:02:47 . Memory (MB): peak = 1924.184 ; gain = 1295.062
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2562.273 ; gain = 0.000 ; free physical = 4904 ; free virtual = 6483
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 1953.172 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2213 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.172 ; gain = 0.000 ; free physical = 4888 ; free virtual = 6474
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1964.234 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d459a659
+Synth Design complete | Checksum: b300af65
 INFO: [Common 17-83] Releasing license: Synthesis
-56 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+65 Infos, 132 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:47 ; elapsed = 00:03:28 . Memory (MB): peak = 2622.172 ; gain = 1190.406 ; free physical = 4887 ; free virtual = 6474
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 6655.721; main = 1698.901; forked = 5186.569
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 15278.559; main = 2622.176; forked = 12729.156
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2646.184 ; gain = 0.000 ; free physical = 4885 ; free virtual = 6475
-INFO: [Common 17-1381] The checkpoint '/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:32 ; elapsed = 00:02:57 . Memory (MB): peak = 1964.234 ; gain = 1536.391
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1964.234 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/synth_1/Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 23 13:42:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 21:14:59 2025...

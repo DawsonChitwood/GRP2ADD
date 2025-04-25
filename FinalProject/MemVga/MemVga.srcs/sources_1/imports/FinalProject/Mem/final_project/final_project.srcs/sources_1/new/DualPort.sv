@@ -14,7 +14,7 @@ output reg [1:0] colorData
 );
 
 
-reg [59:0][79:0][1:0] m_data = 0;    
+(*ram_style = "block"*) reg [59:0][79:0][1:0] m_data = 0;    
 
 always @ (posedge clk) begin
     if(enableVisual) 

@@ -1,2 +1,2 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/student/Desktop/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/Muxed_Control_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Muxed_Starting_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/KeepGoing_Control_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeepGoing_Control_tb

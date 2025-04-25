@@ -113,7 +113,7 @@ always @(posedge Clk) begin
         READ: begin
         //ClockCounter has to be used for Read so that the Pixels have time to proprogate from the storage module
            if(ClockCounter!=1) NextState <= READ; 
-           else if(PixelCount != 8) NextState <= REQUEST;
+          else if(PixelCount != 8) NextState <= REQUEST;
             else NextState <= PROCESS;
         end
         //PROCESS sets the enables for writing to the other storage module before moving on to the WRITE

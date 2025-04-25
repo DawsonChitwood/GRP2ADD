@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Apr 24 08:36:41 2025
+# Process ID         : 13184
+# Current directory  : C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/synth_1
+# Command line       : vivado.exe -log Keypad.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Keypad.tcl
+# Log file           : C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/synth_1/Keypad.vds
+# Journal file       : C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-RH96MGM6
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i5-1235U
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 8216 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 20027 MB
+# Available Virtual  : 8377 MB
+#-----------------------------------------------------------
+source Keypad.tcl -notrace

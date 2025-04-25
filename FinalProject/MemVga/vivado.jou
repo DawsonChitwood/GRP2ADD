@@ -3,10 +3,10 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Apr 11 14:16:22 2025
-# Process ID         : 21632
+# Start of session at: Wed Apr 23 17:03:05 2025
+# Process ID         : 11008
 # Current directory  : C:/CSEE4280/GRP2ADD/FinalProject/MemVga
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent3152 C:\CSEE4280\GRP2ADD\FinalProject\MemVga\MemVga.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent22488 C:\CSEE4280\GRP2ADD\FinalProject\MemVga\MemVga.xpr
 # Log file           : C:/CSEE4280/GRP2ADD/FinalProject/MemVga/vivado.log
 # Journal file       : C:/CSEE4280/GRP2ADD/FinalProject/MemVga\vivado.jou
 # Running On         : LAPTOP-RH96MGM6
@@ -17,39 +17,210 @@
 # CPU Physical cores : 10
 # CPU Logical cores  : 12
 # Host memory        : 8216 MB
-# Swap memory        : 11365 MB
-# Total Virtual      : 19581 MB
-# Available Virtual  : 6943 MB
+# Swap memory        : 11811 MB
+# Total Virtual      : 20027 MB
+# Available Virtual  : 9607 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.xpr
 update_compile_order -fileset sources_1
-add_files {C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Start_Control.v C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Read.v C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Write.v C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Send.v C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Clk.v}
+open_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_project
+create_project Keypad C:/CSEE4280/GRP2ADD/FinalProject/Keypad -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:arty-a7-100:part0:1.1 [current_project]
+file mkdir C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/sources_1/new
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/sources_1/new/Keypad.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/sources_1/new/Keypad.v
+update_compile_order -fileset sources_1
+file mkdir C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/constrs_1
+file mkdir C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/constrs_1/new
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/constrs_1/new/keypad.xdc w ]
+add_files -fileset constrs_1 C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.srcs/constrs_1/new/keypad.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+close_project
+open_project C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_project
+open_project C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/Keypad/Keypad.runs/impl_1/Keypad.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_project
+open_project C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.xpr
+update_compile_order -fileset sources_1
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Start_Control.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Start_Control.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Start_Control.v] -no_script -reset -force -quiet
+remove_files  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Start_Control.v
+remove_files  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Start_Control.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/Start_Control_tb.v w ]
+add_files -fileset sim_1 C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/Start_Control_tb.v
+update_compile_order -fileset sim_1
+set_property top Start_Control_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+source Start_Control_tb.tcl
+close_sim
+launch_simulation
+source Start_Control_tb.tcl
+open_project {C:/Users/dgchi/OneDrive/Desktop/UGA/Spring 2025/Capstone/Verilog_Projects/Synthesizer/Synthesizer/Synthesizer.xpr}
+update_compile_order -fileset sources_1
+close_project
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source Start_Control_tb.tcl
+close_sim
+launch_simulation
+source Start_Control_tb.tcl
+close_sim
+launch_simulation
+source Start_Control_tb.tcl
+close_sim
+launch_simulation
+source Start_Control_tb.tcl
+close_sim
+launch_simulation
+source Start_Control_tb.tcl
+update_compile_order -fileset sources_1
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Keep_Going.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Keep_Going.v
+update_compile_order -fileset sources_1
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/KeepGoing_Control.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/KeepGoing_Control.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/KeepGoing_Control_tb.v w ]
+add_files -fileset sim_1 C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sim_1/new/KeepGoing_Control_tb.v
+update_compile_order -fileset sim_1
+set_property top KeepGoing_Control_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source KeepGoing_Control_tb.tcl
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Frame_Select_Control.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Frame_Select_Control.v
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.runs/impl_1/Top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/EnableVisual_Control.v w ]
+add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/EnableVisual_Control.v
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
-close [ open C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v w ]
-add_files C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
-set_property file_type SystemVerilog [get_files  C:/CSEE4280/GRP2ADD/FinalProject/MemVga/MemVga.srcs/sources_1/new/Starting_Pixels.v]
-update_compile_order -fileset sources_1
-set_property file_type SystemVerilog [get_files  C:/CSEE4280/GRP2ADD/FinalProject/Processing/Processing.srcs/sources_1/new/Auto_Control.v]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-wait_on_run impl_1
+close_sim
