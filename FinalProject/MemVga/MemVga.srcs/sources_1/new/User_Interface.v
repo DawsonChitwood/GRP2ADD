@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module User_Interface(input Clk, input Rst,input [1:0] databack, input [5:0] keys,output reg start,output reg clear,output reg RandMode, output reg [5:0] row, output reg [6:0] col, output reg [1:0] data,output reg RW, output reg enable1, output reg usermode, output reg [2:0] currentkey, output reg [2:0] keyprev1, output reg [2:0] keyprev2, output reg [2:0] keyprev3);
+module User_Interface(input Clk, input Rst,input [1:0] databack, input [5:0] keys,output reg run,output reg clear,output reg RandMode, output reg [5:0] row, output reg [6:0] col, output reg [1:0] data,output reg RW, output reg enable1, output reg usermode, output reg [2:0] currentkey, output reg [2:0] keyprev1, output reg [2:0] keyprev2, output reg [2:0] keyprev3);
 
 reg [3:0] currentstate = 0;
 reg [3:0] nextstate = 0;
@@ -30,6 +30,16 @@ reg mainpressed = 0;
 reg started;
 reg writedata;
 reg [1:0] readdata;
+
+reg [5:0] key;
+assign key[0]=!keys[0];
+assign key[1]=!keys[1];
+assign key[2]=!keys[2];
+assign key[3]=!keys[3];
+assign key[4]=!keys[4];
+assign key[5]=!keys[5];
+
+reg pressed;
 
 parameter MAIN = 0;
 parameter USER = 1;
@@ -48,6 +58,7 @@ parameter READOFF = 13;
 
 
 
+/**
 //keypress logic. logs keyprev so that the current key can be compared with the previous keys for debouncing
 always @(posedge Clk) begin
     keyprev3 = keyprev2;
@@ -207,4 +218,34 @@ always @(posedge Clk) begin
     endcase
 end
 assign RandMode = (currentkey == 3) ? 1 : 0;           
+**/
+
+
+always @(posedge Clk) begin
+    if(key == 0) begin
+        pressed <= 0;
+        RandMode <=0;
+    end
+    else begin
+        if(pressed == 0) begin 
+            if(key[0] == 1) begin
+            end
+            else if(key[1] == 1)begin
+            end
+            else if(key[2] == 1)begin
+            end
+            else if(key[3] == 1)begin
+                RandMode <= 1;
+            end
+            else if(key[4] == 1)begin
+                run <= 1;
+            end
+            else if(key[5] == 1)begin
+                run <= 0;
+            end
+        end
+        else ;
+        pressed <= 1;
+    end
+end
 endmodule

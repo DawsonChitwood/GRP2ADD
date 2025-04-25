@@ -35,19 +35,39 @@ wire RW;
 wire enableVis;
 wire start;
 wire [2:0] testing;
-
-
+wire startFrameTogle;
+reg [24:0] counter;
+reg frameSelect;
+reg test;
 
 Clk_Divider_25MHZ CD(CLK100MHZ,CLK);
 Memory mem(currentRow,currentCol,VC,HC,enableVis,enableData1,enableData2,readWrite,CLK100MHZ,RESET,dataIn,dataBack,colors);
 VGA_Out vga(CLK,RESET,colors, h_sync, v_sync,R,G, B, HC, VC);
-Control_And_Start cas(CLK100MHZ,RESET,JA[5:0],SW[3],start,dataBack,readWrite,currentRow,currentCol,dataIn,enableData1,enableData2,enableVis,testing);
+Control_And_Start cas(CLK100MHZ,RESET,JA[5:0],frameSelect,startFrameTogle,dataBack,readWrite,currentRow,currentCol,dataIn,enableData1,enableData2,keepGoing,testing);
 //EnableVisual_Control evc(CLK100MHZ,RESET,start,SW[3],enableVis);
 //Starting_Pixels(CLK100MHZ,currentRow,currentCol,dataIn,enableData1,SW[1]);
-//assign enableVis = (SW[4]) ? ~SW[3] : 1;
+always @(posedge CLK) begin
+    if(keepGoing == 1) begin
+        frameSelect <=0;
+    end
+    if(startFrameTogle==1) begin
+        counter <= counter + 1;
+        test <= 1;
+        if(counter == 0) begin
+            frameSelect <= frameSelect+1;
+        end   
+    end
+    else begin
+        counter <= 1;
+        test <= 0;
+    end
+end
+
+assign enableVis = (SW[4]) ? ~frameSelect : 1;
 
 assign LED[0] = testing[0];
-assign LED[1] = testing[1];
+assign LED[1] = frameSelect;
 assign LED[2] = testing[2];
+assign LED[3] = test;
 
 endmodule
