@@ -22,22 +22,22 @@
 
 module Auto_Control(input Clk, input Reset, input FrameSelector, input Start, input [1:0] DataBack, output RW, output reg [5:0] Row, output reg [6:0] Col, output reg [1:0] data, output reg enable1, output reg  enable2);
 //State Machine Variables
-reg [3:0] CurrentState = 0;
-reg [3:0] NextState = 0;
+    reg [3:0] CurrentState = 0;   //current state register
+    reg [3:0] NextState = 0;      //next state register
 reg [2:0] ClockCounter = 0;    //Used to make sure transitions to states relying on storage feedback give enough time for 
 // storage to respond
-//reg [2:0] CornerCounter = 0;   //Used to keep track of which corner is being read from storage
-//reg [2:0] CornerBlock = 0;     //Used to keep track of which pixel is being read from storage while reading a particular corner
-//reg [1:0][1:0] CornerCache = 0; //Used to keep track of the values of all pixels used for processing for a particular corner
-//reg [1:0] SideCounter = 0;      // Used to keep track of which side is currently being traversed
+    //reg [2:0] CornerCounter = 0;   //Used to keep track of which corner is being read from storage  |NO LONGER USED|
+    //reg [2:0] CornerBlock = 0;     //Used to keep track of which pixel is being read from storage while reading a particular corner |NO LONGER USED|
+    //reg [1:0][1:0] CornerCache = 0; //Used to keep track of the values of all pixels used for processing for a particular corner |NO LONGER USED|
+    //reg [1:0] SideCounter = 0;      // Used to keep track of which side is currently being traversed |NO LONGER USED|
 reg [3:0] PixelCount = 0; // Used to keep track of which particular peripheral pixel is currently being processed
-//reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line
-//reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line
+    //reg [2:0] SideBlock = 0;        // Used to keep track of which pixel is being read while processing a particular pixel along a line |NO LONGER USED|
+    //reg [2:0][1:0] SideCache = 0;   // Used to hold the pixel information for processing a certain pixel on a line |NO LONGER USED|
 reg [5:0] RowCountStart = 0;
 reg [6:0] ColCountStart = 0;
 reg [5:0] RowCount = RowCountStart;        //Used to keep track of which row is being processed in the MIDDLE section. 1 is the default position
 reg [6:0] ColCount = ColCountStart;        //Used to keep track of which column is being processed in the MIDDLE section. 1 is the default position
-reg  CurrentPixelValue = 0; //Used to hold the pixels currently being processed in the MIDDLE section
+reg  CurrentPixelValue = 0; //Used to hold the pixels currently being processed 
 reg [3:0] Live_Counter; //Used to count how many of the pixels in the cache are living
 
 
@@ -131,7 +131,7 @@ always @(posedge Clk) begin
         endcase
 end
 
-
+// The currentstorage module being processed is determined by the FrameSelector
 always @(FrameSelector) CurrentStorageModule = FrameSelector;
 
 //Output Logic
@@ -151,6 +151,7 @@ always @(posedge Clk) begin
             end
             else ;
         end
+        // A wait state used to set the appropriate enable lines for memory data access
         WaitState: begin
             if(CurrentStorageModule) begin
                 enable1 = 0;
@@ -161,9 +162,12 @@ always @(posedge Clk) begin
                 enable2 = 0;
               end
             end
+
+        //another wait state to provide processing time for the storage module
         WaitStateTwo: begin
         ;
         end
+        // This state is the common state reached whenever a pixel is done being written, it sets all relevant variables back to their zero state
         PIXELDONE: begin
             CurrentPixelValue <= 0;
             Live_Counter <= 0;
@@ -172,8 +176,10 @@ always @(posedge Clk) begin
             enable2 <= 0;
             RW_reg <= 1;
         end
+        
    //This is the state in which the row and column to be requested will be specified. The clock counter is present to give some delay 
-   //allowing for the  module to process
+   //allowing for the  module to process. For the Game of Life, all the surrounding pixels of the processed pixel have to be read in order to make a 
+   //decision on the next state of that pixel
      REQUEST: begin
      ClockCounter <= 0;
     
@@ -237,6 +243,7 @@ always @(posedge Clk) begin
             enable2 <= 1;
          end
      end
+        
      //Reads the data sent from storage. It will move to processing as soon as the the Pixel count reaches 8 (see NextState Logic)
      READ: begin
      ClockCounter <= ClockCounter + 1;
@@ -271,8 +278,8 @@ always @(posedge Clk) begin
       end
      
      
-     //Middle Process merely sets up the enable lines for the write state, essentially allowing a clock pulse for this to happen. 
-     //Oh yeah... and it also implements the game logic. I guess that is a pretty important part of it...
+        //Process implements the logic of the game. If a pixel is dead and has exactly 3 living peripheral pixels, it will come alive (as if by reproduction). if it is alive and 
+        // has between 2 and 3 living peripheral pixels it will stay alive (life in numbers), otherwise it will die off (as if by overpopulation or underpopulation)
      PROCESS: begin 
          PixelCount <= 0;
          //GAME LOGIC!!!
@@ -318,7 +325,7 @@ always @(posedge Clk) begin
         
          
      end
-     //MIDDLE WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
+     //WRITE will continue to increment col count and row count accordingly until it has reached the limit in which case it will no longer increment
      //In which it sets Frame_Done High
      WRITE: begin
         Live_Counter <= 0;
