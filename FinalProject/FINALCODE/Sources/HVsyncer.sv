@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module HVsyncer(input Clk, input BANANAS, output  hsync, output vsync, output [6:0] HC, output [6:0]  VC,output reg pleaseWork);
+module HVsyncer(input Clk, input Reset, output  hsync, output vsync, output [6:0] HC, output [6:0]  VC,output reg pleaseWork);
 
 reg [6:0] HC_reg = 0;     //The register holding the HC Value
 reg [6:0] VC_reg = 0;     //The register holding the VC Value
@@ -52,20 +52,24 @@ parameter VDT = 2;   //2 for testbench, 491 for actual timing
 parameter VRT = 1;   //2;
 parameter VTOT = 7;  //7 for testbench, 525 for actual timing
 
-parameter HStart = 0;
-parameter VStart = 1;
-parameter Von = 2;
-parameter Voff = 3;
-parameter Hon = 4;
-parameter Hoff = 5; 
 
-parameter CounterIncrement = 1;
-parameter CounterReset = 0;
+
+    
+parameter HStart = 0;     //Horizontal Start state
+parameter VStart = 1;     //Vertical Start State
+parameter Von = 2;        //Vertical On State
+parameter Voff = 3;       //Vertical Off State
+parameter Hon = 4;        //Horizontal On State
+parameter Hoff = 5;       //Horizontal Off State
+
+    //HCount and VCount Increment States
+parameter CounterIncrement = 1;    
+parameter CounterReset = 0;        
 
 
 // State Memory
 always @(posedge Clk) begin
-    if (BANANAS) begin
+    if (Reset) begin
         Hstate = HStart;
         Vstate = VStart;
         HCstate = CounterReset;
@@ -103,13 +107,16 @@ end
 // Next State Logic for Hsync
 always @(posedge Clk) begin
     case(Hstate)
+        //HStart goes immediately to HOff
     HStart: begin
         Hnext_state <= Hoff;
     end
+        //HOff goes to Hon if HCount has reached the Horizontal Sync Pulse Time
     Hoff: begin
         if(HCount >= HRT) Hnext_state = Hon;
         else Hnext_state <= Hoff;
     end
+        //HOn goes to HOff if HCount rolls back to 0
     Hon: begin
         if(HCount >= HRT) Hnext_state = Hon;
         else Hnext_state <= Hoff;
@@ -124,11 +131,14 @@ end
 //Next State Logic for Vsync
 always @(posedge Clk) begin
     case(Vstate) 
+        //VStart immediately goes to VOn
     VStart: Vnext_state <= Von;
+        //VOn goes to VOff if VCount has not reached the Vertical Sync Pulse Time
     Von: begin
         if(VCount >= VRT) Vnext_state = Von;
         else Vnext_state <= Voff;
     end
+        //VOFF goes to Von if VCount has reached the Vertical Sync Pulse Time
     Voff: begin
         if(VCount >= VRT) Vnext_state = Von;
         else Vnext_state <= Voff;
@@ -140,10 +150,12 @@ end
 //Next State Logic for HC
 always @(posedge Clk) begin
     case(HCstate) 
+        //Counter only increments within display area
     CounterIncrement: begin
         if ((HCount > (HRT+HBP)) && (HCount < (HRT+HBP+HDT))) HCnext_state <= CounterIncrement;
         else HCnext_state <= CounterReset;
     end
+        //Counter resets outside of display area
     CounterReset: begin
         if ((HCount > (HRT+HBP)) && (HCount < (HRT+HBP+HDT))) HCnext_state <= CounterIncrement;
         else HCnext_state <= CounterReset;
@@ -155,10 +167,12 @@ end
 //Next State Logic for VC
 always @(posedge Clk) begin
     case(VCstate) 
+         //Counter only increments within display area
     CounterIncrement: begin
         if ((VCount > (VRT+VBP)) && (VCount < (VRT+VBP+VDT))) VCnext_state <= CounterIncrement;
         else VCnext_state <= CounterReset;
     end
+        //Counter resets outside of display area
     CounterReset: begin
         if ((VCount > (VRT+VBP)) && (VCount < (VRT+VBP+VDT))) VCnext_state <= CounterIncrement;
         else VCnext_state <= CounterReset;
@@ -207,6 +221,9 @@ always @(posedge Clk) begin
 end
 
 //Output Logic for HC
+
+    //The way we set up our grid was so that a pixel constituted an 8x8 pixel block on the screen. 
+    // This is why HC_reg only changes every time hcCounter reaches 4 (not eight because everything runs on the POSEDGE of the clock)
 always @(posedge Clk) begin
     case(HCstate)
     CounterIncrement: begin
@@ -232,6 +249,9 @@ always @(posedge Clk) begin
 end
 
 //Output Logic for VC
+
+     //The way we set up our grid was so that a pixel constituted an 8x8 pixel block on the screen. 
+    // This is why HC_reg only changes every time hcCounter reaches 8 (8 works here because VC_reg changes based on HC_reg which has already accounted for the POSEDGE Clock swithching messing with the count)
 always @(posedge Clk) begin
     case(VCstate)
     CounterIncrement: begin
