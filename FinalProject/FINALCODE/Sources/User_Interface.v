@@ -31,6 +31,9 @@ reg started;
 reg writedata;
 reg [1:0] readdata;
 
+
+
+	//inverted key assignments due to active low operation
 reg [5:0] key;
 assign key[0]=!keys[0];
 assign key[1]=!keys[1];
@@ -44,6 +47,9 @@ reg inter;
 reg pressyOne;
 reg superBanana;
 
+
+
+	//previous state machine state names no longer used
 parameter MAIN = 0;
 parameter USER = 1;
 parameter RANDOM = 2;
@@ -70,6 +76,9 @@ reg [6:0] oldcol;
 reg modeprev;
 reg returning;
 
+
+	//Write and Read state variables used in the write and read state machine. This state machine's operation is controlled by button presses and by the mode 
+	// encoded by the user
 parameter START = 0;
 parameter WRITEPREVADDRESS = 1;
 parameter WRITEPREVWAIT = 2;
@@ -245,6 +254,8 @@ assign RandMode = (currentkey == 3) ? 1 : 0;
 **/
 
 
+
+	// The user interface. This determines what mode the user is in as well as when randomization and clearing are activated based upon button presses
 always @(posedge Clk) begin
     if(key == 0) begin
         pressed <= 0;
@@ -309,9 +320,12 @@ always @(posedge Clk) begin
     end
 end
 
+	//The state machine for writing and reading. Every time the user leaves a pixel within manual mode, the game has to write back the value of the previous pixel to memory, read the 
+	// current pixel's value, and then write the value of the current pixel to memory (which will take into account that the user is currently hovering over that pixel)
 always @ (posedge Clk) begin	
 	if(mode) begin
 	case(state) 
+		// Address for the previous pixel
 		WRITEPREVADDRESS: begin
 			Row <= oldrow;
 			Col <= oldcol;
@@ -321,23 +335,29 @@ always @ (posedge Clk) begin
 			RW <= 0;
 			state <= WRITEPREVWAIT;
 		end
+		//wait for the write to take place
 		WRITEPREVWAIT: state <= WRITEPREVSTOP;
+		//Stop the writing process
 		WRITEPREVSTOP: begin
 			RW <= 1;
 			enable1 <= 0;
 			state <= READCURRADDRESS;
 		end
+		//Address for reading the current pixel
 		READCURRADDRESS: begin
 			Row <= RowCount;
 			Col <= ColCount;
 			enable1 <= 1;
 			state <= READCURRWAIT;
 		end
+		//wait for the read to take place
 		READCURRWAIT: state <= READCURRSTOP;
+		//Stop the reading process
 		READCURRSTOP: begin
 			readdata <= databack;
 			enable1 <= 0;
 		end
+		//Address for writing to the current pixel
 		WRITECURRADDRESS: begin
 			Row <= RowCount;
 			Col <= ColCount;
@@ -353,7 +373,9 @@ always @ (posedge Clk) begin
 			RW <= 0;
 			state <= WRITECURRWAIT;
 		end
+		//wait for the write to take place
 		WRITECURRWAIT: state = WRITECURRSTOP;
+		//stop the write process
 		WRITECURRSTOP: begin
 			RW <= 1;
 			oldrow <= RowCount;
@@ -362,6 +384,8 @@ always @ (posedge Clk) begin
 			if(superBanana) returning <= 1;
 			state <= START;
 		end
+
+		//wait in this state until an appropriate key has been presse (movement or returning to main menu)
 		START: begin
 			superBanana <= 0;
 			if(key[0] && !pressed) begin
