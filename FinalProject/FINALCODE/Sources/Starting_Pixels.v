@@ -19,11 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// This module writes in the starting pixels for the game, being either random or zero based upon the states of keepGoing and clear
 
 module Starting_Pixels(input Clk,output reg [5:0] currentRow, output reg [6:0] currentCol, output reg [1:0] dataIn, output reg enableData1,input keepGoing,input clear);
 reg [13:0] Write = 0;
 wire data;
 
+    //The Linear Feedback Shift Register
 LFSR lfsr(Clk,data);
 always @(posedge Clk) begin
     if(Write==0) begin
