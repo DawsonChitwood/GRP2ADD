@@ -75,6 +75,8 @@ always @(posedge Clk) begin
             nstate = BLACK;
     end 
 **/
+
+   //Color will only be asserted on the VGA when it is "ColorTime" meaning the VGA is within the display area
 always begin
 if(ColorTime==1)    begin 
     case(ColorIn) 
@@ -111,7 +113,7 @@ end
 
     
 
-
+// instantiation of the HVSyncer module
 HVsyncer hvs(Clk,BANANAS,hsync,vsync,HC,VC,ColorTime);
 
 
