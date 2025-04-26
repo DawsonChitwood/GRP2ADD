@@ -19,13 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+//This module divides the 100MHZ clock into 25 MHZ
 module Clk_Divider_25MHZ(input Clk, output Clk_25_MHZ);
 
 reg Clk_25_MHZ_reg = 0;
 reg [1:0] Counter = 0;
 
-parameter [1:0] COUNT25MHZ = 2;
+    parameter [1:0] COUNT25MHZ = 1; //The counter must reach 1 in order for the clock transition to take place
 
 /*
 always @(BANANAS) begin
@@ -33,9 +33,11 @@ always @(BANANAS) begin
  end
 */
 
+    //If the vga clock
 always @(posedge Clk) begin
     Counter <= Counter + 1;
-    
+
+    // The 25 MHZ clock changes every time the counter reaches 1
     if (Counter == COUNT25MHZ) begin
         Clk_25_MHZ_reg <= !Clk_25_MHZ_reg;
         Counter <= 0;
