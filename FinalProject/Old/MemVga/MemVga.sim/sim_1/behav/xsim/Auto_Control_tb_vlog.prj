@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../Processing/Processing.srcs/sources_1/new/Auto_Control.v" \
+"../../../../MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/DualPort.sv" \
+"../../../../MemVga.srcs/sources_1/imports/FinalProject/Mem/final_project/final_project.srcs/sources_1/new/Memory.sv" \
+"../../../../MemVga.srcs/sim_1/imports/Testbenches/Auto_Control_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

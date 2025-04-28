@@ -41,6 +41,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+
+// This testbench was used to see waveform outputs for physical debugging. We mainly tested this part of the project with physical outputs.
+
+
+
+
+
+
+
+
+
+
+
+
 module Muxed_Starting_tb();
 reg Clk = 0;
 reg Reset = 0;
